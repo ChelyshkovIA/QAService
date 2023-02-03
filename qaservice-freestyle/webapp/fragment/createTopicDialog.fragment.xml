@@ -1,0 +1,26 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Dialog id="createTopicDialog" title="Create Topic">
+        <content>
+            <FlexBox width="100%" justifyContent="Center">
+                <FlexBox class="sapUiSmallMargin" alignItems="Center" justifyContent="SpaceBetween">
+                    <Label class="sapUiSmallMarginEnd" text="Name: " />
+                    <Input value="{
+                        path: 'appModel>/data/newTopicName',
+                        type: 'sap.ui.model.type.String',
+                        constraints: {
+                            minLength: 1,
+                            maxLength: 30
+                        }
+                    }" />
+                </FlexBox>
+            </FlexBox>
+        </content>
+
+        <buttons>
+            <Button text="Create" type="Emphasized" press=".onCreateTopicPress" />
+            <Button text="Close" press=".onCloseDialogButtonPress" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

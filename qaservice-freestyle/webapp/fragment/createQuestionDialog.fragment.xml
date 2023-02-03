@@ -1,0 +1,41 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Dialog id="createQuestionDialog" title="Create Question">
+        <content>
+            <FlexBox class="sapUiSmallMargin" direction="Column">
+                <FlexBox alignItems="Center" justifyContent="SpaceBetween">
+                    <Label class="sapUiSmallMarginEnd" text="Text: " />
+                    <TextArea placeholder="Type question text..." value="{appModel>/newQuestion/text}"  />
+                </FlexBox>
+
+                <FlexBox alignItems="Center" justifyContent="SpaceBetween">
+                    <Label class="sapUiSmallMarginEnd" text="Difficulty: " />
+                    <Select items="{/Difficulties}" selectedKey="{appModel>/newQuestion/difficulty_ID}">
+                        <core:Item key="{ID}" text="{name}" />
+                    </Select>
+                </FlexBox>
+
+                <FlexBox direction="Column">
+                    <FlexBox alignItems="Center" justifyContent="SpaceBetween">
+                        <Label class="sapUiSmallMarginEnd" text="Group: " />
+                        <Input placeholder="Type new group name..." visible="{= !${appModel>/newQuestion/useExistingGroup}}" value="{appModel>/newQuestion/newGroupName}" />
+                        <Select items="{groups}" id="groupSelectBox" visible="{appModel>/newQuestion/useExistingGroup}" selectedKey="{appModel>/newQuestion/existingGroupId}" >
+                            <core:Item key="{ID}" text="{name}" />
+                        </Select>
+                    </FlexBox>
+
+                    <FlexBox alignItems="Center" justifyContent="SpaceBetween">
+                        <Label class="sapUiSmallMarginEnd" text="Use exising group:" />
+                        <Switch state="{appModel>/newQuestion/useExistingGroup}" />
+                    </FlexBox>
+                </FlexBox>
+            </FlexBox>
+        </content>
+
+        <buttons>
+            <Button text="Create" type="Emphasized" press=".onCreateQuestionPress" />
+            <Button text="Close" press=".onCloseNewQuestionDialogPress" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,52 @@
+ID,name,topic_id
+7874b20a-9fc7-8759-217f-3de795bf06fd,General points,dd94fe9f-ff49-b3cc-3eee-f607418fadcd
+2a55060c-ac53-2eea-c632-7f55b1169995,Multi Target applications,dd94fe9f-ff49-b3cc-3eee-f607418fadcd
+5ce5b46d-e0bc-1892-46fd-987e5482a0f9,Application Router,dd94fe9f-ff49-b3cc-3eee-f607418fadcd
+858f6f44-e9df-f4f3-c32a-64df4d449928,Authorisation and authentication,dd94fe9f-ff49-b3cc-3eee-f607418fadcd
+8b309dee-b61d-4f4b-5a63-426c6a387189,Extension capabilities,24ef2942-a5f4-8145-2e89-5210e92a2f9f
+39bb0c1d-2c8f-29eb-8cde-7cd4fbc129b1,Build & deployment,24ef2942-a5f4-8145-2e89-5210e92a2f9f
+b3ed3249-239d-e158-2f56-860a1fe200f1,SAPUI5 ABAP repository & the ABAP Back-End infrastructure,24ef2942-a5f4-8145-2e89-5210e92a2f9f
+01fc4acf-f61f-1ebf-ffda-659d4c26b061,Misc,24ef2942-a5f4-8145-2e89-5210e92a2f9f
+ef9d10ad-3b9e-8180-e92d-ba70448d786c,General,892fd0f4-715a-0941-cb0f-a5ce1044a09d
+26ad804e-c180-5cdc-636a-0ea2a32ea834,Syntax,6954c459-fabf-eae8-1ffb-be7dafe2f377
+89a7f84b-de34-d813-9f94-ecca4da8d6df,Arrays,6954c459-fabf-eae8-1ffb-be7dafe2f377
+a340685c-0cf3-4b49-8d3e-84140374ca5f,Functions,6954c459-fabf-eae8-1ffb-be7dafe2f377
+7be7c1a7-68ed-b8f4-63e3-c98b055e59c3,Scope & closure,6954c459-fabf-eae8-1ffb-be7dafe2f377
+d698d1ac-f72e-611f-abc1-f4163f009430,Async behavior,6954c459-fabf-eae8-1ffb-be7dafe2f377
+0a2faa8f-4759-bb8e-31cb-faef97fccf58,Data types,6954c459-fabf-eae8-1ffb-be7dafe2f377
+527749a4-26f4-faff-61c9-37087c94af69,Expressions & operators,6954c459-fabf-eae8-1ffb-be7dafe2f377
+b120d1e9-8211-02b0-e355-ebc6d29ea5c2,Objects,6954c459-fabf-eae8-1ffb-be7dafe2f377
+28de4294-0fcf-88bd-e18d-7d72cc218a19,Error handling,6954c459-fabf-eae8-1ffb-be7dafe2f377
+c46c406b-6552-434b-36fe-7cca91ce2d63,Misc,6954c459-fabf-eae8-1ffb-be7dafe2f377
+373553b5-6f08-5d21-d3da-a28275134aba,DOM,21496f8a-399e-039f-24ac-d8eedafb6b4e
+32129cc4-3ff8-ba65-f71f-a068d570a6ee,Event handling,21496f8a-399e-039f-24ac-d8eedafb6b4e
+efb7727e-695f-e90e-6237-9f3baf4388ab,Networking,21496f8a-399e-039f-24ac-d8eedafb6b4e
+c67b6971-5bb4-6f06-a342-d5f4f2044d65,Client Side data storage,21496f8a-399e-039f-24ac-d8eedafb6b4e
+af5d4d04-fd76-7f99-c871-2a9ab91af789,Web APIs / interfaces,21496f8a-399e-039f-24ac-d8eedafb6b4e
+c6445983-c02c-ee8b-c99f-ca99eff5d52e,Misc,21496f8a-399e-039f-24ac-d8eedafb6b4e
+1a8209df-bff2-9838-9e6e-6b2ade85843a,V8,21496f8a-399e-039f-24ac-d8eedafb6b4e
+798b3586-58c8-db79-3d42-af69cdcb5b3b,General points,a2692f42-63d2-fa84-98fc-7273cbb0e056
+041880b1-a492-1e22-2fcf-c8b62e175a6b,URI Conventions,a2692f42-63d2-fa84-98fc-7273cbb0e056
+0d58feb4-a046-a7f0-b26a-46eac8fea7cf,Operations / data requesting,a2692f42-63d2-fa84-98fc-7273cbb0e056
+25da02e3-55dd-112d-f6bd-efd3c5d17195,Batch processing,a2692f42-63d2-fa84-98fc-7273cbb0e056
+8a755d41-e354-177e-9c3f-35253f590dab,JSON format representation,a2692f42-63d2-fa84-98fc-7273cbb0e056
+cfbcb3ae-b524-dac2-06c3-d3bcb721f0d7,Misc,a2692f42-63d2-fa84-98fc-7273cbb0e056
+153ed1a7-8d71-1154-31d4-bdf961353fd9,General points,187cdceb-62f6-18b0-1fa7-f74b2b96e2e6
+e3daa338-65a3-27b2-a611-1a1f11c8227c,Vocabulary & Annotation,187cdceb-62f6-18b0-1fa7-f74b2b96e2e6
+787efcf4-7a3c-babc-9736-8025b7e066a1,System query options,187cdceb-62f6-18b0-1fa7-f74b2b96e2e6
+4899f762-bbc9-da3f-f839-8b6a9b639479,Misc.,187cdceb-62f6-18b0-1fa7-f74b2b96e2e6
+61c45a3e-9f84-fae8-57e1-62b576c4306f,Application structure,f3a57544-58fa-9af8-761e-266368ff68d4
+b8125665-e4bd-5286-6eee-216e4400e53d,Data Binding,f3a57544-58fa-9af8-761e-266368ff68d4
+00707a3e-0c2b-06e5-4af3-e6d23c86fb7c,Controls,f3a57544-58fa-9af8-761e-266368ff68d4
+c313c8bb-4ebd-6815-41f7-876762fac7c2,Custom controls,f3a57544-58fa-9af8-761e-266368ff68d4
+78d95ab9-aed0-148c-4110-9fcfb9123f2c,Smart Controls,f3a57544-58fa-9af8-761e-266368ff68d4
+6a19a1c2-193f-8804-0550-9c2732c98f82,MVC,f3a57544-58fa-9af8-761e-266368ff68d4
+eb5c50ac-413a-fe3f-28ce-d434882b1568,Modules,f3a57544-58fa-9af8-761e-266368ff68d4
+74a0350f-86f2-cc97-bb8a-45b0148a9655,Routing,f3a57544-58fa-9af8-761e-266368ff68d4
+bbb62ebd-95b0-93aa-4f8e-c1797ab28022,ODataModel,f3a57544-58fa-9af8-761e-266368ff68d4
+e19462c0-e182-ebab-ec00-8c2cf47826de,OData Metadata,f3a57544-58fa-9af8-761e-266368ff68d4
+9c64a73c-4647-ea36-9dc4-4468b8c9d4d1,Localization,f3a57544-58fa-9af8-761e-266368ff68d4
+42852704-b754-fd68-e3f0-46e24e92f0e2,Layouting & Responsiveness,f3a57544-58fa-9af8-761e-266368ff68d4
+a9e9e3f0-e442-d4ae-6507-323543009c8c,Testing,f3a57544-58fa-9af8-761e-266368ff68d4
+e88c6205-439c-b6ef-4eeb-61bff067355c,Security,f3a57544-58fa-9af8-761e-266368ff68d4
+5412c077-e100-edd2-74e1-51c6580afc84,Accessibility,f3a57544-58fa-9af8-761e-266368ff68d4

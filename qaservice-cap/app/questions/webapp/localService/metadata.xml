@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="QAService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Questions" EntityType="QAService.Questions">
+                    <NavigationPropertyBinding Path="answer" Target="Answers"/>
+                    <NavigationPropertyBinding Path="difficulty" Target="Difficulties"/>
+                </EntitySet>
+                <EntitySet Name="Answers" EntityType="QAService.Answers">
+                    <NavigationPropertyBinding Path="question" Target="Questions"/>
+                </EntitySet>
+                <EntitySet Name="Difficulties" EntityType="QAService.Difficulties">
+                    <NavigationPropertyBinding Path="questions" Target="Questions"/>
+                </EntitySet>
+            </EntityContainer>
+            <EntityType Name="Questions">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="text" Type="Edm.String"/>
+                <NavigationProperty Name="answer" Type="QAService.Answers" Partner="question">
+                    <ReferentialConstraint Property="answer_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="answer_ID" Type="Edm.Int32"/>
+                <NavigationProperty Name="difficulty" Type="QAService.Difficulties" Partner="questions">
+                    <ReferentialConstraint Property="difficulty_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="difficulty_ID" Type="Edm.Int32"/>
+            </EntityType>
+            <EntityType Name="Answers">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="text" Type="Edm.String"/>
+                <NavigationProperty Name="question" Type="QAService.Questions" Partner="answer">
+                    <ReferentialConstraint Property="ID" ReferencedProperty="answer_ID"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="Difficulties">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="name" Type="Edm.String"/>
+                <Property Name="numeric" Type="Edm.Int32"/>
+                <NavigationProperty Name="questions" Type="Collection(QAService.Questions)" Partner="difficulty"/>
+            </EntityType>
+            <Annotations Target="QAService.Questions/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                </Annotations>
+                <Annotations Target="QAService.Questions/createdBy">
+                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                    <Annotation Term="Core.Immutable" Bool="true"/>
+                    <Annotation Term="Core.Computed" Bool="true"/>
+                    <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                        <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                        </Annotations>
+                        <Annotations Target="QAService.Questions/modifiedAt">
+                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                            <Annotation Term="Core.Computed" Bool="true"/>
+                            <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                            </Annotations>
+                            <Annotations Target="QAService.Questions/modifiedBy">
+                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                <Annotation Term="Core.Computed" Bool="true"/>
+                                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                    <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                    </Annotations>
+                                    <Annotations Target="QAService.Answers/createdAt">
+                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                        <Annotation Term="Core.Immutable" Bool="true"/>
+                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                        <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                        </Annotations>
+                                        <Annotations Target="QAService.Answers/createdBy">
+                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                            <Annotation Term="Core.Immutable" Bool="true"/>
+                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                            <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                </Annotations>
+                                                <Annotations Target="QAService.Answers/modifiedAt">
+                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                    <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                    </Annotations>
+                                                    <Annotations Target="QAService.Answers/modifiedBy">
+                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                        <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                            <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                            </Annotations>
+                                                            <Annotations Target="QAService.Difficulties/createdAt">
+                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                </Annotations>
+                                                                <Annotations Target="QAService.Difficulties/createdBy">
+                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                    <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                    <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                        </Annotations>
+                                                                        <Annotations Target="QAService.Difficulties/modifiedAt">
+                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                            </Annotations>
+                                                                            <Annotations Target="QAService.Difficulties/modifiedBy">
+                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                    </Annotations>
+                                                                                </Schema>
+                                                                            </edmx:DataServices>
+                                                                        </edmx:Edmx>

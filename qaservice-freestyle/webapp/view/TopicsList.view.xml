@@ -1,0 +1,83 @@
+<mvc:View
+    controllerName="qaservicefreestyle.controller.TopicsList"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns="sap.m">
+    
+    <f:DynamicPage id="_IDGenDynamicPage1">
+        <f:title>
+            <f:DynamicPageTitle id="_IDGenDynamicPageTitle1">
+                <f:heading>
+                    <Title id="_IDGenTitle1" text="{i18n>topicsListTitle}" />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+
+        <f:header>
+            <f:DynamicPageHeader id="_IDGenDynamicPageHeader1">
+                <FlexBox id="_IDGenFlexBox1" direction="Row" justifyContent="SpaceBetween">
+                    <FlexBox id="_IDGenFlexBox2" alignItems="Center" direction="Row">
+                        <Label class="sapUiSmallMargin" id="_IDGenLabel1" text="Topic Name:" />
+                        <MultiComboBox id="_IDGenMultiComboBox1" items="{/Topics}" selectedKeys="{appModel>/filters/selectedTopics}">
+                            <core:Item key="{ID}" text="{name}" />
+                        </MultiComboBox>
+                    </FlexBox>
+
+                    <FlexBox id="_IDGenFlexBox3" direction="Row">
+                        <Button id="_IDGenButton1" text="Go" type="Emphasized" press=".onGoButtonPress" />
+                    </FlexBox>
+                </FlexBox>
+            </f:DynamicPageHeader>
+        </f:header>
+
+        <f:content>
+            <Table id="_IDGenTable1" items="{/Topics}" inset="true" mode="MultiSelect" selectionChange=".onTableSelectionChange" updateFinished=".onBindingUpdateStarted">
+                <headerToolbar>
+                    <OverflowToolbar id="_IDGenOverflowToolbar1">
+                        <content>
+                            <FlexBox id="_IDGenFlexBox4" direction="Row" width="100%" justifyContent="SpaceBetween" alignItems="Center">
+                                <FlexBox id="_IDGenFlexBox6" alignItems="Center">
+                                    <Title class="sapUiSmallMargin" id="_IDGenTitle2" text="Topics" />
+                                    
+                                    <Input id="_IDGenInput1" liveChange=".onSearchLiveChange" placeholder="Type topic name..." />
+                                </FlexBox>
+                                
+                                <FlexBox id="_IDGenFlexBox5" alignItems="Center">
+                                    <Button id="_IDGenButton3" text="Delete" enabled="{appModel>/table/isSomethingSelected}" press=".onDeleteButtonPress" visible="{= !${appModel>/table/isEditMode} }" />
+                                    <Button id="_IDGenButton4" text="Edit" press=".onEditPress" visible="{= !${appModel>/table/isEditMode} }" />
+                                    <Button id="_IDGenButton2" text="Create" press=".onOpenDialogPress" visible="{= !${appModel>/table/isEditMode} }" />
+                                    <Button text="Save" press=".onSavePress" visible="{appModel>/table/isEditMode}" />
+                                    <Button text="Cancel" press=".onCancelPress" visible="{appModel>/table/isEditMode}" />
+                                </FlexBox>
+                            </FlexBox>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column id="_IDGenColumn2">
+                        <Text id="_IDGenText2" text="Topic" />
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1" type="Navigation" press=".onTopicItemPress" >
+                        <cells>
+                            <FlexBox>
+                                <ObjectIdentifier
+                                    title="{name}"
+                                    text="{ID}"
+                                    visible="{= !${appModel>/table/isEditMode} }" />
+
+                                <Input value="{name}" visible="{appModel>/table/isEditMode}" />
+                            </FlexBox>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </f:content>
+
+        <f:footer></f:footer>
+    </f:DynamicPage>
+</mvc:View>

@@ -1,0 +1,22 @@
+{
+  "name": "xml-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon script.js",
+    "start": "node script.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "nodemon": "^2.0.20",
+    "xml-js": "^1.6.11",
+    "xml-obj": "^1.0.3"
+  }
+}

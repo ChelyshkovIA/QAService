@@ -1,0 +1,126 @@
+<mvc:View
+    controllerName="qaservicefreestyle.controller.TopicDetails"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:m="sap.m"
+    xmlns:t="sap.ui.table"
+    xmlns="sap.uxap">
+
+    <ObjectPageLayout id="topicDetailsObjectPage">
+        <headerTitle>
+            <ObjectPageHeader objectTitle="{name}"></ObjectPageHeader>
+        </headerTitle>
+
+        <headerContent>
+            <m:FlexBox direction="Column" alignItems="Start">
+                <m:ObjectAttribute text="{name} Topic details with full questions list"></m:ObjectAttribute>
+            </m:FlexBox>
+        </headerContent>
+
+        <sections>
+            <ObjectPageSection>
+                <subSections>
+                    <ObjectPageSubSection title="Questions">
+                        <m:FlexBox direction="Column" busy="{appModel>/busyStates/iconFilterBar}">
+                            <m:IconTabBar select=".onDifficultySelect" selectedKey="{appModel>/questionsTable/difficulty}">
+                                <m:items>
+                                    <m:IconTabFilter
+                                        showAll="true"
+                                        count="{appModel>/topicDetails/questions/all/count}"
+                                        text="Questions"
+                                        key="{appModel>/difficultyKey/ALL}" />
+
+                                    <m:IconTabSeparator />
+
+                                    <m:IconTabFilter
+                                        icon="sap-icon://unwired"
+                                        iconColor="#90EE90"
+                                        count="{appModel>/topicDetails/questions/elementary/count}"
+                                        text="Elementary"
+                                        key="{appModel>/difficultyKey/ELEMENTARY}" />
+
+                                    <m:IconTabFilter
+                                        icon="sap-icon://navigation-right-arrow"
+                                        iconColor="Positive"
+                                        count="{appModel>/topicDetails/questions/basic/count}"
+                                        text="Basic"
+                                        key="{appModel>/difficultyKey/BASIC}" />
+
+                                    <m:IconTabFilter
+                                        icon="sap-icon://open-command-field"
+                                        iconColor="Critical"
+                                        count="{appModel>/topicDetails/questions/advanced/count}"
+                                        text="Advanced"
+                                        key="{appModel>/difficultyKey/ADVANCED}" />
+
+                                    <m:IconTabFilter
+                                        icon="sap-icon://process"
+                                        iconColor="Negative"
+                                        count="{appModel>/topicDetails/questions/expert/count}"
+                                        text="Expert"
+                                        key="{appModel>/difficultyKey/EXPERT}" />
+                                </m:items>
+
+                                <m:content>
+                                    <t:TreeTable
+                                        busy="{appModel>/busyStates/questionsTable}"
+                                        rowSelectionChange=".onRowSelectionChange"
+                                        enableSelectAll="false"
+                                        selectionMode="Single"
+                                        rows="{
+                                            path: 'appModel>/groupsTable/data',
+                                            parameters: {
+                                                arrayNames: ['categories']
+                                            }
+                                        }">
+
+                                        <t:columns>
+                                            <t:Column>
+                                                <t:label>
+                                                    <m:Label text="Group" />
+                                                </t:label>
+                                                <t:template>
+                                                    <m:Text text="{appModel>name}"  />
+                                                </t:template>
+                                            </t:Column>
+                                            <t:Column>
+                                                <t:label>
+                                                    <m:Label text="Questions" />
+                                                </t:label>
+                                                <t:template>
+                                                    <m:Text text="{appModel>text}"  />
+                                                </t:template>
+                                            </t:Column>
+                                        </t:columns>
+                                    </t:TreeTable>
+                                </m:content>
+                            </m:IconTabBar>
+
+                            <m:Toolbar>
+                                <m:content>
+                                    <m:ToolbarSpacer />
+                                    <m:Button text="Create" press=".onOpenNewQuestionDialogPress" />
+                                </m:content>
+                            </m:Toolbar>
+                        </m:FlexBox>
+                    </ObjectPageSubSection>
+
+                    <ObjectPageSubSection id="answerSubSection" title="Answer" visible="{appModel>/questionsTable/questionSelected}">
+                        <m:FlexBox direction="Column">
+                            <m:FlexBox direction="Column">
+                                <m:Label text="Answer:" />
+                                <m:TextArea id="answerTextArea" enabled="{appModel>/answer/editMode}" width="100%" />
+                            </m:FlexBox>
+
+                            <m:Toolbar>
+                                <m:ToolbarSpacer />
+                                <m:Button text="Edit" press=".onEditAnswerPress" visible="{= !${appModel>/answer/editMode}}" />
+                                <m:Button text="Save" press=".onSaveAnswerPress" visible="{appModel>/answer/editMode}" />
+                                <m:Button text="Cancel" press=".onCancelAnswerEditPress" visible="{appModel>/answer/editMode}" />
+                            </m:Toolbar>
+                        </m:FlexBox>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+    </ObjectPageLayout>
+</mvc:View>
