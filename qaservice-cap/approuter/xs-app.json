@@ -1,20 +1,14 @@
 {
-    "authenticationMethod": "none",
     "routes": [
         {
-            "source": "^/app/(.*)$",
-            "target": "/$1",
-            "destination": "ui"
-        },
-        {
             "source": "^/odatav2/(.*)$",
-            "target": "/$1",
-            "destination": "qaservice-odatav2"
+            "target": "/v2/qa/$1",
+            "destination": "srv_api"
         },
         {
             "source": "^/odatav4/(.*)$",
-            "target": "/$1",
-            "destination": "qaservice-odatav4"
+            "target": "/qa/$1",
+            "destination": "srv_api"
         }
     ]
 }

@@ -1,5 +1,53 @@
 {
-  "scopes": [],
+  "xsappname": "QAService",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.QAViewer",
+      "description": "QAViewer"
+    },
+    {
+      "name": "$XSAPPNAME.QAManager",
+      "description": "QAManager"
+    }
+  ],
   "attributes": [],
-  "role-templates": []
+  "role-templates": [
+    {
+      "name": "User",
+      "description": "QAService User role template",
+      "scope-references": [
+        "$XSAPPNAME.QAViewer"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "Manager",
+      "description": "QAService Manager role template",
+      "scope-references": [
+        "$XSAPPNAME.QAManager"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "User Role",
+      "description": "QAService User role collection",
+      "role-template-references": [
+        "$XSAPPNAME.User"
+      ]
+    },
+    {
+      "name": "Manager Role",
+      "description": "QAService Manager role collection",
+      "role-template-references": [
+        "$XSAPPNAME.Manager"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "https://01736261trial-mta-approuter.cfapps.us10-001.hana.ondemand.com"
+    ]
+  }
 }
