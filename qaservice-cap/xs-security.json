@@ -3,11 +3,15 @@
   "scopes": [
     {
       "name": "$XSAPPNAME.QAViewer",
-      "description": "QAViewer"
+      "description": "QAViewer",
+      "granted-apps": [ "$XSAPPNAME(application,qaservicefreestyle)" ],
+      "grant-as-authority-to-apps": [ "$XSAPPNAME(application,qaservicefreestyle)" ]
     },
     {
       "name": "$XSAPPNAME.QAManager",
-      "description": "QAManager"
+      "description": "QAManager",
+      "granted-apps": [ "$XSAPPNAME(application,qaservicefreestyle)" ],
+      "grant-as-authority-to-apps": [ "$XSAPPNAME(application,qaservicefreestyle)" ]
     }
   ],
   "attributes": [],
@@ -47,7 +51,8 @@
   ],
   "oauth2-configuration": {
     "redirect-uris": [
-      "https://01736261trial-mta-approuter.cfapps.us10-001.hana.ondemand.com"
+      "https://01736261trial-mta-approuter.cfapps.us10-001.hana.ondemand.com",
+      "https://01736261trial.launchpad.cfapps.us10.hana.ondemand.com"
     ]
   }
 }

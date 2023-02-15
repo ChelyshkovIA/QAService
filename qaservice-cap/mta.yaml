@@ -8,7 +8,6 @@ modules:
     path: approuter
     requires:
       - name: QAService-auth
-      # - name: qaservice-destination
       - name: srv-api
         group: destinations
         properties:
@@ -44,12 +43,6 @@ modules:
       buildpack: nodejs_buildpack
 
 resources:
-  # - name: qaservice-destination
-  #   type: org.cloudfoundry.managed-service
-  #   parameters:
-  #     service: destination
-  #     service-plan: lite
-
   - name: QAService-db
     type: com.sap.xs.hdi-container
     parameters:
