@@ -125,7 +125,7 @@ function createProgressStatuses() {
 }
 
 function getXMLObjFromFile(sFileName) {
-    const sXMLFileContent = fs.readFileSync(__dirname + `\\src-xml\\${sFileName}.xml`, "utf-8");
+    const sXMLFileContent = fs.readFileSync(__dirname + `/src-xml/${sFileName}.xml`, "utf-8");
     return XML.parse(sXMLFileContent);
 }
 
@@ -289,7 +289,8 @@ function generateQuestionsCSV() {
             {id: "answer", title: "answer"},
             {id: "difficulty_ID", title: "difficulty_ID"},
             {id: "topic_ID", title: "topic_ID"},
-            {id: "group_ID", title: "group_ID"}
+            {id: "group_ID", title: "group_ID"},
+            {id: "progress_ID", title: "progress_ID"}
         ]
     });
 
