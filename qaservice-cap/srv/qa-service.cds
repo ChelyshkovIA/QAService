@@ -5,4 +5,5 @@ service QAService {
     entity Groups as projection on qaSchema.Groups;
     entity Difficulties as projection on qaSchema.Difficulties;
     entity Topics as projection on qaSchema.Topics;
+    entity Progress as projection on qaSchema.Progress;
 }

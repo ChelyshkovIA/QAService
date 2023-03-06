@@ -8,6 +8,7 @@ entity Questions : managed {
     difficulty : Association to Difficulties;
     topic      : Association to Topics;
     group      : Association to Groups;
+    progress   : Association to Progress;
 }
 
 entity Groups : managed {
@@ -29,4 +30,10 @@ entity Topics : managed {
     name      : String;
     groups    : Association to many Groups on groups.topic = $self;
     questions : Association to many Questions on questions.topic = $self;
+}
+
+entity Progress : managed {
+    key ID    : UUID;
+    name      : String;
+    questions : Association to many Questions on questions.progress = $self;
 }
