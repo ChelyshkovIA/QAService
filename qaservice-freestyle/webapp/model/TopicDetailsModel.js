@@ -14,10 +14,10 @@ sap.ui.define([
         },
 
         DIFFICULTY_ID: {
-            ELEMENTARY: "ada90e4e-7353-4533-f414-c329f3a0f8f0",
-            BASIC: "92c927a9-c302-30ed-60be-9d150e19ba18",
-            ADVANCED: "305ae917-827f-c61a-7b1f-048f91566865",
-            EXPERT: "aa885dc1-b321-f8bb-b442-fb1b99ec8fd6"
+            ELEMENTARY: "83889ebe-dd29-46bf-e52c-c29bb43f1f2d",
+            BASIC: "b4ac8d1e-3891-6e87-2da2-6698fcc4277e",
+            ADVANCED: "69aebb3c-1d3f-b6be-f4b8-06cb0932b145",
+            EXPERT: "db4e214a-b42b-981c-b367-8c9e94021fab"
         },
 
         init(oODataModel) {
