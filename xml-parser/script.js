@@ -4,6 +4,7 @@ const fs = require("fs");
 const XML = require("xml-obj");
 
 const _aDifficulties = createDifficulties();
+const _aProgress = createProgressStatuses(); 
 const _aTopics = [];
 const _aGroups = [];
 const _aQuestions = [];
@@ -14,7 +15,8 @@ Promise.all([
     generateTopicsCSV(),
     generateGroupsCSV(),
     generateDifficultiesCSV(),
-    generateQuestionsCSV()
+    generateQuestionsCSV(),
+    generatePrgressStatusCSV()
 ]).then(() => {
     console.log("******************************** DONE ********************************");
 });
@@ -60,6 +62,7 @@ function main() {
                         const sQuestionGroupID = sGroupID;
 
                         const sQuestionDifficultyID = aTempDiff[nIdx].ID;
+                        const sQuestionProgressStatusID = _aProgress[0].ID;
                         const sQuestionID = utils.guid();
                         const aTexts = getNodeTexts(oItem);
 
@@ -77,7 +80,7 @@ function main() {
 
                         const sQuestionText = sQuestionHeader + "/n" + sSubTexts;
 
-                        createQuestion(sQuestionID, sQuestionTopicID, sQuestionGroupID, sQuestionDifficultyID, sQuestionText, sQuestionAnswer);
+                        createQuestion(sQuestionID, sQuestionTopicID, sQuestionGroupID, sQuestionDifficultyID, sQuestionText, sQuestionAnswer, sQuestionProgressStatusID);
                     });
                 });
             });
@@ -113,17 +116,26 @@ function createDifficulties() {
     });
 }
 
+function createProgressStatuses() {
+    const aNames = ["None", "In Progress", "Attention", "Completed"];
+
+    return aNames.map(sName => {
+        return { ID: utils.guid(), name: sName };
+    });
+}
+
 function getXMLObjFromFile(sFileName) {
     const sXMLFileContent = fs.readFileSync(__dirname + `\\src-xml\\${sFileName}.xml`, "utf-8");
     return XML.parse(sXMLFileContent);
 }
 
-function createQuestion(sQuestionID, sQuestionTopicID, sQuestionGroupID, sQuestionDifficultyID, sQuestionText, sQuestionAnswer){
+function createQuestion(sQuestionID, sQuestionTopicID, sQuestionGroupID, sQuestionDifficultyID, sQuestionText, sQuestionAnswer, sQuestionProgressStatusID){
     _aQuestions.push({
         ID: sQuestionID,
         topic_ID: sQuestionTopicID,
         group_ID: sQuestionGroupID,
         difficulty_ID: sQuestionDifficultyID,
+        progress_ID: sQuestionProgressStatusID,
         text: sQuestionText,
         answer: sQuestionAnswer
     });
@@ -254,6 +266,18 @@ function generateDifficultiesCSV() {
     });
 
     return csvWriter.writeRecords(_aDifficulties);
+}
+
+function generatePrgressStatusCSV() {
+    const csvWriter = createCsvWriter({
+        path: "./csv-output/Progress.csv",
+        header: [
+            {id: "ID", title: "ID"},
+            {id: "name", title: "name"}
+        ]
+    });
+
+    return csvWriter.writeRecords(_aProgress);
 }
 
 function generateQuestionsCSV() {

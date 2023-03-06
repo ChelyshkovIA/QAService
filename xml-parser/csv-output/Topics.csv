@@ -1,9 +1,9 @@
 ID,name
-dd94fe9f-ff49-b3cc-3eee-f607418fadcd,Business Technology Platform
-24ef2942-a5f4-8145-2e89-5210e92a2f9f,Fiori Elements
-892fd0f4-715a-0941-cb0f-a5ce1044a09d,Git
-6954c459-fabf-eae8-1ffb-be7dafe2f377,JavaScript Core
-21496f8a-399e-039f-24ac-d8eedafb6b4e,JavaScript in WebBrowser
-a2692f42-63d2-fa84-98fc-7273cbb0e056,OData v2.0
-187cdceb-62f6-18b0-1fa7-f74b2b96e2e6,OData v4.0
-f3a57544-58fa-9af8-761e-266368ff68d4,SAPUI5
+7f389b33-c772-643e-945d-4d2235306bb6,Business Technology Platform
+9869a24b-9768-7f20-2060-5eee4aa8bede,Fiori Elements
+c2fa4fd8-08ff-bad0-ed00-e7d9ce78bed1,Git
+3b8e54d8-ed3c-4db0-1b98-2a523f365801,JavaScript Core
+568d239a-50c0-d308-2535-f12988bcb983,JavaScript in WebBrowser
+21b5eacc-ca74-bf3f-1727-1b48c91849e0,OData v2.0
+802de1d8-abdc-7055-477e-24f20bb7f9be,OData v4.0
+93a874eb-cf57-3666-487c-94647a2cdebf,SAPUI5
