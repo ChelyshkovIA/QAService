@@ -78,7 +78,7 @@ function main() {
                         }, "");
                         const sQuestionAnswer = "";
 
-                        const sQuestionText = sQuestionHeader + "/n" + sSubTexts;
+                        const sQuestionText = sQuestionHeader + " \n " + sSubTexts;
 
                         createQuestion(sQuestionID, sQuestionTopicID, sQuestionGroupID, sQuestionDifficultyID, sQuestionText, sQuestionAnswer, sQuestionProgressStatusID);
                     });
@@ -210,7 +210,7 @@ function getSubTexts(oNode) {
         listRes += listItems.reduce((itemRes, listItem, nIdx) => {
             const aTexts = getNodeTexts(listItem);
 
-            itemRes += ` \ ${nIdx}) ` +  aTexts.reduce((textRes, oText) => {
+            itemRes += ` \n ${++nIdx}) ` +  aTexts.reduce((textRes, oText) => {
                 const aSpans = getNodeSpans(oText);
 
                 textRes += aSpans.reduce((spanRes, oSpan) => {
