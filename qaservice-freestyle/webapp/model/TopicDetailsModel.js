@@ -14,10 +14,10 @@ sap.ui.define([
         },
 
         DIFFICULTY_ID: {
-            ELEMENTARY: "83889ebe-dd29-46bf-e52c-c29bb43f1f2d",
-            BASIC: "b4ac8d1e-3891-6e87-2da2-6698fcc4277e",
-            ADVANCED: "69aebb3c-1d3f-b6be-f4b8-06cb0932b145",
-            EXPERT: "db4e214a-b42b-981c-b367-8c9e94021fab"
+            ELEMENTARY: "891a0c87-5825-b3d7-d94d-243a77a314b6",
+            BASIC: "af7d706e-199c-f4e9-b51e-3ecd815fd3b4",
+            ADVANCED: "7a8eec66-b5a4-5c59-f4c7-b844cb506751",
+            EXPERT: "405fa0bc-b8d6-946a-5997-34401cc47721"
         },
 
         init(oODataModel) {
@@ -56,12 +56,13 @@ sap.ui.define([
 
         async getTopicGroupsWithQuestions(sTopicId, sDifficultyId) {
             const aGroupFilters = [new Filter("topic_ID", FilterOperator.EQ, sTopicId)];
-            const sExpandString = sDifficultyId === "all" ? "questions" : `questions($filter=difficulty_ID eq ${sDifficultyId})`;
+            const sExpandString = sDifficultyId === "all" ? "questions($expand=progress)" : `questions($filter=difficulty_ID eq ${sDifficultyId};$expand=progress)`;
 
             return new Promise(function(fnResolve, fnReject) {
                 this.ODataModel.read(this._ENTITY_SET.GROUPS, {
                     success(oData) {
                         fnResolve(oData.results);
+                        console.log(oData.results);
                     },
                     error: fnReject,
                     filters: aGroupFilters,

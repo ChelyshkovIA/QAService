@@ -87,7 +87,15 @@
                                                     <m:Label text="Questions" />
                                                 </t:label>
                                                 <t:template>
-                                                    <m:Text text="{appModel>text}"  />
+                                                    <m:Text wrapping="true" renderWhitspaces="true" text="{appModel>text}"  />
+                                                </t:template>
+                                            </t:Column>
+                                            <t:Column>
+                                                <t:label>
+                                                    <m:Label text="Status" />
+                                                </t:label>
+                                                <t:template>
+                                                    <m:Text text="{appModel>progress/name}"  />
                                                 </t:template>
                                             </t:Column>
                                         </t:columns>
