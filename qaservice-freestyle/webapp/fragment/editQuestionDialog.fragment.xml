@@ -1,0 +1,27 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Dialog title="Edit Question">
+        <content>
+            <FlexBox class="sapUiSmallMargin" direction="Column">
+                <FlexBox class="sapUiSmallMarginBottom" direction="Column">
+                    <Label text="Question text:" />
+                    <TextArea growing="true" value="{text}" width="100%" />
+                </FlexBox>
+
+                <FlexBox class="sapUiSmallMarginBottom" direction="Column">
+                    <Label text="Progress Status:" />
+                    <Select items="{/Progress}" selectedKey="{progress_ID}">
+                        <core:Item key="{ID}" text="{name}" />
+                    </Select>
+                </FlexBox>
+            </FlexBox>
+        </content>
+
+        <buttons>
+            <Button text="Save" press=".onSaveQuestionPress" />
+            <Button text="Close" press=".onCloseEditQuestionDialog" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

@@ -18,14 +18,22 @@ sap.ui.define([
 
         onRowSelectionChange(oEvent) {
             const oTable = oEvent.getSource();
-            const oAppModel = this.getView().getModel("appModel");
             const sQuestionID = this._getSelectedQuestionId(oTable);
             this._setQuestionSelected(sQuestionID ? true : false);
 
             if (!sQuestionID) return;
-
-            oAppModel.setProperty("/questionsTable/selectedQuestionId", sQuestionID);
+            
+            this._setSelectedQuestionId(sQuestionID);
             this._bindAnswerTextArea(sQuestionID);
+        },
+
+        _getQuestionsTreeTable() {
+            return this.getView().byId("questionsTreeTable");
+        },
+
+        _setSelectedQuestionId(sId) {
+            const oAppModel = this.getView().getModel("appModel");
+            oAppModel.setProperty("/questionsTable/selectedQuestionId", sId);
         },
 
         _getSelectedQuestionId(oTable) {
@@ -56,6 +64,41 @@ sap.ui.define([
         async onDifficultySelect(oEvent) {
             this._removeTableSelections();
             await this._updateQuestionsModel();
+        },
+
+        async onQuestionsEditButtonPress(sSelectedQuestionId) {
+            this._setSelectedQuestionId(sSelectedQuestionId);
+            await this._openEditQuestionDialog();
+            this._bindEditQuestionDialog(sSelectedQuestionId);
+        },
+
+        async onSaveQuestionPress() {
+            await TopicDetailsModel.submit();
+            this.editQuestionDialog.close();
+            this._showEditSuccessMessage();
+            await this._updateQuestionsModel();
+        },
+
+        _showEditSuccessMessage() {
+            MessageToast.show("Updated successfuly");
+        },
+        
+        async _openEditQuestionDialog() {
+            if (!this.editQuestionDialog) {
+                this.editQuestionDialog = await this.loadFragment({
+                    name: "qaservicefreestyle.fragment.editQuestionDialog"
+                });
+            }
+    
+            this.editQuestionDialog.open();
+        },
+
+        _bindEditQuestionDialog(sSelectedQuestionId) {
+            this.editQuestionDialog.bindElement(`/Questions(${sSelectedQuestionId})`);
+        },
+        
+        onCloseEditQuestionDialog() {
+            this.editQuestionDialog.close();
         },
 
         async onOpenNewQuestionDialogPress() {
