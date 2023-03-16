@@ -11,13 +11,22 @@
             <ObjectPageHeader objectTitle="{name}"></ObjectPageHeader>
         </headerTitle>
 
-        <headerContent>
-            <m:FlexBox direction="Column" alignItems="Start">
-                <m:ObjectAttribute text="{name} Topic details with full questions list"></m:ObjectAttribute>
+        <headerContent width="100%">
+            <m:FlexBox direction="Column" alignItems="Start" width="100%">
+                <m:FlexBox direction="Row">
+                    <m:ObjectAttribute text="{name} Topic details with full questions list"></m:ObjectAttribute>
+                </m:FlexBox>
             </m:FlexBox>
         </headerContent>
 
         <sections>
+            <ObjectPageSection>
+                <subSections>
+                    <ObjectPageSubSection title="{name} Groups">
+                        <core:Fragment type="XML" fragmentName="qaservicefreestyle.fragment.topicGroupsDonutChart" />
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
             <ObjectPageSection>
                 <subSections>
                     <ObjectPageSubSection title="Questions">

@@ -16,6 +16,12 @@ sap.ui.define([
             TopicDetailsModel.init(this.getView().getModel());
         },
 
+        onChartGroupSelect(oEvent) {
+            const nSegmentNumber = oEvent.getParameters().data[0].data["_context_row_number"];
+            const oSelectedGroup = this.getView().getModel("appModel").getProperty("/groupsTable/data/categories")[nSegmentNumber];
+            const sGroupId = oSelectedGroup.ID;
+        },
+
         onRowSelectionChange(oEvent) {
             const oTable = oEvent.getSource();
             const sQuestionID = this._getSelectedQuestionId(oTable);
