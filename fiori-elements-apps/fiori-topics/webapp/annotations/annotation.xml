@@ -45,6 +45,93 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+
+                <!-- Header Facets -->
+                <Annotation Term="UI.HeaderFacets" >
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Creation Info" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicCreationFieldGroup" />
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Modification Info" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicModificationFieldGroup" />
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Useful links" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicLinksListFieldGroup" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+
+                <!-- Sections  -->
+                <Annotation Term="UI.Facets" >
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Creation Info" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicCreationFieldGroup" />
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Modification Info" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicModificationFieldGroup" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+
+                <!-- Creation Section  -->
+                <Annotation Term="UI.FieldGroup" Qualifier="TopicCreationFieldGroup">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="createdAt" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="createdBy" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Modification Section  -->
+                <Annotation Term="UI.FieldGroup" Qualifier="TopicModificationFieldGroup">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="modifiedAt" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="modifiedBy" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Field Group With URLs -->
+                <Annotation Term="UI.FieldGroup" Qualifier="TopicLinksListFieldGroup">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <!-- Absolute URL Path -->
+                                <Record Type="UI.DataFieldWithUrl">
+                                    <PropertyValue Property="Url" String="https://www.google.com"/>
+                                    <PropertyValue Property="Value" Path="name" />
+                                    <PropertyValue Property="Label" String="Topic DOCs (absolute path)"/>
+                                </Record>
+
+                                <!-- Path Reference to a property -->
+                                <Record Type="UI.DataFieldWithUrl">
+                                    <PropertyValue Property="Url" Path="name" />
+                                    <PropertyValue Property="Value" Path="ID" />
+                                    <PropertyValue Property="Label" String="Topics DOCs (property path)"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
             </Annotations>
         </Schema>
     </edmx:DataServices>
