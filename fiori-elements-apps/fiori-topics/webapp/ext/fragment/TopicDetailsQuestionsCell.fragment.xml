@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.suite.ui.microchart">
+    <BulletMicroChart size="XS" scale="M" targetValue="1.5" forecastValue="{difficulty/numeric}">
+        <actual>
+            <BulletMicroChartData value="{difficulty/numeric}" color="Good"/>
+        </actual>
+        <thresholds>
+            <BulletMicroChartData value="0" color="Error"/>
+            <BulletMicroChartData value="1" color="Critical"/>
+            <BulletMicroChartData value="2" color="Critical"/>
+            <BulletMicroChartData value="3" color="Error"/>
+        </thresholds>
+    </BulletMicroChart>
+</core:FragmentDefinition>

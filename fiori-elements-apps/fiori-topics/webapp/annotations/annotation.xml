@@ -20,8 +20,8 @@
                             <PropertyValue Property="Label" String="Progress Status"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="difficulty/name" />
-                            <PropertyValue Property="Label" String="Difficulty"/>
+                            <PropertyValue Property="Value" Path="difficulty/numeric" />
+                            <PropertyValue Property="Label" String="Numeric"/>
                         </Record>
                     </Collection>
                 </Annotation>

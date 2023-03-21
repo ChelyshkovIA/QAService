@@ -1,0 +1,7 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Column>
+        <Text text="Custom Column" />
+    </Column>
+</core:FragmentDefinition>
