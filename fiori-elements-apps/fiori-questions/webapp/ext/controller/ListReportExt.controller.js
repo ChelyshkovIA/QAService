@@ -1,7 +1,8 @@
 sap.ui.define([
     "sap/ui/model/Filter",
-    "sap/ui/model/FilterOperator"
-], function (Filter, FilterOperator) {
+    "sap/ui/model/FilterOperator",
+    "sap/m/MessageToast"
+], function (Filter, FilterOperator, MessageToast) {
     "use strict";
     return {
         ID: {
@@ -32,6 +33,10 @@ sap.ui.define([
             oBindingParams.parameters = oBindingParams.parameters || {};
             console.log(sSelectedKey);
             this._updateFilters(oBindingParams);
+        },
+
+        onShowMessagePress() {
+            MessageToast.show("Hello, I'm Custom Action!");
         },
 
         _updateFilters(oBindingParams) {
