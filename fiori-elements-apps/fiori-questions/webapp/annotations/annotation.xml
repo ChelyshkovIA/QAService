@@ -13,6 +13,16 @@
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <!-- Topics Name Annotations  -->
+            <Annotations Target="QAService.Topics/name">
+                <Annotation Term="Common.Label" String="Topic name"/>
+            </Annotations>
+
+            <!-- Groups Names Annotations  -->
+            <Annotations Target="QAService.Groups/name">
+                <Annotation Term="Common.Label" String="Group name"/>
+            </Annotations>
+
             <!-- Questions Entity Type Annotations -->
             <Annotations Target="QAService.Questions">
 
