@@ -15,12 +15,50 @@
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
             <!-- Topics Name Annotations  -->
             <Annotations Target="QAService.Topics/name">
+                <!-- Label for the Topic Name -->
                 <Annotation Term="Common.Label" String="Topic name"/>
+
+                <!-- Value list for the Topic Names -->
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="Topics"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="name"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Enable Value List for the Topic Names -->
+                <Annotation Term="Common.ValueListWithFixedValues"/>
             </Annotations>
 
             <!-- Groups Names Annotations  -->
             <Annotations Target="QAService.Groups/name">
+                <!-- Label for the Group Name -->
                 <Annotation Term="Common.Label" String="Group name"/>
+
+                <!-- Value List for the Group Names -->
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="Groups"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="name"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Enable Value List for the Group Names -->
+                <Annotation Term="Common.ValueListWithFixedValues"/>
             </Annotations>
 
             <!-- Questions Entity Type Annotations -->
