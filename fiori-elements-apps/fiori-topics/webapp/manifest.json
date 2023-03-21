@@ -121,6 +121,14 @@
                             "className": "sap.ui.core.Fragment",
                             "fragmentName": "fioritopics.ext.fragment.TopicDetailsQuestionsCell",
                             "type": "XML"
+                        },
+                        "BeforeFacet|Topics|com.sap.vocabularies.UI.v1.FieldGroup::TopicCreationFieldGroup": {
+                            "type": "XML",
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "fioritopics.ext.fragment.TopicDetailsCustomSection",
+                            "sap.ui.generic.app": {
+                                "title": "Custom Section"
+                            }
                         }
                     },
                     "sap.suite.ui.generic.template.ListReport.view.ListReport": {}
