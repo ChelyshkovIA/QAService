@@ -87,6 +87,10 @@
                             <PropertyValue Property="Value" Path="difficulty/name" />
                             <PropertyValue Property="Label" String="Difficulty"/>
                         </Record>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Target" AnnotationPath="difficulty/@UI.Chart#QuestionDifficultyChart"/>
+                            <PropertyValue Property="Label" String="Difficulty"/>
+                        </Record>
                     </Collection>
                 </Annotation>
 
@@ -97,6 +101,41 @@
                         <PropertyPath>topic/name</PropertyPath>
                         <PropertyPath>group/name</PropertyPath>
                     </Collection>
+                </Annotation>
+            </Annotations>
+
+            <!-- Difficutlties Entity Type Annotations -->
+            <Annotations Target="QAService.Difficulties">
+                <!-- Data Point for the Difficulty numeric property -->
+                <Annotation Term="UI.DataPoint" Qualifier="QuestionDifficultyDataPoint">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Value" Path="numeric" />
+                        <PropertyValue Property="CriticalityCalculation">
+                            <Record Type="UI.CriticalityCalculationType">
+                                <PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Minimize" />
+                                <PropertyValue Property="DeviationRangeLowValue" Int="2" />
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Chart for the Difficulty numeric property -->
+                <Annotation Term="UI.Chart" Qualifier="QuestionDifficultyChart">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bullet"/>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>numeric</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#QuestionDifficultyDataPoint"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
                 </Annotation>
             </Annotations>
         </Schema>
