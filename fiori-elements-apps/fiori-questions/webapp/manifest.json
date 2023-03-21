@@ -101,6 +101,24 @@
       "config": {},
       "routes": [],
       "targets": {}
+    },
+    "extends": {
+      "extensions": {
+        "sap.ui.controllerExtensions": {
+          "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+              "controllerName": "fioriquestions.ext.controller.ListReportExt"
+          }
+        },
+        "sap.ui.viewExtensions": {
+          "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+              "SmartFilterBarControlConfigurationExtension|Questions": {
+                  "className": "sap.ui.core.Fragment",
+                  "fragmentName": "fioriquestions.ext.fragment.QuestionsListCustomFilter",
+                  "type": "XML"
+              }
+          }
+        }
+      }
     }
   },
   "sap.ui.generic.app": {
