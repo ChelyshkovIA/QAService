@@ -37,6 +37,15 @@
                         </Record>
                     </Collection>
                 </Annotation>
+
+                <!-- Questions Filters Annotation -->
+                <Annotation Term="UI.SelectionFields" >
+                    <Collection>
+                        <PropertyPath>ID</PropertyPath>
+                        <PropertyPath>topic/name</PropertyPath>
+                        <PropertyPath>group/name</PropertyPath>
+                    </Collection>
+                </Annotation>
             </Annotations>
         </Schema>
     </edmx:DataServices>
