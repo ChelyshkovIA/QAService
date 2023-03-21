@@ -1,0 +1,3 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+    <RatingIndicator value="{difficulty/numeric}" maxValue="3" editable="false"/>
+</core:FragmentDefinition>

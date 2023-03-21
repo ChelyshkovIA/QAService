@@ -68,6 +68,10 @@
                 <Annotation Term="UI.LineItem" >
                     <Collection>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="difficulty/numeric" />
+                            <PropertyValue Property="Label" String="Numeric"/>
+                        </Record>
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="ID" />
                             <PropertyValue Property="Label" String="ID"/>
                         </Record>

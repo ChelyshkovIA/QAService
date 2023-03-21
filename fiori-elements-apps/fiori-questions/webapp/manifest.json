@@ -111,11 +111,21 @@
         },
         "sap.ui.viewExtensions": {
           "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-              "SmartFilterBarControlConfigurationExtension|Questions": {
-                  "className": "sap.ui.core.Fragment",
-                  "fragmentName": "fioriquestions.ext.fragment.QuestionsListCustomFilter",
-                  "type": "XML"
-              }
+            "SmartFilterBarControlConfigurationExtension|Questions": {
+                "className": "sap.ui.core.Fragment",
+                "fragmentName": "fioriquestions.ext.fragment.QuestionsListCustomFilter",
+                "type": "XML"
+            },
+            "ResponsiveTableColumnsExtension|Questions": {
+              "className": "sap.ui.core.Fragment",
+              "fragmentName": "fioriquestions.ext.fragment.QuestionsListCustomColumn",
+              "type": "XML"
+            },
+            "ResponsiveTableCellsExtension|Questions": {
+                "className": "sap.ui.core.Fragment",
+                "fragmentName": "fioriquestions.ext.fragment.QuestionsListCustomCell",
+                "type": "XML"
+            }
           }
         }
       }
