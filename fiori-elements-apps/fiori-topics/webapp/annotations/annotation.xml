@@ -102,6 +102,10 @@
                             <PropertyValue Property="Label" String="Useful links" />
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicLinksListFieldGroup" />
                         </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Data Point"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#TopicRatingDataPoint"/>
+                        </Record>
                     </Collection>
                 </Annotation>
 
@@ -179,6 +183,16 @@
                                 </Record>
                             </Collection>
                         </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Topic Rating Data Point -->
+                <Annotation Term="UI.DataPoint" Qualifier="TopicRatingDataPoint">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Title" String="Topic Rating Data Point"/>
+                        <PropertyValue Property="Value" Int="3" />
+                        <PropertyValue Property="TargetValue" Int="5" />
+                        <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Rating" />
                     </Record>
                 </Annotation>
             </Annotations>
