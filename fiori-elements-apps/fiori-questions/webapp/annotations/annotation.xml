@@ -102,6 +102,22 @@
                         <PropertyPath>group/name</PropertyPath>
                     </Collection>
                 </Annotation>
+
+                <!-- Header Info of Questions App Object Page -->
+                <Annotation Term="UI.HeaderInfo" >
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="topic/name" />
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="text" />
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
             </Annotations>
 
             <!-- Difficutlties Entity Type Annotations -->
