@@ -1,1 +1,7 @@
-<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m"/>
+<core:FragmentDefinition 
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Column>
+        <Text text="Custom Difficulty Column" />
+    </Column>
+</core:FragmentDefinition>
