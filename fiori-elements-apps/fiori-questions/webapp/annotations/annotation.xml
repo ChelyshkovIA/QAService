@@ -111,11 +111,6 @@
                                 <PropertyValue Property="Value" Path="topic/name" />
                             </Record>
                         </PropertyValue>
-                        <PropertyValue Property="Description">
-                            <Record Type="UI.DataField">
-                                <PropertyValue Property="Value" Path="text" />
-                            </Record>
-                        </PropertyValue>
                     </Record>
                 </Annotation>
 
@@ -130,6 +125,16 @@
                         </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#QuestionProgressStatusDataPoint"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+
+                <!-- Question Object Page Section Facets -->
+                <Annotation Term="UI.Facets" >
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Question Info"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#QuestionFieldGroup"/>
                         </Record>
                     </Collection>
                 </Annotation>
@@ -160,6 +165,40 @@
                     <Record Type="UI.DataPointType">
                         <PropertyValue Property="Title" String="Question Progress Status"/>
                         <PropertyValue Property="Value" Path="progress/name"/>
+                    </Record>
+                </Annotation>
+
+                <!-- Question Info Field Group -->
+                <Annotation Term="UI.FieldGroup" Qualifier="QuestionFieldGroup">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Question Text"/>
+                                    <PropertyValue Property="Value" Path="text"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Topic Name"/>
+                                    <PropertyValue Property="Value" Path="topic/name"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Group Name"/>
+                                    <PropertyValue Property="Value" Path="group/name"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Difficulty"/>
+                                    <PropertyValue Property="Value" Path="difficulty/name"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Progress Status"/>
+                                    <PropertyValue Property="Value" Path="progress/name"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <Annotation Term="Common.Label" String="Answer"/>
+                                    <PropertyValue Property="Value" Path="answer"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
                     </Record>
                 </Annotation>
             </Annotations>
