@@ -118,6 +118,50 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+
+                <!-- Question Object Page Header Facets -->
+                <Annotation Term="UI.HeaderFacets" >
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#QuestionDifficultyRatingDataPoint"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#QuestionDifficultyProgressDataPoint"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#QuestionProgressStatusDataPoint"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+
+                <!-- Question Rating Data Point -->
+                <Annotation Term="UI.DataPoint" Qualifier="QuestionDifficultyRatingDataPoint">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Title" String="Question Difficulty Rating"/>
+                        <PropertyValue Property="Value" Path="difficulty/numeric" />
+                        <PropertyValue Property="TargetValue" Int="3" />
+                        <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Rating"/>
+                    </Record>
+                </Annotation>
+
+                <!-- Question Difficulty Progress Data Point -->
+                <Annotation Term="UI.DataPoint" Qualifier="QuestionDifficultyProgressDataPoint">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Title" String="Question Difficulty Progress"/>
+                        <PropertyValue Property="Value" Path="difficulty/numeric"/>
+                        <PropertyValue Property="TargetValue" Int="3"/>
+                        
+                        <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress"/>
+                    </Record>
+                </Annotation>
+
+                <!-- Question Progress Status Data Point -->
+                <Annotation Term="UI.DataPoint" Qualifier="QuestionProgressStatusDataPoint">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Title" String="Question Progress Status"/>
+                        <PropertyValue Property="Value" Path="progress/name"/>
+                    </Record>
+                </Annotation>
             </Annotations>
 
             <!-- Difficutlties Entity Type Annotations -->
