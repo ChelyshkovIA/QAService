@@ -7,6 +7,18 @@
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <!-- Difficulty Criticality Data Point -->
+            <Annotations Target="QAService.Difficulties">
+                <Annotation Term="UI.DataPoint" Qualifier="DifficyltyDataPointBulletChart">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Value" Path="numeric"/>
+                        <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress"/>
+                        <PropertyValue Property="TargetValue" Decimal="3"/>
+                        <PropertyValue Property="Criticality" Path="numeric"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
             <!-- Questions Entity Type Annotations  -->
             <Annotations Target="QAService.Questions">
                 <Annotation Term="UI.LineItem" Qualifier="QuestionsLineItem">
@@ -22,6 +34,10 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="difficulty/numeric" />
                             <PropertyValue Property="Label" String="{@i18n>numeric}"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Label" String="{@i18n>difficultyChart}"/>
+                            <PropertyValue Property="Target" AnnotationPath="difficulty/@UI.DataPoint#DifficyltyDataPointBulletChart"/>
                         </Record>
                     </Collection>
                 </Annotation>
