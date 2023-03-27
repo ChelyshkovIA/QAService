@@ -121,7 +121,7 @@
                             <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#QuestionDifficultyRatingDataPoint"/>
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#QuestionDifficultyProgressDataPoint"/>
+                            <PropertyValue Property="Target" AnnotationPath="difficulty/@UI.DataPoint#QuestionDifficultyProgressDataPoint"/>
                         </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#QuestionProgressStatusDataPoint"/>
@@ -146,17 +146,6 @@
                         <PropertyValue Property="Value" Path="difficulty/numeric" />
                         <PropertyValue Property="TargetValue" Int="3" />
                         <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Rating"/>
-                    </Record>
-                </Annotation>
-
-                <!-- Question Difficulty Progress Data Point -->
-                <Annotation Term="UI.DataPoint" Qualifier="QuestionDifficultyProgressDataPoint">
-                    <Record Type="UI.DataPointType">
-                        <PropertyValue Property="Title" String="Question Difficulty Progress"/>
-                        <PropertyValue Property="Value" Path="difficulty/numeric"/>
-                        <PropertyValue Property="TargetValue" Int="3"/>
-                        
-                        <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress"/>
                     </Record>
                 </Annotation>
 
@@ -233,6 +222,28 @@
                                     <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#QuestionDifficultyDataPoint"/>
                                 </Record>
                             </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Question Difficulty Progress Data Point -->
+                <Annotation Term="UI.DataPoint" Qualifier="QuestionDifficultyProgressDataPoint">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Title" String="Question Difficulty Progress"/>
+                        <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress"/>
+                        <PropertyValue Property="Value" Path="numeric"/>
+                        <PropertyValue Property="TargetValue" Int="3"/>
+                        <PropertyValue Property="Criticality" Path="numeric"/>
+                        
+
+                        <PropertyValue Property="CriticalityCalculation">
+                            <Record Type="UI.CriticalityCalculationType">
+                                <PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Minimize"/>
+                                <PropertyValue Property="AcceptanceRangeHighValue" Decimal="1"/>
+                                <PropertyValue Property="AcceptanceRangeLowValue" Decimal="0"/>
+                                <PropertyValue Property="DeviationRangeHighValue" Decimal="2"/>
+                            </Record>
+                            <Annotation Term="UI.RecommendationState" Int="2"/>
                         </PropertyValue>
                     </Record>
                 </Annotation>
