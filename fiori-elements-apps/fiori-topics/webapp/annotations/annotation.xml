@@ -13,15 +13,15 @@
                     <Collection>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="text" />
-                            <PropertyValue Property="Label" String="Text"/>
+                            <PropertyValue Property="Label" String="{@i18n>text}"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="progress/name" />
-                            <PropertyValue Property="Label" String="Progress Status"/>
+                            <PropertyValue Property="Label" String="{@i18n>progressStatus}"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="difficulty/numeric" />
-                            <PropertyValue Property="Label" String="Numeric"/>
+                            <PropertyValue Property="Label" String="{@i18n>numeric}"/>
                         </Record>
                     </Collection>
                 </Annotation>
@@ -33,15 +33,15 @@
                     <Collection>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="ID"/>
-                            <PropertyValue Property="Label" String="ID"/>
+                            <PropertyValue Property="Label" String="{@i18n>id}"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="name"/>
-                            <PropertyValue Property="Label" String="Name"/>
+                            <PropertyValue Property="Label" String="{@i18n>name}"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="topic/name"/>
-                            <PropertyValue Property="Label" String="Topic Name"/>
+                            <PropertyValue Property="Label" String="{@i18n>topicName}"/>
                         </Record>
                     </Collection>
                 </Annotation>
@@ -54,11 +54,11 @@
                     <Collection>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="ID"/>
-                            <PropertyValue Property="Label" String="Topic ID"/>
+                            <PropertyValue Property="Label" String="{@i18n>topicId}"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="name"/>
-                            <PropertyValue Property="Label" String="Name"/>
+                            <PropertyValue Property="Label" String="{@i18n>name}"/>
                         </Record>
                     </Collection>
                 </Annotation>
@@ -91,19 +91,19 @@
                 <Annotation Term="UI.HeaderFacets" >
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Creation Info" />
+                            <PropertyValue Property="Label" String="{@i18n>creationInfo}" />
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicCreationFieldGroup" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Modification Info" />
+                            <PropertyValue Property="Label" String="{@i18n>modificationInfo}" />
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicModificationFieldGroup" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Useful links" />
+                            <PropertyValue Property="Label" String="{@i18n>usefulLinks}" />
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicLinksListFieldGroup" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Data Point"/>
+                            <PropertyValue Property="Label" String="{@i18n>dataPoint}"/>
                             <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#TopicRatingDataPoint"/>
                         </Record>
                     </Collection>
@@ -113,19 +113,19 @@
                 <Annotation Term="UI.Facets" >
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Creation Info" />
+                            <PropertyValue Property="Label" String="{@i18n>creationInfo}" />
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicCreationFieldGroup" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Modification Info" />
+                            <PropertyValue Property="Label" String="{@i18n>modificationInfo}" />
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicModificationFieldGroup" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Topic Questions"/>
+                            <PropertyValue Property="Label" String="{@i18n>topicQuestions}"/>
                             <PropertyValue Property="Target" AnnotationPath="questions/@UI.LineItem#QuestionsLineItem"/>
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Topic Groups"/>
+                            <PropertyValue Property="Label" String="{@i18n>topicGroups}"/>
                             <PropertyValue Property="Target" AnnotationPath="groups/@UI.LineItem#GroupsLineItem"/>
                         </Record>
                     </Collection>
@@ -172,14 +172,14 @@
                                 <Record Type="UI.DataFieldWithUrl">
                                     <PropertyValue Property="Url" String="https://www.google.com"/>
                                     <PropertyValue Property="Value" Path="name" />
-                                    <PropertyValue Property="Label" String="Topic DOCs (absolute path)"/>
+                                    <PropertyValue Property="Label" String="{@i18n>topicDocsAbsolutePath}"/>
                                 </Record>
 
                                 <!-- Path Reference to a property -->
                                 <Record Type="UI.DataFieldWithUrl">
                                     <PropertyValue Property="Url" Path="name" />
                                     <PropertyValue Property="Value" Path="ID" />
-                                    <PropertyValue Property="Label" String="Topics DOCs (property path)"/>
+                                    <PropertyValue Property="Label" String="{@i18n>topicsDocsPropertyPath}"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
@@ -189,7 +189,7 @@
                 <!-- Topic Rating Data Point -->
                 <Annotation Term="UI.DataPoint" Qualifier="TopicRatingDataPoint">
                     <Record Type="UI.DataPointType">
-                        <PropertyValue Property="Title" String="Topic Rating Data Point"/>
+                        <PropertyValue Property="Title" String="{@i18n>topicRatingDataPoint}"/>
                         <PropertyValue Property="Value" Int="3" />
                         <PropertyValue Property="TargetValue" Int="5" />
                         <PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Rating" />
