@@ -129,6 +129,11 @@
                             "sap.ui.generic.app": {
                                 "title": "Custom Section"
                             }
+                        },
+                        "SmartFormExtension|Topics|com.sap.vocabularies.UI.v1.FieldGroup::TopicModificationCreationFieldGroup": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "fioritopics.ext.fragment.TopicDetailsCustomField",
+                            "type": "XML"
                         }
                     },
                     "sap.suite.ui.generic.template.ListReport.view.ListReport": {}

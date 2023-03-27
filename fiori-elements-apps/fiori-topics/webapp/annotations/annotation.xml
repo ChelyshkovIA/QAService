@@ -137,6 +137,10 @@
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicModificationFieldGroup" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>fullInfo}"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicModificationCreationFieldGroup"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Label" String="{@i18n>topicQuestions}"/>
                             <PropertyValue Property="Target" AnnotationPath="questions/@UI.LineItem#QuestionsLineItem"/>
                         </Record>
@@ -173,6 +177,28 @@
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="modifiedBy" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Full Creation and Modification Section  -->
+                <Annotation Term="UI.FieldGroup" Qualifier="TopicModificationCreationFieldGroup">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="modifiedAt"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="modifiedBy"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="createdAt"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="createdBy"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>

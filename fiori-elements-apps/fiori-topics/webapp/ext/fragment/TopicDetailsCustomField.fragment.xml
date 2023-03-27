@@ -1,0 +1,9 @@
+<core:FragmentDefinition 
+    xmlns:core="sap.ui.core"
+    xmlns:sfo="sap.ui.comp.smartform"
+	xmlns:smartList="sap.ui.comp.smartlist"
+    xmlns="sap.m">
+    <sfo:GroupElement>
+        <Image height="150px" src="https://www.park.by/upload/iblock/547/547c916aba13d22714fad55cd5a2ca35.png" />
+    </sfo:GroupElement>
+</core:FragmentDefinition>
