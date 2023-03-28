@@ -164,7 +164,16 @@
                         "entitySet": "Topics",
                         "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
                         "component": {
-                            "name": "sap.suite.ui.generic.template.ObjectPage"
+                            "name": "sap.suite.ui.generic.template.ObjectPage",
+                            "settings": {
+                                "sections": {
+                                    "groups::com.sap.vocabularies.UI.v1.LineItem::GroupsLineItem": {
+                                        "tableSettings": {
+                                            "type": "GridTable"
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
