@@ -104,6 +104,11 @@
         },
         "extends": {
             "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+                        "controllerName": "fioritopics.ext.controller.TopicDetailsControllerExt"
+                    }
+                },
                 "sap.ui.viewExtensions": {
                     "sap.suite.ui.generic.template.ObjectPage.view.Details": {
                         "AfterHeaderFacet|Topics|headerEditable::com.sap.vocabularies.UI.v1.FieldGroup::TopicLinksListFieldGroup": {
