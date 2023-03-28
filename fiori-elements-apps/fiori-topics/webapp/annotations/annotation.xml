@@ -33,6 +33,8 @@
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="difficulty/numeric" />
+                            <PropertyValue Property="Criticality" Path="difficulty/numeric"/>
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/>
                             <PropertyValue Property="Label" String="{@i18n>numeric}"/>
                         </Record>
                         <Record Type="UI.DataFieldForAnnotation">
