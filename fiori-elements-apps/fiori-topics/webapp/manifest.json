@@ -112,16 +112,6 @@
                             "fragmentName": "fioritopics.ext.fragment.TopicDetailsCustomFacet",
                             "bVisibleOnEdit": true
                         },
-                        "ResponsiveTableColumnsExtension|Questions|questions::com.sap.vocabularies.UI.v1.LineItem::QuestionsLineItem": {
-                            "className": "sap.ui.core.Fragment",
-                            "fragmentName": "fioritopics.ext.fragment.TopicDetailsQuestionsColumn",
-                            "type": "XML"
-                        },
-                        "ResponsiveTableCellsExtension|Questions|questions::com.sap.vocabularies.UI.v1.LineItem::QuestionsLineItem": {
-                            "className": "sap.ui.core.Fragment",
-                            "fragmentName": "fioritopics.ext.fragment.TopicDetailsQuestionsCell",
-                            "type": "XML"
-                        },
                         "BeforeFacet|Topics|com.sap.vocabularies.UI.v1.FieldGroup::TopicCreationFieldGroup": {
                             "type": "XML",
                             "className": "sap.ui.core.Fragment",
@@ -163,6 +153,9 @@
                             "dateSettings": {
                                 "useDateRange": true
                             }
+                        },
+                        "tableSettings": {
+                            "type": "GridTable"
                         }
                     }
                 },
