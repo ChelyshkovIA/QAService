@@ -66,6 +66,7 @@
 
                 <!-- Questions Table Annotation -->
                 <Annotation Term="UI.LineItem" >
+                    <Annotation Term="UI.Criticality" Path="difficulty/numeric"/>
                     <Collection>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="difficulty/numeric" />
