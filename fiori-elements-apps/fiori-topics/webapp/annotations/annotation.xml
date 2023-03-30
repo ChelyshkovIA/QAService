@@ -21,6 +21,47 @@
 
             <!-- Questions Entity Type Annotations  -->
             <Annotations Target="QAService.Questions">
+                <!-- Question Details Header Info -->
+                <Annotation Term="UI.HeaderInfo" >
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="topic/name"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="text"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Question Details Section Facets -->
+                <Annotation Term="UI.Facets" >
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Question Info"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#QuestionTextFieldGroup"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+
+                <!-- Question Text Field Group -->
+                <Annotation Term="UI.FieldGroup" Qualifier="QuestionTextFieldGroup">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Question Text"/>
+                                    <PropertyValue Property="Value" Path="text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Questions Table -->
                 <Annotation Term="UI.LineItem" Qualifier="QuestionsLineItem">
                     <Collection>
                         <Record Type="UI.DataField">
