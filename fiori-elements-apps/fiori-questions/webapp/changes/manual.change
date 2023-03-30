@@ -1,18 +1,18 @@
 {
-    "fileName": "id_1680200664106_101_propertyBindingChange",
+    "fileName": "manual",
     "fileType": "change",
     "changeType": "propertyBindingChange",
     "moduleName": "",
     "reference": "fioriquestions",
     "packageName": "",
     "content": {
-        "property": "visible",
-        "newBinding": "{ui>/editable}"
+        "property": "type",
+        "newBinding": "Reject"
     },
     "selector": {
-        "id": "fioriquestions::sap.suite.ui.generic.template.ObjectPage.view.Details::Questions--com.sap.vocabularies.UI.v1.FieldGroup::QuestionFieldGroup::answer::GroupElement",
+        "id": "fioriquestions::sap.suite.ui.generic.template.ListReport.view.ListReport::Questions--listReportFilter-btnGo",
         "idIsLocal": false,
-        "type": "sap.ui.comp.smartform.GroupElement"
+        "type": "sap.m.Button"
     },
     "layer": "CUSTOMER_BASE",
     "texts": {},
