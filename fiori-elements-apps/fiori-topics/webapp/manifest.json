@@ -192,6 +192,13 @@
                                 "component": {
                                     "name": "sap.suite.ui.generic.template.ObjectPage"
                                 }
+                            },
+                            "ObjectPage|Groups": {
+                                "entitySet": "Groups",
+                                "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+                                "component": {
+                                    "name": "sap.suite.ui.generic.template.ObjectPage"
+                                }
                             }
                         }
                     }
