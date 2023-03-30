@@ -9,10 +9,14 @@ sap.ui.define([
             const oQuestionsTable = this._getQuestionsTable();
             const oGroupsTable = this._getGroupsTable();
 
-            oGroupsTable.removeAllPlugins();
+            if (oQuestionsTable) {
+                this._bindTableProperty(oQuestionsTable, "mode", "SingleSelectLeft", "None");
+            }
 
-            this._bindTableProperty(oQuestionsTable, "mode", "SingleSelectLeft", "None");
-            this._bindTableProperty(oGroupsTable, "selectionMode", "MultiToggle", "None");
+            if (oGroupsTable) {
+                this._bindTableProperty(oGroupsTable, "selectionMode", "MultiToggle", "None");
+                oGroupsTable.removeAllPlugins();
+            }
         },
 
         _bindTableProperty(oTable, sPropertyName, sFirstValue, sSecondValue) {
