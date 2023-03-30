@@ -181,7 +181,7 @@
                                     <PropertyValue Property="Value" Path="progress/name"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <Annotation Term="Common.Label" String="Answer"/>
+                                    <PropertyValue Property="Label" String="Answer"/>
                                     <PropertyValue Property="Value" Path="answer"/>
                                 </Record>
                             </Collection>
