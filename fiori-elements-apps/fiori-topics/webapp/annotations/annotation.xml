@@ -131,6 +131,10 @@
                 <Annotation Term="UI.Facets" >
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>topic}"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicNameFieldGroup"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Label" String="{@i18n>creationInfo}" />
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TopicCreationFieldGroup" />
                         </Record>
@@ -151,6 +155,20 @@
                             <PropertyValue Property="Target" AnnotationPath="groups/@UI.LineItem#GroupsLineItem"/>
                         </Record>
                     </Collection>
+                </Annotation>
+
+                <!-- Topic Name Section -->
+                <Annotation Term="UI.FieldGroup" Qualifier="TopicNameFieldGroup">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="{@i18n>topicName}"/>
+                                    <PropertyValue Property="Value" Path="name" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
                 </Annotation>
 
                 <!-- Creation Section  -->
