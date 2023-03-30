@@ -25,6 +25,28 @@ sap.ui.define([
                 HARD: "1"
             }
         },
+        
+        getCustomAppStateDataExtension: function (oCustomData) {
+            debugger;
+            if (oCustomData) {
+                var oDifficultyFilter = this.oView.byId(this.ID.UI_CONTROL.DIFFICULTY_FILTER);
+                if (oDifficultyFilter) {
+                    oCustomData.DIFFICULTY_KEY = oDifficultyFilter.getSelectedKey();
+                }
+            }
+        },
+
+        restoreCustomAppStateDataExtension: function (oCustomData) {
+            debugger;
+            if (oCustomData) {
+                if (oCustomData.DIFFICULTY_KEY) {
+                    var oDifficultyFilter = this.oView.byId(this.ID.UI_CONTROL.DIFFICULTY_FILTER);
+                    oDifficultyFilter.setSelectedKey(
+                        oCustomData.DIFFICULTY_KEY
+                    );
+                }
+            }
+        },
 
         onBeforeRebindTableExtension: function(oEvent) {
             const oComboBox = this.getView().byId(this.ID.UI_CONTROL.DIFFICULTY_FILTER);
