@@ -1,0 +1,41 @@
+{
+    "fileName": "id_1680199600055_100_propertyBindingChange",
+    "fileType": "change",
+    "changeType": "propertyBindingChange",
+    "moduleName": "",
+    "reference": "fioriquestions",
+    "packageName": "",
+    "content": {
+        "property": "visible",
+        "newBinding": "{ui>/editable}"
+    },
+    "selector": {
+        "id": "fioriquestions::sap.suite.ui.generic.template.ObjectPage.view.Details::Questions--com.sap.vocabularies.UI.v1.FieldGroup::QuestionFieldGroup::progress::name::GroupElement",
+        "idIsLocal": false,
+        "type": "sap.ui.comp.smartform.GroupElement"
+    },
+    "layer": "CUSTOMER_BASE",
+    "texts": {},
+    "namespace": "apps/fioriquestions/changes/",
+    "projectId": "",
+    "creation": 1680199600055,
+    "originalLanguage": "",
+    "support": {
+        "generator": "changeUtils: SAPFioriTools",
+        "service": "",
+        "user": "",
+        "sapui5Version": "1.111.1",
+        "sourceChangeFileName": "",
+        "compositeCommand": ""
+    },
+    "oDataInformation": {},
+    "dependentSelector": {},
+    "validAppVersions": {
+        "from": "0.0.1",
+        "to": "0.0.1",
+        "creation": "0.0.1"
+    },
+    "jsOnly": false,
+    "variantReference": "",
+    "appDescriptorChange": false
+}
