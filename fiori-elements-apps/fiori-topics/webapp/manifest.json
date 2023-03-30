@@ -173,16 +173,24 @@
                             "settings": {
                                 "sections": {
                                     "questions::com.sap.vocabularies.UI.v1.LineItem::QuestionsLineItem": {
-                                        "tableSettings": {
-                                            "inlineDelete": false
-                                        },
-                                        "createMode": "creationRowsHiddenInEditMode"
+                                        "navigationProperty": "questions",
+                                        "entitySet": "Questions",
+                                        "createMode": "inline"
                                     },
                                     "groups::com.sap.vocabularies.UI.v1.LineItem::GroupsLineItem": {
                                         "tableSettings": {
                                             "type": "GridTable"
                                         }
                                     }
+                                }
+                            }
+                        },
+                        "pages": {
+                            "ObjectPage|Questions": {
+                                "entitySet": "Questions",
+                                "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+                                "component": {
+                                    "name": "sap.suite.ui.generic.template.ObjectPage"
                                 }
                             }
                         }
