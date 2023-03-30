@@ -187,17 +187,27 @@
                         },
                         "pages": {
                             "ObjectPage|Questions": {
-                                "entitySet": "Questions",
-                                "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
                                 "component": {
                                     "name": "sap.suite.ui.generic.template.ObjectPage"
-                                }
+                                },
+                                "entitySet": "Questions",
+                                "navigationProperty": "questions",
+                                "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen"
                             },
                             "ObjectPage|Groups": {
                                 "entitySet": "Groups",
                                 "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
                                 "component": {
                                     "name": "sap.suite.ui.generic.template.ObjectPage"
+                                },
+                                "pages": {
+                                    "ObjectPage|Questions": {
+                                        "component": {
+                                            "name": "sap.suite.ui.generic.template.ObjectPage"
+                                        },
+                                        "entitySet": "Questions",
+                                        "navigationProperty": "questions"
+                                    }
                                 }
                             }
                         }
