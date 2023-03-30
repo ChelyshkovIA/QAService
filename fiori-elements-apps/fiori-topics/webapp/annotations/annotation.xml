@@ -111,6 +111,11 @@
                             <PropertyValue Property="Label" String="{@i18n>group}"/>
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GroupInfoFieldGroup"/>
                         </Record>
+
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>questionsList}"/>
+                            <PropertyValue Property="Target" AnnotationPath="questions/@UI.LineItem#QuestionsLineItem"/>
+                        </Record>
                     </Collection>
                 </Annotation>
 
