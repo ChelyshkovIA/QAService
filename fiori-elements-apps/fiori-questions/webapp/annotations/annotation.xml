@@ -56,9 +56,6 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
-
-                <!-- Enable Value List for the Group Names -->
-                <Annotation Term="Common.ValueListWithFixedValues"/>
             </Annotations>
 
             <!-- Questions Entity Type Annotations -->
