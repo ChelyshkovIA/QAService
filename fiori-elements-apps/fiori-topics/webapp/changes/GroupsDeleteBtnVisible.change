@@ -1,0 +1,41 @@
+{
+    "fileName": "GroupsDeleteBtnVisible",
+    "fileType": "change",
+    "changeType": "propertyBindingChange",
+    "moduleName": "",
+    "reference": "fioritopics",
+    "packageName": "",
+    "content": {
+        "property": "visible",
+        "newBinding": "{ui>/editable}"
+    },
+    "selector": {
+        "id": "fioritopics::sap.suite.ui.generic.template.ObjectPage.view.Details::Topics--groups::com.sap.vocabularies.UI.v1.LineItem::GroupsLineItem::deleteEntry",
+        "idIsLocal": false,
+        "type": "sap.m.Button"
+    },
+    "layer": "CUSTOMER_BASE",
+    "texts": {},
+    "namespace": "apps/fioritopics/changes/",
+    "projectId": "",
+    "creation": 1680200664106,
+    "originalLanguage": "",
+    "support": {
+        "generator": "changeUtils: SAPFioriTools",
+        "service": "",
+        "user": "",
+        "sapui5Version": "1.111.1",
+        "sourceChangeFileName": "",
+        "compositeCommand": ""
+    },
+    "oDataInformation": {},
+    "dependentSelector": {},
+    "validAppVersions": {
+        "from": "0.0.1",
+        "to": "0.0.1",
+        "creation": "0.0.1"
+    },
+    "jsOnly": false,
+    "variantReference": "",
+    "appDescriptorChange": false
+}
