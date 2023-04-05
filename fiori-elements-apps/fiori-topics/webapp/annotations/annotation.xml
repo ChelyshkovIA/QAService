@@ -177,6 +177,9 @@
                 <!-- Object Page -->
                 <Annotation Term="UI.HeaderInfo" >
                     <Record>
+                        <PropertyValue Property="TypeName" String="Topic"/>
+                        <PropertyValue Property="TypeNamePlural" String="Topics"/>
+
                         <PropertyValue Property="Title">
                             <Record Type="UI.DataField">
                                 <PropertyValue Property="Value" Path="name" />
