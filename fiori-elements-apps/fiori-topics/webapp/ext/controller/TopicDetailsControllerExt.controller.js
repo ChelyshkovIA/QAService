@@ -5,6 +5,11 @@ sap.ui.define([
     const sGroupsTableId = "fioritopics::sap.suite.ui.generic.template.ObjectPage.view.Details::Topics--groups::com.sap.vocabularies.UI.v1.LineItem::GroupsLineItem::gridTable";
     
     return {
+        onInit() {
+            const oGroupsTable = this._getGroupsTable();
+            oGroupsTable.removeAllPlugins();
+        },
+
         _bindTableProperty(oTable, sPropertyName, sFirstValue, sSecondValue) {
             oTable.bindProperty(sPropertyName, {
                 path: "ui>/editable",
