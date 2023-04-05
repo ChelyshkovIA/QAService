@@ -5,20 +5,6 @@ sap.ui.define([
     const sGroupsTableId = "fioritopics::sap.suite.ui.generic.template.ObjectPage.view.Details::Topics--groups::com.sap.vocabularies.UI.v1.LineItem::GroupsLineItem::gridTable";
     
     return {
-        onInit() {
-            const oQuestionsTable = this._getQuestionsTable();
-            const oGroupsTable = this._getGroupsTable();
-
-            if (oQuestionsTable) {
-                this._bindTableProperty(oQuestionsTable, "mode", "SingleSelectLeft", "None");
-            }
-
-            if (oGroupsTable) {
-                this._bindTableProperty(oGroupsTable, "selectionMode", "MultiToggle", "None");
-                oGroupsTable.removeAllPlugins();
-            }
-        },
-
         _bindTableProperty(oTable, sPropertyName, sFirstValue, sSecondValue) {
             oTable.bindProperty(sPropertyName, {
                 path: "ui>/editable",
