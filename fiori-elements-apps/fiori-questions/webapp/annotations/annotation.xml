@@ -104,6 +104,9 @@
                 <!-- Header Info of Questions App Object Page -->
                 <Annotation Term="UI.HeaderInfo" >
                     <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String="Question"/>
+                        <PropertyValue Property="TypeNamePlural" String="Questions"/>
+                        
                         <PropertyValue Property="Title">
                             <Record Type="UI.DataField">
                                 <PropertyValue Property="Value" Path="topic/name" />
