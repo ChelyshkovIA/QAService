@@ -74,6 +74,15 @@
                     </Collection>
                 </Annotation>
 
+                <Annotation Term="UI.Facets" >
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Orders Table"/>
+                            <PropertyValue Property="Target" AnnotationPath="Order_Details/@UI.LineItem#OrdersLineItem"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+
                 <Annotation Term="UI.FieldGroup" Qualifier="ProductInfoFieldGroup">
                     <Record Type="UI.FieldGroupType">
                         <PropertyValue Property="Data">
@@ -160,6 +169,42 @@
                             </Collection>
                         </PropertyValue>
                     </Record>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="NorthwindModel.Order_Detail">
+                <Annotation Term="UI.LineItem" Qualifier="OrdersLineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Order ID"/>
+                            <PropertyValue Property="Value" Path="OrderID"/>
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Product ID"/>
+                            <PropertyValue Property="Value" Path="ProductID"/>
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Customer ID"/>
+                            <PropertyValue Property="Value" Path="Order/CustomerID"/>
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Customer Contact Name"/>
+                            <PropertyValue Property="Value" Path="Order/Customer/ContactName"/>
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Order Date"/>
+                            <PropertyValue Property="Value" Path="Order/OrderDate"/>
+                        </Record>
+                        
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Discount"/>
+                            <PropertyValue Property="Value" Path="Discount"/>
+                        </Record>
+                    </Collection>
                 </Annotation>
             </Annotations>
         </Schema>
