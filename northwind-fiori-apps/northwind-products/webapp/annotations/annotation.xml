@@ -207,6 +207,24 @@
                     </Collection>
                 </Annotation>
             </Annotations>
+
+            <Annotations Target="NorthwindModel.Order_Detail/OrderID">
+                <Annotation Term="Common.FieldControl">
+                    <EnumMember>Common.FieldControlType/ReadOnly</EnumMember>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="NorthwindModel.Order_Detail/ProductID">
+                <Annotation Term="Common.FieldControl">
+                    <EnumMember>Common.FieldControlType/ReadOnly</EnumMember>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="NorthwindModel.Order/CustomerID">
+                <Annotation Term="Common.FieldControl">
+                    <EnumMember>Common.FieldControlType/ReadOnly</EnumMember>
+                </Annotation>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
