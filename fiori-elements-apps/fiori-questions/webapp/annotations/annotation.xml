@@ -249,6 +249,13 @@
                     </Record>
                 </Annotation>
             </Annotations>
+
+            <!-- Field Control Setting for the Question text property -->
+            <Annotations Target="QAService.Questions/text">
+                <Annotation Term="Common.FieldControl">
+                    <Path>difficulty/numeric</Path>
+                </Annotation>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
