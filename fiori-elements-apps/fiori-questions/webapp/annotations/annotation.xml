@@ -121,6 +121,21 @@
                     </Record>
                 </Annotation>
 
+                <Annotation Term="Common.SideEffects" Qualifier="test">
+                    <Record Type="Common.SideEffectsType">
+                        <PropertyValue Property="SourceProperties">
+                            <Collection>
+                                <PropertyPath>text</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="TargetEntities">
+                            <Collection>
+                                <NavigationPropertyPath>difficulty</NavigationPropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
                 <!-- Questions Table Annotation -->
                 <Annotation Term="UI.LineItem" >
                     <Annotation Term="UI.Criticality" Path="difficulty/numeric"/>
