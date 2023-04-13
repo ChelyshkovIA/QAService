@@ -84,6 +84,20 @@
 
             <!-- Questions Entity Type Annotations -->
             <Annotations Target="QAService.Questions">
+                <Annotation Term="Common.SideEffects" >
+                    <Record Type="Common.SideEffectsType">
+                        <PropertyValue Property="SourceProperties">
+                            <Collection>
+                                <PropertyPath>group_ID</PropertyPath>                                
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="TargetEntities">
+                            <Collection>
+                                <NavigationPropertyPath>group/topic</NavigationPropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
 
                 <!-- Questions Table Annotation -->
                 <Annotation Term="UI.LineItem" >
@@ -133,7 +147,7 @@
                         
                         <PropertyValue Property="Title">
                             <Record Type="UI.DataField">
-                                <PropertyValue Property="Value" Path="topic/name" />
+                                <PropertyValue Property="Value" Path="group/topic/name" />
                             </Record>
                         </PropertyValue>
                     </Record>
