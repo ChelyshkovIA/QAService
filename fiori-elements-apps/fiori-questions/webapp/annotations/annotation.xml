@@ -66,6 +66,28 @@
                 <Annotation Term="Common.Text" Path="name"/>
             </Annotations>
 
+            <Annotations Target="QAService.Difficulties/ID">
+                <Annotation Term="Common.Text" Path="name"/>
+            </Annotations>
+
+            <Annotations Target="QAService.Questions/difficulty_ID">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="Difficulties"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="difficulty_ID"/>
+                                    <PropertyValue Property="ValueListProperty" String="ID"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+
             <Annotations Target="QAService.Questions/topic_ID">
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
@@ -106,7 +128,7 @@
 
             <!-- Questions Entity Type Annotations -->
             <Annotations Target="QAService.Questions">
-                <Annotation Term="Common.SideEffects" >
+                <Annotation Term="Common.SideEffects" Qualifier="groupIdGroupTopicSF">
                     <Record Type="Common.SideEffectsType">
                         <PropertyValue Property="SourceProperties">
                             <Collection>
@@ -121,7 +143,7 @@
                     </Record>
                 </Annotation>
 
-                <Annotation Term="Common.SideEffects" Qualifier="test">
+                <Annotation Term="Common.SideEffects" Qualifier="textDifficultySF">
                     <Record Type="Common.SideEffectsType">
                         <PropertyValue Property="SourceProperties">
                             <Collection>
@@ -252,7 +274,7 @@
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Label" String="Difficulty"/>
-                                    <PropertyValue Property="Value" Path="difficulty/name"/>
+                                    <PropertyValue Property="Value" Path="difficulty_ID"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Label" String="Progress Status"/>
