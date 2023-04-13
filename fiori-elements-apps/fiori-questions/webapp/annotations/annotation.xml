@@ -58,6 +58,30 @@
                 </Annotation>
             </Annotations>
 
+            <Annotations Target="QAService.Groups/ID">
+                <Annotation Term="Common.Text" Path="name"/>
+            </Annotations>
+
+            <Annotations Target="QAService.Questions/group_ID">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="Groups"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="group_ID"/>
+                                    <PropertyValue Property="ValueListProperty" String="ID"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+
+                <Annotation Term="Common.Text" Path="group/name"/>
+            </Annotations>
+
             <!-- Questions Entity Type Annotations -->
             <Annotations Target="QAService.Questions">
 
@@ -169,11 +193,11 @@
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Label" String="Topic Name"/>
-                                    <PropertyValue Property="Value" Path="topic/name"/>
+                                    <PropertyValue Property="Value" Path="group/topic/name"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Label" String="Group Name"/>
-                                    <PropertyValue Property="Value" Path="group/name"/>
+                                    <PropertyValue Property="Value" Path="group_ID"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Label" String="Difficulty"/>
