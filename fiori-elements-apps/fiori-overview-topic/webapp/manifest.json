@@ -140,6 +140,32 @@
             "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariant",
             "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem"
           }
+        },
+        "groupsTableCardWithTabs": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.table",
+          "settings": {
+            "title": "Groups",
+            "description": "Javascript Topics Groups",
+            "entitySet": "Groups",
+            "tabs": [
+              {
+                "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariant",
+                "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem",
+                "value": "JS in Web Browser"
+              },
+              {
+                "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariantJsCore",
+                "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem",
+                "value": "JS Core"
+              },
+              {
+                "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariantUi5",
+                "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem",
+                "value": "SAPUI5"
+              }
+            ]
+          }
         }
       }
     },
