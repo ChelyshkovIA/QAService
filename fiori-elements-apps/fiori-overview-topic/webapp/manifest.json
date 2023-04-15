@@ -180,6 +180,58 @@
             "listType": "extended",
             "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#lineItemListBar"
           }
+        },
+        "topicsLinkList": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.linklist",
+          "settings": {
+            "title": "Topics Docs Links",
+            "listFlavor": "standard",
+            "staticContent": [
+              {
+                "title": "JavaScript",
+                "imageUri": "img/1.png",
+                "imageAltText": "JavaScript",
+                "targetUri": "https://learn.javascript.ru/",
+                "openInNewWindow": true
+              },
+              {
+                "title": "FioriElements",
+                "imageUri": "img/2.png",
+                "imageAltText": "Fiori Elements",
+                "targetUri": "https://experience.sap.com/fiori-design-web/smart-templates/#:~:text=SAP%20Fiori%20elements%20is%20a,to%20build%20SAP%20Fiori%20apps.",
+                "openInNewWindow": true
+              },
+              {
+                "title": "SAPUI5",
+                "imageUri": "img/3.png",
+                "imageAltText": "SAPUI5",
+                "targetUri": "https://sapui5.hana.ondemand.com/",
+                "openInNewWindow": true
+              },
+              {
+                "title": "GIT",
+                "imageUri": "img/4.png",
+                "imageAltText": "SAPUI5",
+                "targetUri": "https://git-scm.com/doc",
+                "openInNewWindow": true
+              },
+              {
+                "title": "Business Technology Platform",
+                "imageUri": "img/5.png",
+                "imageAltText": "SAPUI5",
+                "targetUri": "https://help.sap.com/docs/btp",
+                "openInNewWindow": true
+              },
+              {
+                "title": "Open Data Protocol",
+                "imageUri": "img/6.png",
+                "imageAltText": "SAPUI5",
+                "targetUri": "https://www.odata.org/",
+                "openInNewWindow": true
+              }
+            ]
+          }
         }
       }
     },
