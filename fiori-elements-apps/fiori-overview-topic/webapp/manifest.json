@@ -166,6 +166,20 @@
               }
             ]
           }
+        },
+        "difficultiesListCard": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.list",
+          "settings": {
+            "title": "Difficulties",
+            "description": "All Possible Difficulties",
+            "entitySet": "Difficulties",
+            "sortBy": "numeric",
+            "sortOrder": "descending",
+            "listFlavor": "bar",
+            "listType": "extended",
+            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#lineItemListBar"
+          }
         }
       }
     },
