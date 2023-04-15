@@ -243,6 +243,20 @@
             "entitySet": "Topics",
             "headerAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#topicHeaderInfo"
           }
+        },
+        "topicGroupsStackCard": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.stack",
+          "settings": {
+            "title": "Topics",
+            "addODataSelect": false,
+            "subTitle": "Topics Stack Card",
+            "entitySet": "Topics",
+            "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#topicIndentification",
+            "objectStreamCardsSettings": {
+              "annotationPath": "com.sap.vocabularies.UI.v1.Facets#topicStackCardFacet"
+            }
+          }
         }
       }
     },

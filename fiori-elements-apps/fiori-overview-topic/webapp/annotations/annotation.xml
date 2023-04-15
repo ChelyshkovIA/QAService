@@ -41,6 +41,26 @@
                     </Collection>
                 </Annotation>
 
+                <Annotation Term="UI.HeaderInfo">
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String="Topic"/>
+                        <PropertyValue Property="TypeNamePlural" String="Topics"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Topic Name"/>
+                                <PropertyValue Property="Value" Path="name"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Topic ID"/>
+                                <PropertyValue Property="Value" Path="ID"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="ImageUrl" String="img/LX.png"/>
+                    </Record>
+                </Annotation>
+
                 <Annotation Term="UI.HeaderInfo" Qualifier="topicHeaderInfo">
                     <Record Type="UI.HeaderInfoType">
                         <PropertyValue Property="TypeName" String="Topic"/>
@@ -58,6 +78,55 @@
                             </Record>
                         </PropertyValue>
                         <PropertyValue Property="ImageUrl" String="img/LX.png"/>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.Facets" Qualifier="topicStackCardFacet">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <Annotation Term="UI.IsSummary"/>
+                            <PropertyValue Property="Label" String="Creation Info"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#topicFieldGroupCreated"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <Annotation Term="UI.IsSummary"/>
+                            <PropertyValue Property="Label" String="Modification Info"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#topicFieldGroupModified"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+
+                <Annotation Term="UI.FieldGroup" Qualifier="topicFieldGroupCreated">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Created At"/>
+                                    <PropertyValue Property="Value" Path="createdAt"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Created By"/>
+                                    <PropertyValue Property="Value" Path="createdBy"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.FieldGroup" Qualifier="topicFieldGroupModified">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Modified At"/>
+                                    <PropertyValue Property="Value" Path="modifiedAt"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Modified By"/>
+                                    <PropertyValue Property="Value" Path="modifiedBy"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
                     </Record>
                 </Annotation>
             </Annotations>
