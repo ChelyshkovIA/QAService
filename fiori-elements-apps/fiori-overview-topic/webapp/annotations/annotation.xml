@@ -14,6 +14,7 @@
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
             <Annotations Target="QAService.Topics/name">
+                <!-- Value List for the Topic Name -->
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
                         <PropertyValue Property="CollectionPath" String="Topics"/>
@@ -28,13 +29,68 @@
                     </Record>
                 </Annotation>
 
+                <!-- Value List with fixed values -->
                 <Annotation Term="Common.ValueListWithFixedValues"/>
             </Annotations>
 
             <Annotations Target="QAService.Topics">
+                <!-- Selection Fields for the Topic -->
                 <Annotation Term="UI.SelectionFields" >
                     <Collection>
                         <PropertyPath>name</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="QAService.Questions">
+                <!-- Select Options for the Questions List -->
+                <Annotation Term="UI.SelectionVariant" Qualifier="questionsListSelectionVariant">
+                    <Record>
+                        <PropertyValue Property="SelectOptions">
+                            <Collection>
+                                <Record Type="UI.SelectOptionType">
+                                    <PropertyValue Property="PropertyName" PropertyPath="topic_ID" />
+                                    <PropertyValue Property="Ranges">
+                                        <Collection>
+                                            <Record Type="UI.SelectionRangeType">
+                                            <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+                                            <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                            <PropertyValue Property="Low" String="81f2573d-40f4-5186-6976-a56c6703b961" />
+                                            </Record>
+                                        </Collection>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Data Point for the Questions List Card -->
+                <Annotation Term="UI.DataPoint" Qualifier="questionListCardDataPoint">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Title" String="Questions Difficulty" />
+                        <PropertyValue Property="Description" String="Questions Difficulty Description" />
+                        <PropertyValue Property="Value" Path="difficulty/numeric" />
+                    </Record>
+                </Annotation>
+
+                <!-- Line Item Annotations for the Questions List Card -->
+                <Annotation Term="UI.LineItem" Qualifier="lineItemForQuestionsListCard">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Question ID"/>
+                            <PropertyValue Property="Value" Path="ID"/>
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Group"/>
+                            <PropertyValue Property="Value" Path="group/name"/>
+                        </Record>
+
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Question"/>
+                            <PropertyValue Property="Value" Path="text"/>
+                        </Record>
                     </Collection>
                 </Annotation>
             </Annotations>
