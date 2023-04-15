@@ -126,7 +126,21 @@
               "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#questionListCardDataPoint",
               "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#questionsListSelectionVariant"
             }
+        },
+        "groupsTableCard": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.table",
+          "settings": {
+            "title": "Groups",
+            "description": "JavaScript in Web Browser",
+            "entitySet": "Groups",
+            "listFlavor": "bar",
+            "listType": "extended",
+            "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#groupsDataPoint",
+            "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariant",
+            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem"
           }
+        }
       }
     },
     "sap.fiori": {
