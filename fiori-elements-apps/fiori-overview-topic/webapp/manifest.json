@@ -232,6 +232,17 @@
               }
             ]
           }
+        },
+        "topicDynamicLinkList": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.linklist",
+          "settings": {
+            "title": "Topics",
+            "targetUri": "https://google.com",
+            "listFlavor": "carousel",
+            "entitySet": "Topics",
+            "headerAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#topicHeaderInfo"
+          }
         }
       }
     },
