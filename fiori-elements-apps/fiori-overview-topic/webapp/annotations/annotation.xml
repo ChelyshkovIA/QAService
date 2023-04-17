@@ -300,6 +300,39 @@
                         <PropertyValue Property="Criticality" Path="numeric" />
                     </Record>
                 </Annotation>
+
+                <Annotation Term="com.sap.vocabularies.UI.v1.Chart"  Qualifier="difficultiesLineChart">
+                    <Record>
+                        <PropertyValue Property="Title" String="Difficulties Chart" />
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="com.sap.vocabularies.UI.v1.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="numeric" />
+                                    <PropertyValue Property="Role" EnumMember="com.sap.vocabularies.UI.v1.ChartMeasureRoleType/Axis1" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="com.sap.vocabularies.UI.v1.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="name" />
+                                    <PropertyValue Property="Role" EnumMember="com.sap.vocabularies.UI.v1.ChartDimensionRoleType/Category" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line" />
+                        <PropertyValue Property="Description" String="Difficulties Chart Description" />
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.DataPoint" Qualifier="difficultyChartDataPoint">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Title" String="Difficulty" />
+                        <PropertyValue Property="Description" String="Difficulty description" />
+                        <PropertyValue Property="Value" Path="numeric" />
+                        <PropertyValue Property="Criticality" EnumMember="UI.CriticalityType/Negative"/>
+                    </Record>
+                </Annotation>
             </Annotations>
         </Schema>
     </edmx:DataServices>

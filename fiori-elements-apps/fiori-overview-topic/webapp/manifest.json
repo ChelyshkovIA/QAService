@@ -257,6 +257,16 @@
               "annotationPath": "com.sap.vocabularies.UI.v1.Facets#topicStackCardFacet"
             }
           }
+        },
+        "difficultyLineChartCard": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.charts.analytical",
+          "settings": {
+              "title": "Difficulties",
+              "entitySet": "Difficulties",
+              "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#difficultiesLineChart",
+              "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#difficultyChartDataPoint"
+          }
         }
       }
     },
