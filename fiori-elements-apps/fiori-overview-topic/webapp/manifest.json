@@ -317,6 +317,15 @@
               "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#difficultiesLineChart",
               "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#difficultyChartDataPoint"
           }
+        },
+        "difficultyDonutChartCard": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.charts.analytical",
+          "settings": {
+            "title": "Difficulty Donut Chart",
+            "entitySet": "Difficulties",
+            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#difficultyDonutChart"
+          }
         }
       }
     },
