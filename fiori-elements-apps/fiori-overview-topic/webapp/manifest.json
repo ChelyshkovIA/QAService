@@ -143,6 +143,15 @@
       "enableLiveFilter": true,
       "considerAnalyticalParameters": false,
       "cards": {
+        "productsVerticalBullertChart": {
+          "model": "northwind",
+          "template": "sap.ovp.cards.charts.analytical",
+          "settings": {
+            "title": "Products Vertical Bullet Chart",
+            "entitySet": "Products",
+            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productVerticalBulletChart"
+          }
+        },
         "productsColumnStackedChart": {
           "model": "northwind",
           "template": "sap.ovp.cards.charts.analytical",
