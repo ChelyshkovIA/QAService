@@ -326,6 +326,15 @@
             "entitySet": "Difficulties",
             "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#difficultyDonutChart"
           }
+        },
+        "difficultyColumnChart": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.charts.analytical",
+          "settings": {
+            "title": "Difficulty Column Chart",
+            "entitySet": "Difficulties",
+            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#difficultyColumbChart"
+          }
         }
       }
     },
