@@ -143,6 +143,17 @@
       "enableLiveFilter": true,
       "considerAnalyticalParameters": false,
       "cards": {
+        "categoriesListCard": {
+          "model": "northwind",
+          "template": "sap.ovp.cards.list",
+          "settings": {
+            "title": "Categories List",
+            "entitySet": "Categories",
+            "listType": "condensed",
+            "listFlavor": "standard",
+            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#northwindCategoryLineItem"
+          }
+        },
         "questionsListCard": {
           "model": "mainModel",
           "template": "sap.ovp.cards.list",
