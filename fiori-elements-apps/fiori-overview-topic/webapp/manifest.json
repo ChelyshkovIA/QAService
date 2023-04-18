@@ -27,11 +27,29 @@
             "odataVersion": "2.0"
           }
         },
+        "northwind": {
+          "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+          "type": "OData",
+          "settings": {
+            "annotations": [
+              "northwindAnnotation"
+            ],
+            "localUri": "northwindService/metadata.xml",
+            "odataVersion": "2.0"
+          }
+        },
         "annotation": {
           "type": "ODataAnnotation",
           "uri": "annotations/annotation.xml",
           "settings": {
             "localUri": "annotations/annotation.xml"
+          }
+        },
+        "northwindAnnotation": {
+          "type": "ODataAnnotation",
+          "uri": "annotations/northwindAnnotation.xml",
+          "settings": {
+            "localUri": "annotations/northwindAnnotation.xml"
           }
         }
       }
@@ -82,6 +100,18 @@
         },
         "mainModel": {
           "dataSource": "mainService",
+          "preload": true,
+          "settings": {
+            "defaultBindingMode": "TwoWay",
+            "defaultCountMode": "Inline",
+            "refreshAfterChange": false,
+            "metadataUrlParams": {
+              "sap-value-list": "none"
+            }
+          }
+        },
+        "northwind": {
+          "dataSource": "northwind",
           "preload": true,
           "settings": {
             "defaultBindingMode": "TwoWay",
