@@ -135,6 +135,32 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+
+                <Annotation Term="UI.Chart" Qualifier="productsScatterChart">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Scatter"/>
+                        <PropertyValue Property="Title" String="Products Scatter Chart"/>
+                        <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="ProductName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                                    <PropertyValue Property="Measure" PropertyPath="UnitPrice"/>
+                                </Record>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis2"/>
+                                    <PropertyValue Property="Measure" PropertyPath="UnitsInStock"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
             </Annotations>
         </Schema>
     </edmx:DataServices>

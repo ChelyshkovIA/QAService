@@ -143,6 +143,15 @@
       "enableLiveFilter": true,
       "considerAnalyticalParameters": false,
       "cards": {
+        "productsScatterChartCard": {
+          "model": "northwind",
+          "template": "sap.ovp.cards.charts.analytical",
+          "settings": {
+            "title": "Products Scatter Chart",
+            "entitySet": "Products",
+            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productsScatterChart"
+          }
+        },
         "productsCombinedChart": {
           "model": "northwind",
           "template": "sap.ovp.cards.charts.analytical",
