@@ -202,6 +202,10 @@
                 <!-- Groups Table Card Line Item -->
                 <Annotation Term="UI.LineItem" Qualifier="groupsLineItem">
                     <Collection>
+                        <Record Type="UI.DataFieldForIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="Group"/>
+                            <PropertyValue Property="Action" String="View"/>
+                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="ID"/>
                             <PropertyValue Property="Value" Path="ID"/>
