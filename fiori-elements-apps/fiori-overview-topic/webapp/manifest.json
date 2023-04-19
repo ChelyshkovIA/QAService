@@ -1,400 +1,418 @@
 {
     "_version": "1.49.0",
     "sap.app": {
-      "id": "fiorioverviewtopic",
-      "type": "application",
-      "i18n": "i18n/i18n.properties",
-      "applicationVersion": {
-        "version": "0.0.1"
-      },
-      "title": "{{appTitle}}",
-      "description": "{{appDescription}}",
-      "resources": "resources.json",
-      "sourceTemplate": {
-        "id": "@sap/generator-fiori:ovp",
-        "version": "1.9.3",
-        "toolsId": "577e2115-631d-4854-8021-d77dc8c0eddb"
-      },
-      "dataSources": {
-        "mainService": {
-          "uri": "/odatav2/",
-          "type": "OData",
-          "settings": {
-            "annotations": [
-              "annotation"
-            ],
-            "localUri": "localService/metadata.xml",
-            "odataVersion": "2.0"
-          }
+        "id": "fiorioverviewtopic",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
         },
-        "northwind": {
-          "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
-          "type": "OData",
-          "settings": {
-            "annotations": [
-              "northwindAnnotation"
-            ],
-            "localUri": "northwindService/metadata.xml",
-            "odataVersion": "2.0"
-          }
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:ovp",
+            "version": "1.9.3",
+            "toolsId": "577e2115-631d-4854-8021-d77dc8c0eddb"
         },
-        "annotation": {
-          "type": "ODataAnnotation",
-          "uri": "annotations/annotation.xml",
-          "settings": {
-            "localUri": "annotations/annotation.xml"
-          }
+        "dataSources": {
+            "mainService": {
+                "uri": "/odatav2/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "annotation"
+                    ],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "northwind": {
+                "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "northwindAnnotation"
+                    ],
+                    "localUri": "northwindService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "annotation": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotation.xml",
+                "settings": {
+                    "localUri": "annotations/annotation.xml"
+                }
+            },
+            "northwindAnnotation": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/northwindAnnotation.xml",
+                "settings": {
+                    "localUri": "annotations/northwindAnnotation.xml"
+                }
+            }
         },
-        "northwindAnnotation": {
-          "type": "ODataAnnotation",
-          "uri": "annotations/northwindAnnotation.xml",
-          "settings": {
-            "localUri": "annotations/northwindAnnotation.xml"
-          }
+        "crossNavigation": {
+            "inbounds": {
+                "fiorioverviewtopic-inbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "OVP",
+                    "action": "View",
+                    "title": "{{flpTitle}}",
+                    "subTitle": "{{flpSubtitle}}",
+                    "icon": ""
+                }
+            }
         }
-      }
     },
     "sap.ui": {
-      "technology": "UI5",
-      "icons": {
-        "icon": "",
-        "favIcon": "",
-        "phone": "",
-        "phone@2": "",
-        "tablet": "",
-        "tablet@2": ""
-      },
-      "deviceTypes": {
-        "desktop": true,
-        "tablet": true,
-        "phone": true
-      }
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
     },
     "sap.ui5": {
-      "flexEnabled": true,
-      "dependencies": {
-        "minUI5Version": "1.112.1",
-        "libs": {
-          "sap.m": {},
-          "sap.ui.core": {},
-          "sap.ushell": {},
-          "sap.f": {},
-          "sap.ui.comp": {},
-          "sap.ui.generic.app": {},
-          "sap.suite.ui.generic.template": {},
-          "sap.ovp": {},
-          "sap.ui.rta": {},
-          "sap.ui.layout": {}
-        }
-      },
-      "contentDensities": {
-        "compact": true,
-        "cozy": true
-      },
-      "models": {
-        "i18n": {
-          "type": "sap.ui.model.resource.ResourceModel",
-          "settings": {
-            "bundleName": "fiorioverviewtopic.i18n.i18n"
-          }
-        },
-        "mainModel": {
-          "dataSource": "mainService",
-          "preload": true,
-          "settings": {
-            "defaultBindingMode": "TwoWay",
-            "defaultCountMode": "Inline",
-            "refreshAfterChange": false,
-            "metadataUrlParams": {
-              "sap-value-list": "none"
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.112.1",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.ushell": {},
+                "sap.f": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ovp": {},
+                "sap.ui.rta": {},
+                "sap.ui.layout": {}
             }
-          }
         },
-        "northwind": {
-          "dataSource": "northwind",
-          "preload": true,
-          "settings": {
-            "defaultBindingMode": "TwoWay",
-            "defaultCountMode": "Inline",
-            "refreshAfterChange": false,
-            "metadataUrlParams": {
-              "sap-value-list": "none"
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "fiorioverviewtopic.i18n.i18n"
+                }
+            },
+            "mainModel": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            },
+            "northwind": {
+                "dataSource": "northwind",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            },
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
             }
-          }
         },
-        "@i18n": {
-          "type": "sap.ui.model.resource.ResourceModel",
-          "uri": "i18n/i18n.properties"
+        "resources": {
+            "css": []
+        },
+        "routing": {
+            "config": {},
+            "routes": [],
+            "targets": {}
         }
-      },
-      "resources": {
-        "css": []
-      },
-      "routing": {
-        "config": {},
-        "routes": [],
-        "targets": {}
-      }
     },
     "sap.ovp": {
-      "globalFilterModel": "mainModel",
-      "globalFilterEntityType": "Topics",
-      "containerLayout": "resizable",
-      "enableLiveFilter": true,
-      "considerAnalyticalParameters": false,
-      "cards": {
-        "summaryOfSalesLineCharCard": {
-          "model": "northwind",
-          "template": "sap.ovp.cards.charts.analytical",
-          "settings": {
-            "title": "Summary of Sales Line Chart",
-            "entitySet": "Summary_of_Sales_by_Years",
-            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#summaryOfSalesByYearLineChart"
-          }
-        },
-        "productWaterfallChart": {
-          "model": "northwind",
-          "template": "sap.ovp.cards.charts.analytical",
-          "settings": {
-            "title": "Products Waterfall Chart",
-            "entitySet": "Products",
-            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productWaterfallChart"
-          }
-        },
-        "productsScatterChartCard": {
-          "model": "northwind",
-          "template": "sap.ovp.cards.charts.analytical",
-          "settings": {
-            "title": "Products Scatter Chart",
-            "entitySet": "Products",
-            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productsScatterChart"
-          }
-        },
-        "productsCombinedChart": {
-          "model": "northwind",
-          "template": "sap.ovp.cards.charts.analytical",
-          "settings": {
-            "title": "Products Combined Chart",
-            "entitySet": "Products",
-            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productCombinedChart"
-          }
-        },
-        "productsVerticalBullertChart": {
-          "model": "northwind",
-          "template": "sap.ovp.cards.charts.analytical",
-          "settings": {
-            "title": "Products Vertical Bullet Chart",
-            "entitySet": "Products",
-            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productVerticalBulletChart"
-          }
-        },
-        "productsColumnStackedChart": {
-          "model": "northwind",
-          "template": "sap.ovp.cards.charts.analytical",
-          "settings": {
-            "title": "Product Column Stacked Chart",
-            "entitySet": "Products",
-            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productsColumnStackedChart"
-          }
-        },
-        "productsBubbleCard": {
-          "model": "northwind",
-          "template": "sap.ovp.cards.charts.analytical",
-          "settings": {
-            "title": "Products Bubble Chart",
-            "entitySet": "Products",
-            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productBubbleChart"
-          }
-        },
-        "categoriesListCard": {
-          "model": "northwind",
-          "template": "sap.ovp.cards.list",
-          "settings": {
-            "title": "Categories List",
-            "entitySet": "Categories",
-            "listType": "condensed",
-            "listFlavor": "standard",
-            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#northwindCategoryLineItem"
-          }
-        },
-        "questionsListCard": {
-          "model": "mainModel",
-          "template": "sap.ovp.cards.list",
-          "settings": {
-              "title": "Questions",
-              "description": "JavaScript in Web Browser",
-              "entitySet": "Questions",
-              "listType": "condensed",
-              "listFlavor": "standard",
-              "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#lineItemForQuestionsListCard",
-              "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#questionListCardDataPoint",
-              "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#questionsListSelectionVariant"
+        "globalFilterModel": "mainModel",
+        "globalFilterEntityType": "Topics",
+        "containerLayout": "resizable",
+        "enableLiveFilter": true,
+        "considerAnalyticalParameters": false,
+        "cards": {
+            "summaryOfSalesLineCharCard": {
+                "model": "northwind",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "Summary of Sales Line Chart",
+                    "entitySet": "Summary_of_Sales_by_Years",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#summaryOfSalesByYearLineChart"
+                }
+            },
+            "productWaterfallChart": {
+                "model": "northwind",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "Products Waterfall Chart",
+                    "entitySet": "Products",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productWaterfallChart"
+                }
+            },
+            "productsScatterChartCard": {
+                "model": "northwind",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "Products Scatter Chart",
+                    "entitySet": "Products",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productsScatterChart"
+                }
+            },
+            "productsCombinedChart": {
+                "model": "northwind",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "Products Combined Chart",
+                    "entitySet": "Products",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productCombinedChart"
+                }
+            },
+            "productsVerticalBullertChart": {
+                "model": "northwind",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "Products Vertical Bullet Chart",
+                    "entitySet": "Products",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productVerticalBulletChart"
+                }
+            },
+            "productsColumnStackedChart": {
+                "model": "northwind",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "Product Column Stacked Chart",
+                    "entitySet": "Products",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productsColumnStackedChart"
+                }
+            },
+            "productsBubbleCard": {
+                "model": "northwind",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "Products Bubble Chart",
+                    "entitySet": "Products",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#productBubbleChart"
+                }
+            },
+            "categoriesListCard": {
+                "model": "northwind",
+                "template": "sap.ovp.cards.list",
+                "settings": {
+                    "title": "Categories List",
+                    "entitySet": "Categories",
+                    "listType": "condensed",
+                    "listFlavor": "standard",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#northwindCategoryLineItem"
+                }
+            },
+            "questionsListCard": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.list",
+                "settings": {
+                    "title": "Questions",
+                    "description": "JavaScript in Web Browser",
+                    "entitySet": "Questions",
+                    "listType": "condensed",
+                    "listFlavor": "standard",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#lineItemForQuestionsListCard",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#questionListCardDataPoint",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#questionsListSelectionVariant"
+                }
+            },
+            "groupsTableCard": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.table",
+                "settings": {
+                    "title": "Groups",
+                    "description": "JavaScript in Web Browser",
+                    "entitySet": "Groups",
+                    "listFlavor": "bar",
+                    "listType": "extended",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#groupsDataPoint",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariant",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem"
+                }
+            },
+            "groupsTableCardWithTabs": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.table",
+                "settings": {
+                    "title": "Groups",
+                    "description": "Javascript Topics Groups",
+                    "entitySet": "Groups",
+                    "tabs": [
+                        {
+                            "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariant",
+                            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem",
+                            "value": "JS in Web Browser"
+                        },
+                        {
+                            "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariantJsCore",
+                            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem",
+                            "value": "JS Core"
+                        },
+                        {
+                            "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariantUi5",
+                            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem",
+                            "value": "SAPUI5"
+                        }
+                    ]
+                }
+            },
+            "difficultiesListCard": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.list",
+                "settings": {
+                    "title": "Difficulties",
+                    "description": "All Possible Difficulties",
+                    "entitySet": "Difficulties",
+                    "sortBy": "numeric",
+                    "sortOrder": "descending",
+                    "listFlavor": "bar",
+                    "listType": "extended",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#lineItemListBar"
+                }
+            },
+            "topicsLinkList": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.linklist",
+                "settings": {
+                    "title": "Topics Docs Links",
+                    "listFlavor": "standard",
+                    "staticContent": [
+                        {
+                            "title": "JavaScript",
+                            "imageUri": "img/1.png",
+                            "imageAltText": "JavaScript",
+                            "targetUri": "https://learn.javascript.ru/",
+                            "openInNewWindow": true
+                        },
+                        {
+                            "title": "FioriElements",
+                            "imageUri": "img/2.png",
+                            "imageAltText": "Fiori Elements",
+                            "targetUri": "https://experience.sap.com/fiori-design-web/smart-templates/#:~:text=SAP%20Fiori%20elements%20is%20a,to%20build%20SAP%20Fiori%20apps.",
+                            "openInNewWindow": true
+                        },
+                        {
+                            "title": "SAPUI5",
+                            "imageUri": "img/3.png",
+                            "imageAltText": "SAPUI5",
+                            "targetUri": "https://sapui5.hana.ondemand.com/",
+                            "openInNewWindow": true
+                        },
+                        {
+                            "title": "GIT",
+                            "imageUri": "img/4.png",
+                            "imageAltText": "SAPUI5",
+                            "targetUri": "https://git-scm.com/doc",
+                            "openInNewWindow": true
+                        },
+                        {
+                            "title": "Business Technology Platform",
+                            "imageUri": "img/5.png",
+                            "imageAltText": "SAPUI5",
+                            "targetUri": "https://help.sap.com/docs/btp",
+                            "openInNewWindow": true
+                        },
+                        {
+                            "title": "Open Data Protocol",
+                            "imageUri": "img/6.png",
+                            "imageAltText": "SAPUI5",
+                            "targetUri": "https://www.odata.org/",
+                            "openInNewWindow": true
+                        }
+                    ]
+                }
+            },
+            "topicDynamicLinkList": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.linklist",
+                "settings": {
+                    "title": "Topics",
+                    "targetUri": "https://google.com",
+                    "listFlavor": "carousel",
+                    "entitySet": "Topics",
+                    "headerAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#topicHeaderInfo"
+                }
+            },
+            "topicGroupsStackCard": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.stack",
+                "settings": {
+                    "title": "Topics",
+                    "addODataSelect": false,
+                    "subTitle": "Topics Stack Card",
+                    "entitySet": "Topics",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#topicIndentification",
+                    "objectStreamCardsSettings": {
+                        "annotationPath": "com.sap.vocabularies.UI.v1.Facets#topicStackCardFacet"
+                    }
+                }
+            },
+            "difficultyLineChartCard": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "Difficulties",
+                    "entitySet": "Difficulties",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#difficultiesLineChart",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#difficultyChartDataPoint"
+                }
+            },
+            "difficultyDonutChartCard": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "Difficulty Donut Chart",
+                    "entitySet": "Difficulties",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#difficultyDonutChart"
+                }
+            },
+            "difficultyColumnChart": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "Difficulty Column Chart",
+                    "entitySet": "Difficulties",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#difficultyColumbChart"
+                }
             }
-        },
-        "groupsTableCard": {
-          "model": "mainModel",
-          "template": "sap.ovp.cards.table",
-          "settings": {
-            "title": "Groups",
-            "description": "JavaScript in Web Browser",
-            "entitySet": "Groups",
-            "listFlavor": "bar",
-            "listType": "extended",
-            "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#groupsDataPoint",
-            "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariant",
-            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem"
-          }
-        },
-        "groupsTableCardWithTabs": {
-          "model": "mainModel",
-          "template": "sap.ovp.cards.table",
-          "settings": {
-            "title": "Groups",
-            "description": "Javascript Topics Groups",
-            "entitySet": "Groups",
-            "tabs": [
-              {
-                "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariant",
-                "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem",
-                "value": "JS in Web Browser"
-              },
-              {
-                "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariantJsCore",
-                "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem",
-                "value": "JS Core"
-              },
-              {
-                "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#groupsSelectionVariantUi5",
-                "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#groupsLineItem",
-                "value": "SAPUI5"
-              }
-            ]
-          }
-        },
-        "difficultiesListCard": {
-          "model": "mainModel",
-          "template": "sap.ovp.cards.list",
-          "settings": {
-            "title": "Difficulties",
-            "description": "All Possible Difficulties",
-            "entitySet": "Difficulties",
-            "sortBy": "numeric",
-            "sortOrder": "descending",
-            "listFlavor": "bar",
-            "listType": "extended",
-            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#lineItemListBar"
-          }
-        },
-        "topicsLinkList": {
-          "model": "mainModel",
-          "template": "sap.ovp.cards.linklist",
-          "settings": {
-            "title": "Topics Docs Links",
-            "listFlavor": "standard",
-            "staticContent": [
-              {
-                "title": "JavaScript",
-                "imageUri": "img/1.png",
-                "imageAltText": "JavaScript",
-                "targetUri": "https://learn.javascript.ru/",
-                "openInNewWindow": true
-              },
-              {
-                "title": "FioriElements",
-                "imageUri": "img/2.png",
-                "imageAltText": "Fiori Elements",
-                "targetUri": "https://experience.sap.com/fiori-design-web/smart-templates/#:~:text=SAP%20Fiori%20elements%20is%20a,to%20build%20SAP%20Fiori%20apps.",
-                "openInNewWindow": true
-              },
-              {
-                "title": "SAPUI5",
-                "imageUri": "img/3.png",
-                "imageAltText": "SAPUI5",
-                "targetUri": "https://sapui5.hana.ondemand.com/",
-                "openInNewWindow": true
-              },
-              {
-                "title": "GIT",
-                "imageUri": "img/4.png",
-                "imageAltText": "SAPUI5",
-                "targetUri": "https://git-scm.com/doc",
-                "openInNewWindow": true
-              },
-              {
-                "title": "Business Technology Platform",
-                "imageUri": "img/5.png",
-                "imageAltText": "SAPUI5",
-                "targetUri": "https://help.sap.com/docs/btp",
-                "openInNewWindow": true
-              },
-              {
-                "title": "Open Data Protocol",
-                "imageUri": "img/6.png",
-                "imageAltText": "SAPUI5",
-                "targetUri": "https://www.odata.org/",
-                "openInNewWindow": true
-              }
-            ]
-          }
-        },
-        "topicDynamicLinkList": {
-          "model": "mainModel",
-          "template": "sap.ovp.cards.linklist",
-          "settings": {
-            "title": "Topics",
-            "targetUri": "https://google.com",
-            "listFlavor": "carousel",
-            "entitySet": "Topics",
-            "headerAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#topicHeaderInfo"
-          }
-        },
-        "topicGroupsStackCard": {
-          "model": "mainModel",
-          "template": "sap.ovp.cards.stack",
-          "settings": {
-            "title": "Topics",
-            "addODataSelect": false,
-            "subTitle": "Topics Stack Card",
-            "entitySet": "Topics",
-            "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#topicIndentification",
-            "objectStreamCardsSettings": {
-              "annotationPath": "com.sap.vocabularies.UI.v1.Facets#topicStackCardFacet"
-            }
-          }
-        },
-        "difficultyLineChartCard": {
-          "model": "mainModel",
-          "template": "sap.ovp.cards.charts.analytical",
-          "settings": {
-              "title": "Difficulties",
-              "entitySet": "Difficulties",
-              "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#difficultiesLineChart",
-              "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#difficultyChartDataPoint"
-          }
-        },
-        "difficultyDonutChartCard": {
-          "model": "mainModel",
-          "template": "sap.ovp.cards.charts.analytical",
-          "settings": {
-            "title": "Difficulty Donut Chart",
-            "entitySet": "Difficulties",
-            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#difficultyDonutChart"
-          }
-        },
-        "difficultyColumnChart": {
-          "model": "mainModel",
-          "template": "sap.ovp.cards.charts.analytical",
-          "settings": {
-            "title": "Difficulty Column Chart",
-            "entitySet": "Difficulties",
-            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#difficultyColumbChart"
-          }
         }
-      }
     },
     "sap.fiori": {
-      "registrationIds": [],
-      "archeType": "analytical"
+        "registrationIds": [],
+        "archeType": "analytical"
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "fiorioverviewtopic"
     }
-  }
-  
+}
