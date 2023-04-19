@@ -166,6 +166,10 @@
                 <!-- Line Item Annotations for the Questions List Card -->
                 <Annotation Term="UI.LineItem" Qualifier="lineItemForQuestionsListCard">
                     <Collection>
+                        <Record Type="UI.DataFieldForIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="Question"/>
+                            <PropertyValue Property="Action" String="View"/>
+                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="Question ID"/>
                             <PropertyValue Property="Value" Path="ID"/>
