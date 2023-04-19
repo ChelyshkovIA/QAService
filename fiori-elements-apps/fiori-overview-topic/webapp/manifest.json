@@ -143,6 +143,15 @@
       "enableLiveFilter": true,
       "considerAnalyticalParameters": false,
       "cards": {
+        "summaryOfSalesLineCharCard": {
+          "model": "northwind",
+          "template": "sap.ovp.cards.charts.analytical",
+          "settings": {
+            "title": "Summary of Sales Line Chart",
+            "entitySet": "Summary_of_Sales_by_Years",
+            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#summaryOfSalesByYearLineChart"
+          }
+        },
         "productWaterfallChart": {
           "model": "northwind",
           "template": "sap.ovp.cards.charts.analytical",
