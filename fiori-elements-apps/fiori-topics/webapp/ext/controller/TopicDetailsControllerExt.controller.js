@@ -7,7 +7,7 @@ sap.ui.define([
     return {
         onInit() {
             const oGroupsTable = this._getGroupsTable();
-            oGroupsTable.removeAllPlugins();
+            if (oGroupsTable) oGroupsTable.removeAllPlugins();
         },
 
         _bindTableProperty(oTable, sPropertyName, sFirstValue, sSecondValue) {
