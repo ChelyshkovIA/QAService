@@ -81,6 +81,15 @@
                     </Record>
                 </Annotation>
 
+                <Annotation Term="UI.Identification" Qualifier="identificationForTopicsCaruselLinkListCard">
+                    <Collection>
+                        <Record Type="UI.DataFieldForIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="Topic"/>
+                            <PropertyValue Property="Action" String="View"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+
                 <Annotation Term="UI.Facets" Qualifier="topicStackCardFacet">
                     <Collection>
                         <Record Type="UI.ReferenceFacet">

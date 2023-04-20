@@ -360,6 +360,7 @@
                     "targetUri": "https://google.com",
                     "listFlavor": "carousel",
                     "entitySet": "Topics",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#identificationForTopicsCaruselLinkListCard",
                     "headerAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo#topicHeaderInfo"
                 }
             },
