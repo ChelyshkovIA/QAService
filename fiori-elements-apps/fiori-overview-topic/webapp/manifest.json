@@ -372,7 +372,7 @@
                     "addODataSelect": false,
                     "subTitle": "Topics Stack Card",
                     "entitySet": "Topics",
-                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#topicIndentification",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#identificationForTopicsCaruselLinkListCard,com.sap.vocabularies.UI.v1.Identification#identificationForTopicsCaruselLinkListCard",
                     "objectStreamCardsSettings": {
                         "annotationPath": "com.sap.vocabularies.UI.v1.Facets#topicStackCardFacet"
                     }
