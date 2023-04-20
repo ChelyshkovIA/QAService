@@ -11,8 +11,7 @@
             <smartFilterBar:SmartFilterBar
                 id="smartFilterBar"
                 entitySet="Questions"
-                enableBasicSearch="true"
-                persistencyKey="UniqueAndStablePersistencyKey"/>
+                enableBasicSearch="true" />
 
             <VBox class="sapUiSmallMargin">
                 <HBox>
@@ -35,7 +34,6 @@
                 tableType="ResponsiveTable"
                 initiallyVisibleFields="ID,text,topic_ID,group_ID"
                 requestAtLeastFields="difficulty_ID"
-                persistencyKey="SmartTablePKey"
                 ignoredFields="progress_ID">
                 <Table>
                     <columns>
