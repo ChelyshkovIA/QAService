@@ -1,12 +1,14 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "../model/formatter",
-    "sap/ui/model/json/JSONModel"
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, formatter, JSONModel) {
+    function (Controller, formatter, JSONModel, Filter, FilterOperator) {
         "use strict";
 
         return Controller.extend("qaservicefreestylesmart.controller.QuestionList", {
@@ -14,6 +16,7 @@ sap.ui.define([
             
             onInit: function () {
                 this._initAppModel();
+                this._attachDefaultFilterToTheTable();
             },
 
             onRebind() {
@@ -28,6 +31,21 @@ sap.ui.define([
 
             onEditToggled(oEvent) {
                 oEvent.getSource().setEditable(oEvent.getParameter("editable"));
+            },
+
+            _attachDefaultFilterToTheTable() {
+                const oTable = this._getSmartTable();
+                oTable.attachBeforeRebindTable(this._onBeforeRebindQuestionsTable.bind(this));
+            },
+
+            _onBeforeRebindQuestionsTable(oEvent) {
+                const oBindingParameters = oEvent.getParameter("bindingParams");
+                const oQuestionsFilter = this._getQuestionsFilter();
+                oBindingParameters.filters.push(oQuestionsFilter);
+            },
+
+            _getQuestionsFilter() {
+                return new Filter("topic_ID", FilterOperator.EQ, "f1aa66cd-0b9d-7c34-7145-cdab9cb79098");
             },
 
             _getModel() {
