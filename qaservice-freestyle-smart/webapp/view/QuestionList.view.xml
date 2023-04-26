@@ -39,9 +39,15 @@
                     <columns>
                         <Column>
                             <customData>
-                                <core:CustomData key="p13nData" value='\{"columnKey": "Test", "columnIndex" : "3"}'/>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "customDifficulty", "leadingProperty": "difficulty_ID", "columnIndex" : "3"}'/>
                             </customData>
                             <Text text="Custom Difficulty" />
+                        </Column>
+                        <Column>
+                            <customData>
+                                <core:CustomData key="p13nData" value='\{"columnKey": "groupName", "columnIndex" : "4"}'/>
+                            </customData>
+                            <Text text="Group Name" />
                         </Column>
                     </columns>
 
@@ -57,6 +63,7 @@
                                     formatter: '.formatter.formatDifficultyState'
                                 }"
                             ></ObjectStatus>
+                            <Text text="{group/name}" />
                         </ColumnListItem>
                     </items>
                 </Table>

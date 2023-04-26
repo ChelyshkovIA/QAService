@@ -3,12 +3,13 @@ sap.ui.define([
     "../model/formatter",
     "sap/ui/model/json/JSONModel",
     "sap/ui/model/Filter",
-    "sap/ui/model/FilterOperator"
+    "sap/ui/model/FilterOperator",
+    "sap/ui/model/Sorter"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, formatter, JSONModel, Filter, FilterOperator) {
+    function (Controller, formatter, JSONModel, Filter, FilterOperator, Sorter) {
         "use strict";
 
         return Controller.extend("qaservicefreestylesmart.controller.QuestionList", {
@@ -41,7 +42,14 @@ sap.ui.define([
             _onBeforeRebindQuestionsTable(oEvent) {
                 const oBindingParameters = oEvent.getParameter("bindingParams");
                 const oQuestionsFilter = this._getQuestionsFilter();
+                const oQuestionsSorter = this._getQuestionsSorter();
                 oBindingParameters.filters.push(oQuestionsFilter);
+                oBindingParameters.sorter.push(oQuestionsSorter);
+                oBindingParameters.parameters["expand"] = "group";
+            },
+
+            _getQuestionsSorter() {
+                return new Sorter("group/name", false, true);
             },
 
             _getQuestionsFilter() {
