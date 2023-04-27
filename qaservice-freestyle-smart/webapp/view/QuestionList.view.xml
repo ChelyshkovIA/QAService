@@ -39,15 +39,27 @@
                     <columns>
                         <Column>
                             <customData>
-                                <core:CustomData key="p13nData" value='\{"columnKey": "customDifficulty", "leadingProperty": "difficulty_ID", "columnIndex" : "3"}'/>
+                                <core:CustomData key="p13nData" value='\{
+                                    "columnKey": "customDifficulty",
+                                    "leadingProperty": "difficulty/numeric",
+                                    "sortProperty": "difficulty/numeric",
+                                    "filterProperty": "difficulty/name",
+                                    "columnIndex" : "3"
+                                }'/>
                             </customData>
                             <Text text="Custom Difficulty" />
                         </Column>
                         <Column>
                             <customData>
-                                <core:CustomData key="p13nData" value='\{"columnKey": "groupName", "columnIndex" : "4"}'/>
+                                <core:CustomData key="p13nData" value='\{
+                                    "columnKey": "groupName",
+                                    "leadingProperty": "group/name",
+                                    "sortProperty": "group/name",
+                                    "filterProperty": "group/name",
+                                    "columnIndex" : "4"
+                                }'/>
                             </customData>
-                            <Text text="Group Name" />
+                            <Text text="Custom Group" />
                         </Column>
                     </columns>
 
@@ -55,11 +67,11 @@
                         <ColumnListItem>
                             <ObjectStatus
                                 text="{
-                                    path: 'difficulty_ID',
+                                    path: 'difficulty/ID',
                                     formatter: '.formatter.formatDifficultyText'
                                 }"
                                 state="{
-                                    path: 'difficulty_ID',
+                                    path: 'difficulty/ID',
                                     formatter: '.formatter.formatDifficultyState'
                                 }"
                             ></ObjectStatus>

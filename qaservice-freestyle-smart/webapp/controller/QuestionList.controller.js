@@ -45,7 +45,7 @@ sap.ui.define([
                 const oQuestionsSorter = this._getQuestionsSorter();
                 oBindingParameters.filters.push(oQuestionsFilter);
                 oBindingParameters.sorter.push(oQuestionsSorter);
-                oBindingParameters.parameters["expand"] = "group";
+                oBindingParameters.parameters["expand"] = "group,difficulty";
             },
 
             _getQuestionsSorter() {
