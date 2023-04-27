@@ -183,6 +183,9 @@
                         },
                         "dataLoadSettings": {
                             "loadDataOnAppLaunch": "always"
+                        },
+                        "tableSettings": {
+                            "type": "Table"
                         }
                     }
                 },

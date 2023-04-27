@@ -182,6 +182,11 @@
                             <PropertyValue Property="Value" Path="difficulty/name" />
                             <PropertyValue Property="Label" String="Difficulty"/>
                         </Record>
+                        <Record Type="UI.DataField">
+                            <!-- !!! Added to Ignored Fields property (doesn't displayed on UI) -->
+                            <PropertyValue Property="Label" String="progress_ID"/>
+                            <PropertyValue Property="Value" Path="progress_ID"/>
+                        </Record>
                         <Record Type="UI.DataFieldForAnnotation">
                             <PropertyValue Property="Target" AnnotationPath="difficulty/@UI.Chart#QuestionDifficultyChart"/>
                             <PropertyValue Property="Label" String="Difficulty"/>
