@@ -154,7 +154,16 @@
             "extensions": {
                 "sap.ui.controllerExtensions": {
                     "sap.ovp.app.Main": {
-                        "controllerName": "fiorioverviewtopic.ext.OVPExtension"
+                        "controllerName": "fiorioverviewtopic.ext.controller.OVPExtension"
+                    }
+                },
+                "sap.ui.viewExtensions": {
+                    "sap.ovp.app.Main": {
+                        "SmartFilterBarGlobalActionExtension": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "fiorioverviewtopic.ext.view.OVPCustomGlobalAction",
+                            "type": "XML"
+                        }
                     }
                 }
             }

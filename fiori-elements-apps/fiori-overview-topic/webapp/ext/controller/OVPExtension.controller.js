@@ -10,6 +10,10 @@ sap.ui.define([
             return this[sCustomAction].bind(this);
         },
 
+        onFireGlobalAction() {
+            MessageToast.show("Global Action Fired!");
+        },
+
         onPopUp(oEvent) {
             const oTopic = this._getTopic(oEvent);
 
