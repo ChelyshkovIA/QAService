@@ -163,6 +163,11 @@
                             "className": "sap.ui.core.Fragment",
                             "fragmentName": "fiorioverviewtopic.ext.view.OVPCustomGlobalAction",
                             "type": "XML"
+                        },
+                        "SmartFilterBarControlConfigurationExtension|Topics": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "fiorioverviewtopic.ext.view.OVPCustomFilter",
+                            "type": "XML"
                         }
                     }
                 }

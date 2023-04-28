@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar">
+
+    <smartfilterbar:ControlConfiguration
+        key="topic_ID"
+        label="Topic Cluster (Extension)"
+        visibleInAdvancedArea="true">
+        <smartfilterbar:customControl>
+            <ComboBox id="CustomTopicFilter--combobox">
+                <core:Item key="0" text="JS"/>
+                <core:Item key="1" text="Other"/>
+            </ComboBox>
+        </smartfilterbar:customControl>
+    </smartfilterbar:ControlConfiguration>
+</core:FragmentDefinition>
