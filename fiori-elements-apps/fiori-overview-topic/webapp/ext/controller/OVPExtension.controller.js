@@ -40,6 +40,20 @@ sap.ui.define([
             }
         },
 
+        onCustomParams(sCustomParam) {
+            return this[sCustomParam];
+        },
+
+        getJSCoreTopicNavParameter() {
+            // Excludes OData v4.0
+            return [{
+                path: "ID",
+                operator: FilterOperator.EQ,
+                value1: "6739629b-0e15-e76a-7a01-01d0fb6772d0",
+                sign: "E"
+            }];
+        },
+
         onCustomActionPress(sCustomAction) {
             return this[sCustomAction].bind(this);
         },

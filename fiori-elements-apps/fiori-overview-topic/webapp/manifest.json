@@ -395,6 +395,7 @@
                     "addODataSelect": false,
                     "subTitle": "Topics Stack Card",
                     "entitySet": "Topics",
+                    "customParams": "getJSCoreTopicNavParameter",
                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#identificationForTopicsCaruselLinkListCard,com.sap.vocabularies.UI.v1.Identification#identificationForTopicsCaruselLinkListCard",
                     "objectStreamCardsSettings": {
                         "annotationPath": "com.sap.vocabularies.UI.v1.Facets#topicStackCardFacet",
