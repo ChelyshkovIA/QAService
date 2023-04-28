@@ -149,6 +149,15 @@
             "config": {},
             "routes": [],
             "targets": {}
+        },
+        "extends": {
+            "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.ovp.app.Main": {
+                        "controllerName": "fiorioverviewtopic.ext.OVPExtension"
+                    }
+                }
+            }
         }
     },
     "sap.ovp": {
@@ -374,7 +383,20 @@
                     "entitySet": "Topics",
                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#identificationForTopicsCaruselLinkListCard,com.sap.vocabularies.UI.v1.Identification#identificationForTopicsCaruselLinkListCard",
                     "objectStreamCardsSettings": {
-                        "annotationPath": "com.sap.vocabularies.UI.v1.Facets#topicStackCardFacet"
+                        "annotationPath": "com.sap.vocabularies.UI.v1.Facets#topicStackCardFacet",
+                        "showFirstActionInFooter": false,
+                        "customActions": [
+                            {
+                                "text": "Pop-up",
+                                "press": "onPopUp",
+                                "postion": 1
+                            },
+                            {
+                                "text": "Log",
+                                "press": "onLog",
+                                "position": 2
+                            }
+                        ]
                     }
                 }
             },
