@@ -25,9 +25,15 @@ sap.ui.define([
                 }
             });
         },
-
-        onItemPress() {
-            console.log("Item Pressed!");
+        
+        onItemPress(oEvent) {
+            const sQuestionsPath = oEvent.getSource().getBindingContext("mainModel").getPath();
+            
+            this.CrossNavigation.toExternal({
+                target: {
+                    shellHash: `Question-View?sap-ui-app-id-hint=saas_approuter_fioriquestions&${sQuestionsPath}`
+                }
+            });
         }
     }
 });
