@@ -8,10 +8,25 @@ sap.ui.define([
     return {
         onInit() {},
 
+        onBeforeRebindPageExtension(aCards, oSelectionVariant) {
+            this._updateGroupsViewSwitch();
+        },
+
+        _updateGroupsViewSwitch() {
+            const sSelectedCluster = this._getSelectedCluster();
+            if (!sSelectedCluster) return; 
+
+            const oTabIndexList = {
+                "groupsTableCardWithTabs": sSelectedCluster === "1" ? 3 : 1
+            };
+
+            this.setTabIndex(oTabIndexList);
+        },
+
         getCustomFilters() {
             const aFilters = [];
 
-            const sSelectedValue = this._getSelectedTopic();
+            const sSelectedValue = this._getSelectedCluster();
 
             const oTopicFilter = this._getTopicFilter(sSelectedValue);
 
@@ -118,7 +133,7 @@ sap.ui.define([
             });
         },
 
-        _getSelectedTopic() {
+        _getSelectedCluster() {
             return this._byId("CustomTopicFilter--combobox").getSelectedKey();
         },
 
