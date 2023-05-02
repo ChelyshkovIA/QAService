@@ -442,6 +442,12 @@
                     "entitySet": "Difficulties",
                     "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#difficultyColumbChart"
                 }
+            },
+            "customCard": {
+                "template": "fiorioverviewtopic.ext.card",
+                "settings": {
+                    "title": "Custom Card"
+                }
             }
         }
     },

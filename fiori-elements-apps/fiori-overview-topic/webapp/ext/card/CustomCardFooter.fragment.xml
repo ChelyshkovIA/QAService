@@ -1,0 +1,6 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Text text="Footer" />
+</core:FragmentDefinition>
