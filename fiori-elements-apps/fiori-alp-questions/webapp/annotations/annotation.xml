@@ -13,6 +13,89 @@
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="QAService.Difficulties">
+                <!-- ================================================= \/ KPI \/ ================================================ -->
+                <Annotation Term="UI.KPI" Qualifier="KPIDif">
+                    <Record Type="UI.KPIType">
+                        <PropertyValue Property="DataPoint" Path="@UI.DataPoint#KPIDataPoint"/>
+                        <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#KPISelectionVariant"/>
+                        <PropertyValue Property="ID" String="DifficultyKPI"/>
+                        <PropertyValue Property="Detail">
+                            <Record Type="UI.KPIDetailType">
+                                <PropertyValue Property="SemanticObject" String="Question"/>
+                                <PropertyValue Property="Action" String="View"/>
+                                <PropertyValue Property="DefaultPresentationVariant" Path="@UI.PresentationVariant#KPIPresentationVariant" />
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.PresentationVariant" Qualifier="KPIPresentationVariant">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.Chart#KPIDifficultyChart</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.Chart" Qualifier="KPIDifficultyChart">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut"/>
+                        <PropertyValue Property="Title" String="Difficulty"/>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>numeric</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>name</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.DataPoint" Qualifier="KPIDataPoint">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Title" String="DIF"/>
+                        <PropertyValue Property="Description" String="Diffiuclty KPI"/>
+                        <PropertyValue Property="Value" Path="4"/>
+                        <PropertyValue Property="Criticality" EnumMember="UI.CriticalityType/Negative"/>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.SelectionVariant" Qualifier="KPISelectionVariant">
+                    <Record Type="UI.SelectionVariantType">
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="UI.Parameter">
+                                    <PropertyValue Property="PropertyName" PropertyPath="ID"/>
+                                    <PropertyValue Property="PropertyValue" String="405fa0bc-b8d6-946a-5997-34401cc47721"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="SelectOptions">
+                            <Collection>
+                                <Record Type="UI.SelectOptionType">
+                                    <PropertyValue Property="PropertyName" PropertyPath="questions/difficulty/ID"/>
+                                    <PropertyValue Property="Ranges">
+                                        <Collection>
+                                            <Record Type="UI.SelectionRangeType">
+                                                <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+                                                <PropertyValue Property="Low" String="405fa0bc-b8d6-946a-5997-34401cc47721"/>
+                                            </Record>
+                                        </Collection>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <!-- ================================================== /\ KPI /\ ==================================================== -->
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
