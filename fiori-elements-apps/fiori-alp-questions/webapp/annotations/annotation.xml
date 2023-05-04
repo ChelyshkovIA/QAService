@@ -96,6 +96,35 @@
                 </Annotation>
                 <!-- ================================================== /\ KPI /\ ==================================================== -->
             </Annotations>
+
+            <Annotations Target="QAService.Questions">
+                <Annotation Term="UI.SelectionFields" >
+                    <Collection>
+                        <PropertyPath>topic/name</PropertyPath>
+                        <PropertyPath>group/name</PropertyPath>
+                        <PropertyPath>difficulty/name</PropertyPath>
+                        <PropertyPath>text</PropertyPath>
+                        <PropertyPath>ID</PropertyPath>
+                        <PropertyPath>progress/name</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="QAService.Difficulties/name">
+                <Annotation Term="Common.Label" String="Difficulty"/>
+            </Annotations>
+
+            <Annotations Target="QAService.Progress/name">
+                <Annotation Term="Common.Label" String="Progress Status"/>
+            </Annotations>
+
+            <Annotations Target="QAService.Topics/name">
+                <Annotation Term="Common.Label" String="Topic Name"/>
+            </Annotations>
+
+            <Annotations Target="QAService.Groups/name">
+                <Annotation Term="Common.Label" String="Group Name"/>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
