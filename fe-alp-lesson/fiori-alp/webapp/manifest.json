@@ -130,6 +130,11 @@
                         "keyPerformanceIndicators": {},
                         "chartSettings": {
                             "showDataLabel": true
+                        },
+                        "filterSettings": {
+                            "dateSettings": {
+                                "useDateRange": true
+                            }
                         }
                     }
                 },
