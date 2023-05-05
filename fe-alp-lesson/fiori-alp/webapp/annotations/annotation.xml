@@ -91,6 +91,18 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+
+                <!-- FILTER AREA: Added Selection Fields for the Filter -->
+                <Annotation Term="UI.SelectionFields" >
+                    <Collection>
+                        <PropertyPath>DeliveryCalendarDate</PropertyPath>
+                        <PropertyPath>SoldToParty</PropertyPath>
+                        <PropertyPath>Product</PropertyPath>
+                        <PropertyPath>MainProductCategory</PropertyPath>
+                        <PropertyPath>DeliveryCalendarQuarter</PropertyPath>
+                        <PropertyPath>OrderDate</PropertyPath>
+                    </Collection>
+                </Annotation>
             </Annotations>
         </Schema>
     </edmx:DataServices>
