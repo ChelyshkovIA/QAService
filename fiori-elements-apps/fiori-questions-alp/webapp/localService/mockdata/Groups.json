@@ -1,0 +1,1175 @@
+[
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "0d162522-031c-b78f-3121-96c62af8bddc",
+    "name": "Functions",
+    "topic_ID": "f1aa66cd-0b9d-7c34-7145-cdab9cb79098",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'0d162522-031c-b78f-3121-96c62af8bddc')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'0d162522-031c-b78f-3121-96c62af8bddc')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'0d162522-031c-b78f-3121-96c62af8bddc')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "0fafb946-17d4-5b34-f921-b600a93268e9",
+    "name": "Misc",
+    "topic_ID": "60ae3692-684c-1d8a-75bf-6763c5c3f4cd",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'0fafb946-17d4-5b34-f921-b600a93268e9')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'0fafb946-17d4-5b34-f921-b600a93268e9')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'0fafb946-17d4-5b34-f921-b600a93268e9')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "10da04ac-65e5-1808-75d0-9832c2fa5806",
+    "name": "Modules",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'10da04ac-65e5-1808-75d0-9832c2fa5806')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'10da04ac-65e5-1808-75d0-9832c2fa5806')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'10da04ac-65e5-1808-75d0-9832c2fa5806')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "150dc069-82ba-dded-f437-d4dadb726ad2",
+    "name": "Testing",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'150dc069-82ba-dded-f437-d4dadb726ad2')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'150dc069-82ba-dded-f437-d4dadb726ad2')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'150dc069-82ba-dded-f437-d4dadb726ad2')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "15475219-a0ce-ba31-574d-617c9923f65c",
+    "name": "V8",
+    "topic_ID": "81f2573d-40f4-5186-6976-a56c6703b961",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'15475219-a0ce-ba31-574d-617c9923f65c')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'15475219-a0ce-ba31-574d-617c9923f65c')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'15475219-a0ce-ba31-574d-617c9923f65c')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "16be200b-9570-9b10-e6c3-2056657f1162",
+    "name": "Networking",
+    "topic_ID": "81f2573d-40f4-5186-6976-a56c6703b961",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'16be200b-9570-9b10-e6c3-2056657f1162')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'16be200b-9570-9b10-e6c3-2056657f1162')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'16be200b-9570-9b10-e6c3-2056657f1162')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "19735916-883f-fd19-cd43-89430a267c54",
+    "name": "Event handling",
+    "topic_ID": "81f2573d-40f4-5186-6976-a56c6703b961",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'19735916-883f-fd19-cd43-89430a267c54')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'19735916-883f-fd19-cd43-89430a267c54')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'19735916-883f-fd19-cd43-89430a267c54')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "1db4e20e-5eca-9a4f-46c6-8e2586ae555b",
+    "name": "Async behavior",
+    "topic_ID": "f1aa66cd-0b9d-7c34-7145-cdab9cb79098",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'1db4e20e-5eca-9a4f-46c6-8e2586ae555b')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'1db4e20e-5eca-9a4f-46c6-8e2586ae555b')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'1db4e20e-5eca-9a4f-46c6-8e2586ae555b')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "1dc8796d-2c8a-8fac-7a7f-c38d7bfc4df2",
+    "name": "Scope & closure",
+    "topic_ID": "f1aa66cd-0b9d-7c34-7145-cdab9cb79098",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'1dc8796d-2c8a-8fac-7a7f-c38d7bfc4df2')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'1dc8796d-2c8a-8fac-7a7f-c38d7bfc4df2')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'1dc8796d-2c8a-8fac-7a7f-c38d7bfc4df2')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "298901ce-d06f-093e-6713-4ae909698270",
+    "name": "Data Binding",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'298901ce-d06f-093e-6713-4ae909698270')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'298901ce-d06f-093e-6713-4ae909698270')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'298901ce-d06f-093e-6713-4ae909698270')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "32adae1c-44fe-ed43-acf0-5c551dab3899",
+    "name": "General points",
+    "topic_ID": "8b5342b9-54ea-9dcb-c957-2b78517b8938",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'32adae1c-44fe-ed43-acf0-5c551dab3899')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'32adae1c-44fe-ed43-acf0-5c551dab3899')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'32adae1c-44fe-ed43-acf0-5c551dab3899')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "32db71f1-1461-db3a-0c88-9788ded23a7a",
+    "name": "System query options",
+    "topic_ID": "6739629b-0e15-e76a-7a01-01d0fb6772d0",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'32db71f1-1461-db3a-0c88-9788ded23a7a')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'32db71f1-1461-db3a-0c88-9788ded23a7a')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'32db71f1-1461-db3a-0c88-9788ded23a7a')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "3bd8067d-2aeb-1d68-b0dc-3821f90c88b8",
+    "name": "Syntax",
+    "topic_ID": "f1aa66cd-0b9d-7c34-7145-cdab9cb79098",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'3bd8067d-2aeb-1d68-b0dc-3821f90c88b8')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'3bd8067d-2aeb-1d68-b0dc-3821f90c88b8')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'3bd8067d-2aeb-1d68-b0dc-3821f90c88b8')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "4b0f7f8b-ab16-7372-bdfc-a17d996a32ec",
+    "name": "Layouting & Responsiveness",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'4b0f7f8b-ab16-7372-bdfc-a17d996a32ec')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'4b0f7f8b-ab16-7372-bdfc-a17d996a32ec')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'4b0f7f8b-ab16-7372-bdfc-a17d996a32ec')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "50b94a2c-57ae-b2ae-f138-0738dc375fd5",
+    "name": "General points",
+    "topic_ID": "60ae3692-684c-1d8a-75bf-6763c5c3f4cd",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'50b94a2c-57ae-b2ae-f138-0738dc375fd5')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'50b94a2c-57ae-b2ae-f138-0738dc375fd5')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'50b94a2c-57ae-b2ae-f138-0738dc375fd5')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "51de3689-bf0d-dbe8-92aa-10a3f29045ac",
+    "name": "Misc.",
+    "topic_ID": "6739629b-0e15-e76a-7a01-01d0fb6772d0",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'51de3689-bf0d-dbe8-92aa-10a3f29045ac')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'51de3689-bf0d-dbe8-92aa-10a3f29045ac')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'51de3689-bf0d-dbe8-92aa-10a3f29045ac')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "59bac279-0dd1-0062-cc01-f7bf7978e34c",
+    "name": "Vocabulary & Annotation",
+    "topic_ID": "6739629b-0e15-e76a-7a01-01d0fb6772d0",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'59bac279-0dd1-0062-cc01-f7bf7978e34c')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'59bac279-0dd1-0062-cc01-f7bf7978e34c')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'59bac279-0dd1-0062-cc01-f7bf7978e34c')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "5aa1b432-e83c-c981-090b-04187200809b",
+    "name": "Multi Target applications",
+    "topic_ID": "8b5342b9-54ea-9dcb-c957-2b78517b8938",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'5aa1b432-e83c-c981-090b-04187200809b')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'5aa1b432-e83c-c981-090b-04187200809b')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'5aa1b432-e83c-c981-090b-04187200809b')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "6005a103-8070-0db6-05cb-da537e432f1b",
+    "name": "Application structure",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'6005a103-8070-0db6-05cb-da537e432f1b')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'6005a103-8070-0db6-05cb-da537e432f1b')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'6005a103-8070-0db6-05cb-da537e432f1b')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "610c9720-668d-4eeb-1575-4d325be74cf4",
+    "name": "Controls",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'610c9720-668d-4eeb-1575-4d325be74cf4')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'610c9720-668d-4eeb-1575-4d325be74cf4')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'610c9720-668d-4eeb-1575-4d325be74cf4')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "64856824-8ba5-c606-afab-be9d9002741d",
+    "name": "Routing",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'64856824-8ba5-c606-afab-be9d9002741d')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'64856824-8ba5-c606-afab-be9d9002741d')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'64856824-8ba5-c606-afab-be9d9002741d')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "6e72dc8d-5ed4-28ce-fc5f-2a9bd53155e0",
+    "name": "Error handling",
+    "topic_ID": "f1aa66cd-0b9d-7c34-7145-cdab9cb79098",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'6e72dc8d-5ed4-28ce-fc5f-2a9bd53155e0')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'6e72dc8d-5ed4-28ce-fc5f-2a9bd53155e0')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'6e72dc8d-5ed4-28ce-fc5f-2a9bd53155e0')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "7898f66b-927c-a00f-ca93-6bfe55e3db4f",
+    "name": "Build & deployment",
+    "topic_ID": "ed910572-a008-ab7a-4950-d5b23a70a4b4",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7898f66b-927c-a00f-ca93-6bfe55e3db4f')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7898f66b-927c-a00f-ca93-6bfe55e3db4f')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7898f66b-927c-a00f-ca93-6bfe55e3db4f')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "7a3e4e87-1498-d62f-43af-cd08b6a02c8a",
+    "name": "Arrays",
+    "topic_ID": "f1aa66cd-0b9d-7c34-7145-cdab9cb79098",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7a3e4e87-1498-d62f-43af-cd08b6a02c8a')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7a3e4e87-1498-d62f-43af-cd08b6a02c8a')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7a3e4e87-1498-d62f-43af-cd08b6a02c8a')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "7b14e948-ba25-2aa4-e881-b1a964eb3f1b",
+    "name": "Web APIs / interfaces",
+    "topic_ID": "81f2573d-40f4-5186-6976-a56c6703b961",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7b14e948-ba25-2aa4-e881-b1a964eb3f1b')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7b14e948-ba25-2aa4-e881-b1a964eb3f1b')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7b14e948-ba25-2aa4-e881-b1a964eb3f1b')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "7b58d414-7fa7-715c-9ab5-47a43bac6a70",
+    "name": "OData Metadata",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7b58d414-7fa7-715c-9ab5-47a43bac6a70')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7b58d414-7fa7-715c-9ab5-47a43bac6a70')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7b58d414-7fa7-715c-9ab5-47a43bac6a70')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "7dbfff89-d12a-4fa1-a65b-bafd4cd14398",
+    "name": "Misc",
+    "topic_ID": "f1aa66cd-0b9d-7c34-7145-cdab9cb79098",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7dbfff89-d12a-4fa1-a65b-bafd4cd14398')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7dbfff89-d12a-4fa1-a65b-bafd4cd14398')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'7dbfff89-d12a-4fa1-a65b-bafd4cd14398')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "849c9be1-d903-d2be-3448-a38f5dabab27",
+    "name": "Authorisation and authentication",
+    "topic_ID": "8b5342b9-54ea-9dcb-c957-2b78517b8938",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'849c9be1-d903-d2be-3448-a38f5dabab27')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'849c9be1-d903-d2be-3448-a38f5dabab27')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'849c9be1-d903-d2be-3448-a38f5dabab27')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "84df5692-9e22-ee5c-7a9c-fd7f93bd2b20",
+    "name": "Misc",
+    "topic_ID": "ed910572-a008-ab7a-4950-d5b23a70a4b4",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'84df5692-9e22-ee5c-7a9c-fd7f93bd2b20')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'84df5692-9e22-ee5c-7a9c-fd7f93bd2b20')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'84df5692-9e22-ee5c-7a9c-fd7f93bd2b20')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "8acf746e-797c-a302-6c2c-e27c36ce4c1c",
+    "name": "Operations / data requesting",
+    "topic_ID": "60ae3692-684c-1d8a-75bf-6763c5c3f4cd",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'8acf746e-797c-a302-6c2c-e27c36ce4c1c')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'8acf746e-797c-a302-6c2c-e27c36ce4c1c')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'8acf746e-797c-a302-6c2c-e27c36ce4c1c')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "907150ac-a7a3-7d0c-c563-54bb75fad5fc",
+    "name": "Client Side data storage",
+    "topic_ID": "81f2573d-40f4-5186-6976-a56c6703b961",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'907150ac-a7a3-7d0c-c563-54bb75fad5fc')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'907150ac-a7a3-7d0c-c563-54bb75fad5fc')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'907150ac-a7a3-7d0c-c563-54bb75fad5fc')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "91a2c7aa-7b98-ce53-492c-7045eaa3bde1",
+    "name": "URI Conventions",
+    "topic_ID": "60ae3692-684c-1d8a-75bf-6763c5c3f4cd",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'91a2c7aa-7b98-ce53-492c-7045eaa3bde1')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'91a2c7aa-7b98-ce53-492c-7045eaa3bde1')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'91a2c7aa-7b98-ce53-492c-7045eaa3bde1')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "965bdf36-4e66-6bbb-6eb5-390b9129adb9",
+    "name": "Data types",
+    "topic_ID": "f1aa66cd-0b9d-7c34-7145-cdab9cb79098",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'965bdf36-4e66-6bbb-6eb5-390b9129adb9')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'965bdf36-4e66-6bbb-6eb5-390b9129adb9')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'965bdf36-4e66-6bbb-6eb5-390b9129adb9')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "993c1f10-7216-be88-ef14-b8e61933d07d",
+    "name": "Security",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'993c1f10-7216-be88-ef14-b8e61933d07d')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'993c1f10-7216-be88-ef14-b8e61933d07d')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'993c1f10-7216-be88-ef14-b8e61933d07d')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "9aad29c7-b61b-2424-abd4-08d2c45e4b78",
+    "name": "Batch processing",
+    "topic_ID": "60ae3692-684c-1d8a-75bf-6763c5c3f4cd",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'9aad29c7-b61b-2424-abd4-08d2c45e4b78')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'9aad29c7-b61b-2424-abd4-08d2c45e4b78')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'9aad29c7-b61b-2424-abd4-08d2c45e4b78')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "9d853614-7351-ebb3-fcf1-acbdd23bfd01",
+    "name": "Accessibility",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'9d853614-7351-ebb3-fcf1-acbdd23bfd01')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'9d853614-7351-ebb3-fcf1-acbdd23bfd01')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'9d853614-7351-ebb3-fcf1-acbdd23bfd01')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "9e397fe4-dfe7-6376-104a-30d36757c09d",
+    "name": "DOM",
+    "topic_ID": "81f2573d-40f4-5186-6976-a56c6703b961",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'9e397fe4-dfe7-6376-104a-30d36757c09d')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'9e397fe4-dfe7-6376-104a-30d36757c09d')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'9e397fe4-dfe7-6376-104a-30d36757c09d')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "9e5fe9e4-068f-adff-0f21-03a2f6cf4113",
+    "name": "Objects",
+    "topic_ID": "f1aa66cd-0b9d-7c34-7145-cdab9cb79098",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'9e5fe9e4-068f-adff-0f21-03a2f6cf4113')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'9e5fe9e4-068f-adff-0f21-03a2f6cf4113')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'9e5fe9e4-068f-adff-0f21-03a2f6cf4113')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "a02a6129-663e-578d-9f77-01040730ac39",
+    "name": "JSON format representation",
+    "topic_ID": "60ae3692-684c-1d8a-75bf-6763c5c3f4cd",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'a02a6129-663e-578d-9f77-01040730ac39')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'a02a6129-663e-578d-9f77-01040730ac39')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'a02a6129-663e-578d-9f77-01040730ac39')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "b3880128-47de-f9fe-6ffb-0107e6794f84",
+    "name": "SAPUI5 ABAP repository & the ABAP Back-End infrastructure",
+    "topic_ID": "ed910572-a008-ab7a-4950-d5b23a70a4b4",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'b3880128-47de-f9fe-6ffb-0107e6794f84')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'b3880128-47de-f9fe-6ffb-0107e6794f84')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'b3880128-47de-f9fe-6ffb-0107e6794f84')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "bb9a308c-219b-688e-a905-d5cb9fa92046",
+    "name": "Smart Controls",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'bb9a308c-219b-688e-a905-d5cb9fa92046')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'bb9a308c-219b-688e-a905-d5cb9fa92046')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'bb9a308c-219b-688e-a905-d5cb9fa92046')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "bc0f1238-496e-81f5-0112-1b3107cb0815",
+    "name": "Custom controls",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'bc0f1238-496e-81f5-0112-1b3107cb0815')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'bc0f1238-496e-81f5-0112-1b3107cb0815')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'bc0f1238-496e-81f5-0112-1b3107cb0815')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "bd8b970a-7d5a-c16e-0916-b67b5775d394",
+    "name": "MVC",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'bd8b970a-7d5a-c16e-0916-b67b5775d394')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'bd8b970a-7d5a-c16e-0916-b67b5775d394')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'bd8b970a-7d5a-c16e-0916-b67b5775d394')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "be6d4b28-5947-b324-195f-98a3f22e9815",
+    "name": "Misc",
+    "topic_ID": "81f2573d-40f4-5186-6976-a56c6703b961",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'be6d4b28-5947-b324-195f-98a3f22e9815')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'be6d4b28-5947-b324-195f-98a3f22e9815')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'be6d4b28-5947-b324-195f-98a3f22e9815')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "c8e462d8-6191-9142-86c5-a36a30564a8d",
+    "name": "ODataModel",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'c8e462d8-6191-9142-86c5-a36a30564a8d')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'c8e462d8-6191-9142-86c5-a36a30564a8d')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'c8e462d8-6191-9142-86c5-a36a30564a8d')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": "/Date(1681396811594+0000)/",
+    "modifiedBy": "anonymous",
+    "ID": "e5095a16-c5c4-add9-1ce2-31656798cb68",
+    "name": "General points",
+    "topic_ID": "6739629b-0e15-e76a-7a01-01d0fb6772d0",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'e5095a16-c5c4-add9-1ce2-31656798cb68')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'e5095a16-c5c4-add9-1ce2-31656798cb68')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'e5095a16-c5c4-add9-1ce2-31656798cb68')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "e51b544f-b07a-0998-3c60-1ca674c2f7b1",
+    "name": "Application Router",
+    "topic_ID": "8b5342b9-54ea-9dcb-c957-2b78517b8938",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'e51b544f-b07a-0998-3c60-1ca674c2f7b1')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'e51b544f-b07a-0998-3c60-1ca674c2f7b1')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'e51b544f-b07a-0998-3c60-1ca674c2f7b1')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "eace4302-e244-0fda-8450-a2e3d99d7779",
+    "name": "General",
+    "topic_ID": "af707c61-fa5a-681d-a982-b51ce8596977",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'eace4302-e244-0fda-8450-a2e3d99d7779')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'eace4302-e244-0fda-8450-a2e3d99d7779')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'eace4302-e244-0fda-8450-a2e3d99d7779')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "f50b785a-31c7-6d57-855d-1ce00de68446",
+    "name": "Localization",
+    "topic_ID": "bab71ca5-3ca6-b217-375a-1cb884fc25e9",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'f50b785a-31c7-6d57-855d-1ce00de68446')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'f50b785a-31c7-6d57-855d-1ce00de68446')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'f50b785a-31c7-6d57-855d-1ce00de68446')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "f7b2eeae-518e-3f9f-b03a-f681e9c21842",
+    "name": "Expressions & operators",
+    "topic_ID": "f1aa66cd-0b9d-7c34-7145-cdab9cb79098",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'f7b2eeae-518e-3f9f-b03a-f681e9c21842')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'f7b2eeae-518e-3f9f-b03a-f681e9c21842')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'f7b2eeae-518e-3f9f-b03a-f681e9c21842')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "fe014476-8079-ce3a-32b9-930ac5a9e0f3",
+    "name": "Extension capabilities",
+    "topic_ID": "ed910572-a008-ab7a-4950-d5b23a70a4b4",
+    "topic": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'fe014476-8079-ce3a-32b9-930ac5a9e0f3')/topic"
+    }
+    },
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'fe014476-8079-ce3a-32b9-930ac5a9e0f3')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Groups",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Groups(guid'fe014476-8079-ce3a-32b9-930ac5a9e0f3')"
+    }
+    }
+    ]

@@ -1,0 +1,74 @@
+[
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "405fa0bc-b8d6-946a-5997-34401cc47721",
+    "name": "Expert",
+    "numeric": 3,
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Difficulties(guid'405fa0bc-b8d6-946a-5997-34401cc47721')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Difficulties",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Difficulties(guid'405fa0bc-b8d6-946a-5997-34401cc47721')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "7a8eec66-b5a4-5c59-f4c7-b844cb506751",
+    "name": "Advanced",
+    "numeric": 2,
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Difficulties(guid'7a8eec66-b5a4-5c59-f4c7-b844cb506751')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Difficulties",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Difficulties(guid'7a8eec66-b5a4-5c59-f4c7-b844cb506751')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "891a0c87-5825-b3d7-d94d-243a77a314b6",
+    "name": "Elementary",
+    "numeric": 0,
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Difficulties(guid'891a0c87-5825-b3d7-d94d-243a77a314b6')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Difficulties",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Difficulties(guid'891a0c87-5825-b3d7-d94d-243a77a314b6')"
+    }
+    },
+    {
+    "createdAt": null,
+    "createdBy": null,
+    "modifiedAt": null,
+    "modifiedBy": null,
+    "ID": "af7d706e-199c-f4e9-b51e-3ecd815fd3b4",
+    "name": "Basic",
+    "numeric": 1,
+    "questions": {
+    "__deferred": {
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Difficulties(guid'af7d706e-199c-f4e9-b51e-3ecd815fd3b4')/questions"
+    }
+    },
+    "__metadata": {
+    "type": "QAService.Difficulties",
+    "uri": "https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/Difficulties(guid'af7d706e-199c-f4e9-b51e-3ecd815fd3b4')"
+    }
+    }
+    ]
