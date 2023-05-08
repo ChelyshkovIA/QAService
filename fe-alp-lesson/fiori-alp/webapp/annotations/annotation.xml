@@ -141,6 +141,14 @@
                                 <PropertyPath>Quantity</PropertyPath>
                             </Collection>
                         </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="Quantity"/>
+                                    <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#VisualFilterCriticalityDataPoint"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
                     </Record>
                 </Annotation>
                 
@@ -151,6 +159,18 @@
                             <Collection>
                                 <AnnotationPath>@UI.Chart#VisualFilterQualifier</AnnotationPath>
                             </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="VisualFilterCriticalityDataPoint">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Value" String="Quantity"/>
+                        <PropertyValue Property="CriticalityCalculation">
+                            <Record Type="UI.CriticalityCalculationType">
+                                <PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Maximize"/>
+                                <PropertyValue Property="ToleranceRangeLowValue" Int="5"/>
+                                <PropertyValue Property="DeviationRangeLowValue" Int="4"/>
+                            </Record>
                         </PropertyValue>
                     </Record>
                 </Annotation>
