@@ -1,0 +1,294 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="QAService">
+            <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Questions" EntityType="QAService.Questions"/>
+                <EntitySet Name="Groups" EntityType="QAService.Groups"/>
+                <EntitySet Name="Difficulties" EntityType="QAService.Difficulties"/>
+                <EntitySet Name="Topics" EntityType="QAService.Topics"/>
+                <EntitySet Name="Progress" EntityType="QAService.Progress"/>
+                <AssociationSet Name="Questions_difficulty" Association="QAService.Questions_difficulty">
+                    <End Role="Questions" EntitySet="Questions"/>
+                    <End Role="Difficulties" EntitySet="Difficulties"/>
+                </AssociationSet>
+                <AssociationSet Name="Questions_topic" Association="QAService.Questions_topic">
+                    <End Role="Questions" EntitySet="Questions"/>
+                    <End Role="Topics" EntitySet="Topics"/>
+                </AssociationSet>
+                <AssociationSet Name="Questions_group" Association="QAService.Questions_group">
+                    <End Role="Questions" EntitySet="Questions"/>
+                    <End Role="Groups" EntitySet="Groups"/>
+                </AssociationSet>
+                <AssociationSet Name="Questions_progress" Association="QAService.Questions_progress">
+                    <End Role="Questions" EntitySet="Questions"/>
+                    <End Role="Progress" EntitySet="Progress"/>
+                </AssociationSet>
+                <AssociationSet Name="Groups_topic" Association="QAService.Groups_topic">
+                    <End Role="Groups" EntitySet="Groups"/>
+                    <End Role="Topics" EntitySet="Topics"/>
+                </AssociationSet>
+            </EntityContainer>
+            <EntityType Name="Questions">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="text" Type="Edm.String"/>
+                <Property Name="answer" Type="Edm.String"/>
+                <NavigationProperty Name="difficulty" Relationship="QAService.Questions_difficulty" FromRole="Questions" ToRole="Difficulties"/>
+                <Property Name="difficulty_ID" Type="Edm.Guid"/>
+                <NavigationProperty Name="topic" Relationship="QAService.Questions_topic" FromRole="Questions" ToRole="Topics"/>
+                <Property Name="topic_ID" Type="Edm.Guid"/>
+                <NavigationProperty Name="group" Relationship="QAService.Questions_group" FromRole="Questions" ToRole="Groups"/>
+                <Property Name="group_ID" Type="Edm.Guid"/>
+                <NavigationProperty Name="progress" Relationship="QAService.Questions_progress" FromRole="Questions" ToRole="Progress"/>
+                <Property Name="progress_ID" Type="Edm.Guid"/>
+            </EntityType>
+            <EntityType Name="Groups">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="name" Type="Edm.String"/>
+                <NavigationProperty Name="topic" Relationship="QAService.Groups_topic" FromRole="Groups" ToRole="Topics"/>
+                <Property Name="topic_ID" Type="Edm.Guid"/>
+                <NavigationProperty Name="questions" Relationship="QAService.Questions_group" FromRole="Groups" ToRole="Questions"/>
+            </EntityType>
+            <EntityType Name="Difficulties">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="name" Type="Edm.String"/>
+                <Property Name="numeric" Type="Edm.Int32"/>
+                <NavigationProperty Name="questions" Relationship="QAService.Questions_difficulty" FromRole="Difficulties" ToRole="Questions"/>
+            </EntityType>
+            <EntityType Name="Topics">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="name" Type="Edm.String"/>
+                <NavigationProperty Name="groups" Relationship="QAService.Groups_topic" FromRole="Topics" ToRole="Groups"/>
+                <NavigationProperty Name="questions" Relationship="QAService.Questions_topic" FromRole="Topics" ToRole="Questions"/>
+            </EntityType>
+            <EntityType Name="Progress">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="name" Type="Edm.String"/>
+                <NavigationProperty Name="questions" Relationship="QAService.Questions_progress" FromRole="Progress" ToRole="Questions"/>
+            </EntityType>
+            <Association Name="Questions_difficulty">
+                <End Role="Questions" Type="QAService.Questions" Multiplicity="*"/>
+                <End Role="Difficulties" Type="QAService.Difficulties" Multiplicity="0..1"/>
+                <ReferentialConstraint>
+                    <Principal Role="Difficulties">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="Questions">
+                        <PropertyRef Name="difficulty_ID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Questions_topic">
+                <End Role="Questions" Type="QAService.Questions" Multiplicity="*"/>
+                <End Role="Topics" Type="QAService.Topics" Multiplicity="0..1"/>
+                <ReferentialConstraint>
+                    <Principal Role="Topics">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="Questions">
+                        <PropertyRef Name="topic_ID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Questions_group">
+                <End Role="Questions" Type="QAService.Questions" Multiplicity="*"/>
+                <End Role="Groups" Type="QAService.Groups" Multiplicity="0..1"/>
+                <ReferentialConstraint>
+                    <Principal Role="Groups">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="Questions">
+                        <PropertyRef Name="group_ID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Questions_progress">
+                <End Role="Questions" Type="QAService.Questions" Multiplicity="*"/>
+                <End Role="Progress" Type="QAService.Progress" Multiplicity="0..1"/>
+                <ReferentialConstraint>
+                    <Principal Role="Progress">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="Questions">
+                        <PropertyRef Name="progress_ID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Groups_topic">
+                <End Role="Groups" Type="QAService.Groups" Multiplicity="*"/>
+                <End Role="Topics" Type="QAService.Topics" Multiplicity="0..1"/>
+                <ReferentialConstraint>
+                    <Principal Role="Topics">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="Groups">
+                        <PropertyRef Name="topic_ID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Questions/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Questions/createdBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Questions/modifiedAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Questions/modifiedBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Groups/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Groups/createdBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Groups/modifiedAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Groups/modifiedBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Difficulties/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Difficulties/createdBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Difficulties/modifiedAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Difficulties/modifiedBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Topics/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Topics/createdBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Topics/modifiedAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Topics/modifiedBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Progress/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Created On"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Progress/createdBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Created By"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Progress/modifiedAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="Changed On"/>
+            </Annotations>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="QAService.Progress/modifiedBy">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Core.Description" String="User's unique ID"/>
+                <Annotation Term="Common.Label" String="Changed By"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
