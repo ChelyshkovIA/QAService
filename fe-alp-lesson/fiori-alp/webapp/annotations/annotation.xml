@@ -104,6 +104,57 @@
                     </Collection>
                 </Annotation>
             </Annotations>
+
+            <Annotations Target="TECHED_ALP_SOA_SRV.Z_SEPMRA_SO_SALESORDERANALYSISType/DeliveryCalendarDate">
+                <!-- Value List Annotation for connecting Chart and Filter Bar Properties -->
+                <!-- Take into consideration the PresentationVariantQualifier Property -->
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="SEPMRA_SO_ALP_SLDORDERITEM"/>
+                        <PropertyValue Property="PresentationVariantQualifier" String="VisualFilterPresentationVariantQualifier"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DeliveryCalendarDate"/>
+                                    <PropertyValue Property="ValueListProperty" String="DeliveryDate"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="TECHED_ALP_SOA_SRV.SEPMRA_SO_ALP_SLDORDERITEMType">
+                <!-- Chart For Visual Filter -->
+                <Annotation Term="UI.Chart" Qualifier="VisualFilterQualifier">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="Title" String="Visual Filter Title"/>
+                        <PropertyValue Property="Description" String="Visual Filter Description"/>
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line"/>
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>DeliveryDate</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>Quantity</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                
+                <!-- Presentation Variant Annotation (How to show Chart) -->
+                <Annotation Term="UI.PresentationVariant" Qualifier="VisualFilterPresentationVariantQualifier">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.Chart#VisualFilterQualifier</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
