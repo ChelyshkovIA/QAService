@@ -71,7 +71,7 @@
                 <Property Name="topic_ID" Type="Edm.Guid"/>
                 <NavigationProperty Name="questions" Relationship="QAService.Questions_group" FromRole="Groups" ToRole="Questions"/>
             </EntityType>
-            <EntityType Name="Difficulties">
+            <EntityType Name="Difficulties" sap:semantics="aggregate">
                 <Key>
                     <PropertyRef Name="ID"/>
                 </Key>
@@ -79,9 +79,9 @@
                 <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
                 <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
                 <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
-                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="ID" sap:aggregation-role="dimension" Type="Edm.Guid" Nullable="false"/>
                 <Property Name="name" Type="Edm.String"/>
-                <Property Name="numeric" Type="Edm.Int32"/>
+                <Property Name="numeric" Type="Edm.Int32" sap:aggregation-role="measure"/>
                 <NavigationProperty Name="questions" Relationship="QAService.Questions_difficulty" FromRole="Difficulties" ToRole="Questions"/>
             </EntityType>
             <EntityType Name="Topics">

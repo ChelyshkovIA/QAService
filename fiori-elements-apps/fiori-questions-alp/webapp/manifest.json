@@ -126,6 +126,9 @@
             "tableSettings": {
               "multiSelect": false
             },
+            "chartSettings": {
+                "showDataLabel": true
+            },
             "keyPerformanceIndicators": {}
           }
         },
