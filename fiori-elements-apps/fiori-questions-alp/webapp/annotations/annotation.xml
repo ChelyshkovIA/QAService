@@ -20,7 +20,7 @@
                     </Collection>
                 </Annotation>
 
-                <Annotation Term="UI.LineItem" >
+                <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="ID"/>
@@ -40,10 +40,51 @@
                         </Record>
                     </Collection>
                 </Annotation>
+
+                <Annotation Term="UI.PresentationVariant" Qualifier="ContentAreaPresentationVariant">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="Text" String="Default"/>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="difficulty/numeric"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        
+                        <PropertyValue Property="IncludeGrandTotal" Bool="false"/>
+                        <PropertyValue Property="InitialExpansionLevel" Int="1"/>
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.LineItem</AnnotationPath>
+                                <AnnotationPath>@UI.Chart#InteractiveUIChart</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.Chart" Qualifier="InteractiveUIChart">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column"/>
+                        <PropertyValue Property="Title" String="Interactive Chart Title"/>
+                        <PropertyValue Property="Description" String="Interactive Chart Description"/>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>difficulty/numeric</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>difficulty_ID</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
             </Annotations>
 
             <Annotations Target="QAService.Questions/difficulty_ID">
-                <Annotation Term="Common.ValueList">
+                <Annotation Term="Common.ValueList" Qualifier="ValueListForVisualFilter">
                     <Record Type="Common.ValueListType">
                         <PropertyValue Property="CollectionPath" String="Difficulties"/>
                         <PropertyValue Property="PresentationVariantQualifier" String="DifficultyPresentationVarian"/>
