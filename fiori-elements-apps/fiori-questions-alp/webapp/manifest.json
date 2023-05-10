@@ -89,6 +89,18 @@
                     }
                 }
             },
+            "kpi": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            },
             "@i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "uri": "i18n/i18n.properties"
@@ -130,7 +142,13 @@
                         "chartSettings": {
                             "showDataLabel": true
                         },
-                        "keyPerformanceIndicators": {}
+                        "keyPerformanceIndicators": {
+                            "KPIQualifier": {
+                                "entitySet": "Difficulties",
+                                "qualifier": "KPIQualifier",
+                                "model": "kpi"
+                            }
+                        }
                     }
                 },
                 "pages": {

@@ -5,9 +5,6 @@
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
         <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
     </edmx:Reference>
-    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
-        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
-    </edmx:Reference>
     <edmx:Reference Uri="/here/goes/your/serviceurl/$metadata">
         <edmx:Include Namespace="QAService"/>
     </edmx:Reference>
@@ -125,6 +122,70 @@
                             <Collection>
                                 <PropertyPath>ID</PropertyPath>
                             </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.DataPoint" Qualifier="KPIDataPoint">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Title" String="DIF"/>
+                        <PropertyValue Property="Description" String="Difficulty KPI"/>
+                        <PropertyValue Property="Value" Path="numeric"/>
+                        <PropertyValue Property="Criticality" EnumMember="UI.CriticalityType/Negative"/>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.SelectionVariant" Qualifier="KPISelectionVariant">
+                    <Record>
+                        <PropertyValue Property="Parameters" />
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.PresentationVariant" Qualifier="KPIPresentationVariant">
+                    <Record>
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.Chart#KPIChart</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.Chart" Qualifier="KPIChart">
+                    <Record>
+                        <PropertyValue Property="Title" String="KPI Chart Title"/>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="numeric"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="name"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut"/>
+                        <PropertyValue Property="Description" String="KPI Chart Description"/>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.KPI" Qualifier="KPIQualifier">
+                    <Record Type="UI.KPIType">
+                        <PropertyValue Property="DataPoint" Path="@UI.DataPoint#KPIDataPoint"/>
+                        <PropertyValue Property="SelectionVariant" Path="@UI.SelectionVariant#KPISelectionVariant"/>
+                        <PropertyValue Property="ID" String="KPIID"/>
+                        <PropertyValue Property="Detail">
+                            <Record Type="UI.KPIDetailType">
+                                <PropertyValue Property="SemanticObject" String="Question"/>
+                                <PropertyValue Property="Action" String="View"/>
+                                <PropertyValue Property="DefaultPresentationVariant" Path="@UI.PresentationVariant#KPIPresentationVariant"/>
+                            </Record>
                         </PropertyValue>
                     </Record>
                 </Annotation>

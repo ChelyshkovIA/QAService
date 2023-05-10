@@ -80,7 +80,7 @@
                 <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
                 <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
                 <Property Name="ID" sap:aggregation-role="dimension" Type="Edm.Guid" Nullable="false"/>
-                <Property Name="name" Type="Edm.String"/>
+                <Property Name="name" sap:aggregation-role="dimension" Type="Edm.String"/>
                 <Property Name="numeric" Type="Edm.Int32" sap:aggregation-role="measure"/>
                 <NavigationProperty Name="questions" Relationship="QAService.Questions_difficulty" FromRole="Difficulties" ToRole="Questions"/>
             </EntityType>
