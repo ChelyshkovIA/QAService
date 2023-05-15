@@ -7,7 +7,7 @@
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>simple|
 |**Service Type**<br>OData Url|
-|**Service URL**<br>https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/
+|**Service URL**<br>https://f12b58eftrial-dev-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/
 |**Module Name**<br>qaservice-freestyle-smart|
 |**Application Title**<br>App|
 |**Namespace**<br>|
