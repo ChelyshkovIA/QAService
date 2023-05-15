@@ -7,7 +7,7 @@
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>Overview Page V2|
 |**Service Type**<br>OData Url|
-|**Service URL**<br>https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/
+|**Service URL**<br>https://f12b58eftrial-dev-approuter.cfapps.us10-001.hana.ondemand.com/odatav2/
 |**Module Name**<br>fiori-overview-topic|
 |**Application Title**<br>Topics Overview|
 |**Namespace**<br>|

@@ -28,7 +28,7 @@
                 }
             },
             "northwind": {
-                "uri": "/northwind/",
+                "uri": "/Northwind.svc/",
                 "type": "OData",
                 "settings": {
                     "annotations": [

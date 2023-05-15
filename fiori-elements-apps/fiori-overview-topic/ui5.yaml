@@ -17,7 +17,9 @@ server:
           url: https://ui5.sap.com
         backend:
           - path: /odatav2
-            url: https://01736261trial-trial-yvsw8fxv-qaservice-approuter.cfapps.us10-001.hana.ondemand.com
+            url: https://f12b58eftrial-dev-approuter.cfapps.us10-001.hana.ondemand.com
+          - path: /Northwind.svc
+            url: https://services.odata.org/V2/Northwind
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
