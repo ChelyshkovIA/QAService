@@ -31,6 +31,7 @@
                 enableAutoBinding="true"
                 editTogglable="{appModel>/editTogglable}"
                 app:useSmartToggle="true"
+                app:p13nDialogSettings="{group: {visible: false}, sort: {visible: false}}"
                 tableType="ResponsiveTable"
                 initiallyVisibleFields="ID,text,topic_ID,group_ID"
                 requestAtLeastFields="difficulty_ID"
