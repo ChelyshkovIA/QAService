@@ -121,7 +121,19 @@
             "extensions": {
                 "sap.ui.controllerExtensions": {
                     "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-                        "controllerName": "fioriquestions.ext.controller.ListReportExt"
+                        "controllerName": "fioriquestions.ext.controller.ListReportExt",
+                        "sap.ui.generic.app": {
+                            "Questions": {
+                                "EntitySet": "Questions",
+                                "Actions": {
+                                    "ShowMessageToast": {
+                                        "id": "showMessageToastAction",
+                                        "text": "Show Message",
+                                        "press": "onShowMessagePress"
+                                    }
+                                }
+                            }
+                        }
                     }
                 },
                 "sap.ui.viewExtensions": {
