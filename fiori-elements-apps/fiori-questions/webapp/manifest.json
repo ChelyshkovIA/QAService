@@ -121,19 +121,7 @@
             "extensions": {
                 "sap.ui.controllerExtensions": {
                     "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-                        "controllerName": "fioriquestions.ext.controller.ListReportExt",
-                        "sap.ui.generic.app": {
-                            "Questions": {
-                                "EntitySet": "Questions",
-                                "Actions": {
-                                    "ShowMessageToast": {
-                                        "id": "showMessageToastAction",
-                                        "text": "Show Message",
-                                        "press": "onShowMessagePress"
-                                    }
-                                }
-                            }
-                        }
+                        "controllerName": "fioriquestions.ext.controller.ListReportExt"
                     }
                 },
                 "sap.ui.viewExtensions": {
@@ -180,9 +168,6 @@
                             "dateSettings": {
                                 "useDateRange": true
                             }
-                        },
-                        "dataLoadSettings": {
-                            "loadDataOnAppLaunch": "always"
                         },
                         "tableSettings": {
                             "type": "Table"
