@@ -41,22 +41,23 @@
                 <Key>
                     <PropertyRef Name="ID"/>
                 </Key>
-                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
-                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
-                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
-                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
-                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
-                <Property Name="text" Type="Edm.String"/>
-                <Property Name="answer" Type="Edm.String"/>
-                <Property Name="numeric" Type="Edm.Int32" sap:aggregation-role="measure"/>
+                <Property sap:aggregation-role="dimension" Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property sap:aggregation-role="dimension" Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property sap:aggregation-role="dimension" Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property sap:aggregation-role="dimension" Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property sap:aggregation-role="dimension" Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property sap:aggregation-role="dimension" Name="text" Type="Edm.String"/>
+                <Property sap:aggregation-role="dimension" Name="diffName" Type="Edm.String"/>
+                <Property sap:aggregation-role="dimension" Name="answer" Type="Edm.String"/>
+                <Property sap:aggregation-role="measure"  Name="numeric" Type="Edm.Int32"/>
                 <NavigationProperty Name="difficulty" Relationship="QAService.Questions_difficulty" FromRole="Questions" ToRole="Difficulties"/>
                 <Property sap:aggregation-role="dimension" Name="difficulty_ID" Type="Edm.Guid"/>
                 <NavigationProperty Name="topic" Relationship="QAService.Questions_topic" FromRole="Questions" ToRole="Topics"/>
-                <Property Name="topic_ID" Type="Edm.Guid"/>
+                <Property sap:aggregation-role="dimension" Name="topic_ID" Type="Edm.Guid"/>
                 <NavigationProperty Name="group" Relationship="QAService.Questions_group" FromRole="Questions" ToRole="Groups"/>
-                <Property Name="group_ID" Type="Edm.Guid"/>
+                <Property sap:aggregation-role="dimension" Name="group_ID" Type="Edm.Guid"/>
                 <NavigationProperty Name="progress" Relationship="QAService.Questions_progress" FromRole="Questions" ToRole="Progress"/>
-                <Property Name="progress_ID" Type="Edm.Guid"/>
+                <Property sap:aggregation-role="dimension" Name="progress_ID" Type="Edm.Guid"/>
             </EntityType>
             <EntityType Name="Groups">
                 <Key>

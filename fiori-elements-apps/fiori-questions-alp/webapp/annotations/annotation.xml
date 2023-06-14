@@ -17,7 +17,7 @@
                     </Collection>
                 </Annotation>
 
-                <Annotation Term="UI.LineItem">
+                <Annotation Term="UI.LineItem" Qualifier="QuestionsTable">
                     <Collection>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="ID"/>
@@ -28,12 +28,8 @@
                             <PropertyValue Property="Value" Path="text"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Topic"/>
-                            <PropertyValue Property="Value" Path="topic/name"/>
-                        </Record>
-                        <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="Difficulty"/>
-                            <PropertyValue Property="Value" Path="difficulty/name"/>
+                            <PropertyValue Property="Value" Path="diffName"/>
                         </Record>
                     </Collection>
                 </Annotation>
@@ -44,7 +40,7 @@
                         <PropertyValue Property="SortOrder">
                             <Collection>
                                 <Record Type="Common.SortOrderType">
-                                    <PropertyValue Property="Property" PropertyPath="difficulty/numeric"/>
+                                    <PropertyValue Property="Property" PropertyPath="numeric"/>
                                     <PropertyValue Property="Descending" Bool="true"/>
                                 </Record>
                             </Collection>
@@ -54,7 +50,7 @@
                         <PropertyValue Property="InitialExpansionLevel" Int="1"/>
                         <PropertyValue Property="Visualizations">
                             <Collection>
-                                <AnnotationPath>@UI.LineItem</AnnotationPath>
+                                <AnnotationPath>@UI.LineItem#QuestionsTable</AnnotationPath>
                                 <AnnotationPath>@UI.Chart#InteractiveUIChart</AnnotationPath>
                             </Collection>
                         </PropertyValue>
