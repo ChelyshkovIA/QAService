@@ -22,6 +22,10 @@ sap.ui.define([
 
             /** In case of first condition true will prevent default navigation */
             return true;
+        },
+
+        onBeforeRebindChartExtension(oEvent) {
+            /** Add necessary logic which will be triggered before chart binding change */
         }
     };
 });
