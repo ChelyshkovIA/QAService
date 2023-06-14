@@ -113,6 +113,27 @@
             "config": {},
             "routes": [],
             "targets": {}
+        },
+        "extends": {
+            "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.suite.ui.generic.template.AnalyticalListPage.view.AnalyticalListPage": {
+                        "controllerName": "fioriquestionsalp.ext.controller.ALPExt",
+                        "sap.ui.generic.app": {
+                            "Questions": {
+                                "EntitySet": "Questions",
+                                "Actions": {
+                                    "RefreshAll": {
+                                        "id": "refreshActionButton",
+                                        "text": "Refresh All",
+                                        "press": "onRefreshAllPress"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     },
     "sap.ui.generic.app": {
