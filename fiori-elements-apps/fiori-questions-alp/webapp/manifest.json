@@ -126,7 +126,40 @@
                                     "RefreshAll": {
                                         "id": "refreshActionButton",
                                         "text": "Refresh All",
-                                        "press": "onRefreshAllPress"
+                                        "press": "onRefreshAllPress",
+                                        "determining": true
+                                    },
+                                    "Action A": {
+                                        "id": "ActionA",
+                                        "text": "Action A",
+                                        "press": "onClickActionA",
+                                        "global": true
+                                    },
+                                    "Action B": {
+                                        "id": "ActionB_requiresSelection",
+                                        "text": "Action B",
+                                        "press": "onClickActionB",
+                                        "filter": "table",
+                                        "requiresSelection":true
+                                    },
+                                    "Action C": {
+                                        "id": "ActionC_requiresSelection",
+                                        "text": "Action C",
+                                        "press": "onClickActionC",
+                                        "filter": "chart",
+                                        "requiresSelection":true
+                                    },
+                                    "Action D": {
+                                        "id": "ActionD",
+                                        "text": "Action D",
+                                        "press": "onClickActionD",
+                                        "filter": "table"
+                                    },
+                                    "Action E": {
+                                        "id": "ActionE",
+                                        "text": "Action E",
+                                        "press": "onClickActionE",
+                                        "filter": "chart"
                                     }
                                 }
                             }
