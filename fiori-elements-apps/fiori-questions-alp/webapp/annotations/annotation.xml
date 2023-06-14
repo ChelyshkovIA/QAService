@@ -68,7 +68,7 @@
                         <PropertyValue Property="Description" String="Interactive Chart Description"/>
                         <PropertyValue Property="Measures">
                             <Collection>
-                                <PropertyPath>difficulty/numeric</PropertyPath>
+                                <PropertyPath>numeric</PropertyPath>
                             </Collection>
                         </PropertyValue>
                         <PropertyValue Property="Dimensions">
