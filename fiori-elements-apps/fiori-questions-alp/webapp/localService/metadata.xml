@@ -37,7 +37,7 @@
                     <End Role="Topics" EntitySet="Topics"/>
                 </AssociationSet>
             </EntityContainer>
-            <EntityType Name="Questions">
+            <EntityType Name="Questions" sap:semantics="aggregate">
                 <Key>
                     <PropertyRef Name="ID"/>
                 </Key>
@@ -48,8 +48,9 @@
                 <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
                 <Property Name="text" Type="Edm.String"/>
                 <Property Name="answer" Type="Edm.String"/>
+                <Property Name="numeric" Type="Edm.Int32" sap:aggregation-role="measure"/>
                 <NavigationProperty Name="difficulty" Relationship="QAService.Questions_difficulty" FromRole="Questions" ToRole="Difficulties"/>
-                <Property Name="difficulty_ID" Type="Edm.Guid"/>
+                <Property sap:aggregation-role="dimension" Name="difficulty_ID" Type="Edm.Guid"/>
                 <NavigationProperty Name="topic" Relationship="QAService.Questions_topic" FromRole="Questions" ToRole="Topics"/>
                 <Property Name="topic_ID" Type="Edm.Guid"/>
                 <NavigationProperty Name="group" Relationship="QAService.Questions_group" FromRole="Questions" ToRole="Groups"/>
