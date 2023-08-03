@@ -1,50 +1,56 @@
-_schema-version: "3.1"
+_schema-version: '3.1'
 ID: QAService
 description: A simple CAP project.
 version: 1.0.0
 modules:
-- name: approuter
-  type: approuter.nodejs
-  path: approuter
-  requires:
-    - name: qaservice-destination
-  parameters:
-    disk-quota: 256M
-    memory: 256M
-
-- name: QAService-srv
-  type: nodejs
-  path: gen/srv
-  requires:
-  - name: QAService-db
-  provides:
-  - name: srv-api
-    properties:
-      srv-url: ${default-url}
-  parameters:
-    buildpack: nodejs_buildpack
-  build-parameters:
-    builder: npm-ci
-
-- name: QAService-db-deployer
-  type: hdb
-  path: gen/db
-  requires:
-  - name: QAService-db
-  parameters:
-    buildpack: nodejs_buildpack
-
+  - name: approuter
+    type: approuter.nodejs
+    path: approuter
+    requires:
+      - name: qaservice-destination
+      - name: qaservice-uaa
+    parameters:
+      keep-existing-routes: true
+      disk-quota: 256M
+      memory: 256M
+  - name: QAService-srv
+    type: nodejs
+    path: gen/srv
+    requires:
+      - name: QAService-db
+      - name: qaservice-uaa
+    provides:
+      - name: srv-api
+        properties:
+          srv-url: '${default-url}'
+    parameters:
+      buildpack: nodejs_buildpack
+    build-parameters:
+      builder: npm-ci
+  - name: QAService-db-deployer
+    type: hdb
+    path: gen/db
+    requires:
+      - name: QAService-db
+    parameters:
+      buildpack: nodejs_buildpack
 resources:
-- name: qaservice-destination
-  type: org.cloudfoundry.managed-service
-  parameters:
+  - name: qaservice-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
       service: destination
       service-plan: lite
-  
-- name: QAService-db
-  type: com.sap.xs.hdi-container
-  parameters:
-    service: hana
-    service-plan: hdi-shared
-
- 
+  - name: QAService-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
+  - name: qaservice-uaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      path: ./xs-security.json
+      service: xsuaa
+      service-plan: application
+      config:
+        xsappname: QAService-${org}-${space}
+        tenant-mode: dedicated

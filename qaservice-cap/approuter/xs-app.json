@@ -1,20 +1,26 @@
 {
-    "authenticationMethod": "none",
+    "authenticationMethod": "route",
     "routes": [
         {
             "source": "^/app/(.*)$",
             "target": "/$1",
-            "destination": "ui"
+            "destination": "ui",
+        	"authenticationType": "xsuaa",
+            "csrfProtection": true
         },
         {
             "source": "^/odatav2/(.*)$",
             "target": "/$1",
-            "destination": "qaservice-odatav2"
+            "destination": "qaservice-odatav2",
+        	"authenticationType": "xsuaa",
+            "csrfProtection": true
         },
         {
             "source": "^/odatav4/(.*)$",
             "target": "/$1",
-            "destination": "qaservice-odatav4"
+            "destination": "qaservice-odatav4",
+        	"authenticationType": "xsuaa",
+            "csrfProtection": true
         }
     ]
 }
