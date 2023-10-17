@@ -22,7 +22,7 @@
   "scripts": {
     "start": "cds run",
     "watch-questions": "cds watch --open questions/webapp/index.html?sap-ui-xx-viewCache=false",
-    "deploy": "cf deploy mta_archives/QAService_1.0.0.mtar",
+    "deploy": "cf deploy mta_archives/archive.mtar",
     "undeploy": "cf undeploy QAService --delete-services --delete-service-keys --delete-service-brokers",
     "build": "rimraf resources mta_archives && mbt build --mtar archive"
   },
