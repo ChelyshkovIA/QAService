@@ -1,15 +1,9 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller"
-],
-    /**
-     * @param {typeof sap.ui.core.mvc.Controller} Controller
-     */
-    function (Controller) {
-        "use strict";
+], function(Controller) {
+    "use strict";
 
-        return Controller.extend("qaservicefreestyleodatav4.controller.Boards", {
-            onInit: function () {
-
-            }
-        });
+    return Controller.extend("qaservicefreestyleodatav4.controller.Boards", {
+        onInit() {}
     });
+});

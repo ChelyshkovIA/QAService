@@ -1,7 +1,7 @@
-<mvc:View controllerName="qaservicefreestyleodatav4.controller.Boards"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+<mvc:View
+    controllerName="qaservicefreestyleodatav4.controller.Boards"
+    xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
-    </Page>
+
+    <Page id="page" title="{i18n>title}"></Page>
 </mvc:View>
