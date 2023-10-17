@@ -1,0 +1,1 @@
+using QAService as service from '../../srv/qa-service';
