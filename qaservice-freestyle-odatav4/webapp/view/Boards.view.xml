@@ -1,7 +1,115 @@
 <mvc:View
     controllerName="qaservicefreestyleodatav4.controller.Boards"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:f="sap.f">
 
-    <Page id="page" title="{i18n>title}"></Page>
+    <Page id="page" title="{i18n>title}">
+        <f:FlexibleColumnLayout layout="TwoColumnsMidExpanded">
+            <f:beginColumnPages>
+                <FlexBox width="100%" direction="Column">
+                    <FlexBox class="sapUiResponsiveContentPadding" height="50%" width="100%" direction="Column">
+                        <ScrollContainer height="100%" width="100%" vertical="true" horizontal="false" focusable="true">
+                            <List
+                                mode="SingleSelectMaster"
+                                width="100%" 
+                                items="{/Topics}"
+                                selectionChange=".onTopicSelect"
+                                sticky="HeaderToolbar">
+
+                                <headerToolbar>
+                                    <OverflowToolbar >
+                                        <Title text="Topics" />
+                                        <ToolbarSpacer />
+                                        <Button icon="sap-icon://reset" />
+                                    </OverflowToolbar>
+                                </headerToolbar>
+
+                                <StandardListItem type="Active" title="{name}" />    
+                            </List>
+                        </ScrollContainer>
+                    </FlexBox>
+
+                    <FlexBox class="sapUiResponsiveContentPadding" height="50%" width="100%" direction="Column">
+                        <ScrollContainer height="100%" width="100%" vertical="true" horizontal="false">
+                            <List
+                                id="groupsList"
+                                mode="SingleSelectMaster"
+                                selectionChange=".onGroupSelect"
+                                width="100%"
+                                items="{groups}" 
+                                sticky="HeaderToolbar">
+
+                                <headerToolbar>
+                                    <OverflowToolbar >
+                                        <Title text="{name} Groups" />
+                                        <ToolbarSpacer />
+                                        <Button icon="sap-icon://reset" />
+                                    </OverflowToolbar>
+                                </headerToolbar>
+
+                                <StandardListItem type="Active" title="{name}" />
+                            </List>
+                        </ScrollContainer>
+                    </FlexBox>
+                </FlexBox>
+            </f:beginColumnPages>
+
+            <f:midColumnPages>
+                <FlexBox direction="Column" width="100%">
+                    <FlexBox class="sapUiResponsiveContentPadding" direction="Column" height="calc(100% - 150px)" width="100%">
+                        <ScrollContainer
+                            height="100%"
+                            width="100%"
+                            vertical="true"
+                            horizontal="false">
+                            
+                            <List 
+                                id="questionsList"
+                                mode="SingleSelectMaster"
+                                selectionChange="onQuestionSelect"
+                                growing="true"
+                                growingThreshold="3"
+                                growingScrollToLoad="true"
+                                items="{}"
+                                width="100%"
+                                sticky="HeaderToolbar">
+
+                                <headerToolbar>
+                                    <OverflowToolbar >
+                                        <Title text="Questions" />
+                                        <ToolbarSpacer />
+                                        <Title text="{app>/selectedTopic/name}" />
+                                        <ToolbarSpacer />
+                                        <Title text="{app>/selectedGroup/name}" />
+                                    </OverflowToolbar>
+                                </headerToolbar>
+
+                                <StandardListItem 
+                                    title="{ID}" 
+                                    description="{text}"
+                                    wrapping="true"
+                                    counter="{difficulty/numeric}" 
+                                    adaptTitleSize="true"
+                                    type="Active"
+                                    highlight="{
+                                        path: 'difficulty/numeric',
+                                        formatter: '.formatHighlight'
+                                    }" />
+                            </List>
+                        </ScrollContainer>
+                    </FlexBox>
+
+                    <FlexBox class="sapUiResponsiveContentPadding" direction="Column" height="150px" width="100%">
+                        <FlexBox justifyContent="SpaceBetween" alignItems="Center">
+                            <Title text="Answer" />
+                            <Button visible="{app>/selectedQuestion/selected}" enabled="false" icon="sap-icon://edit" />
+                        </FlexBox>
+
+                        <TextArea width="100%" rows="3" enabled="false" value="{app>/selectedQuestion/answer}" />
+                    </FlexBox>
+                </FlexBox>
+            </f:midColumnPages>
+        </f:FlexibleColumnLayout>
+    </Page>
 </mvc:View>
