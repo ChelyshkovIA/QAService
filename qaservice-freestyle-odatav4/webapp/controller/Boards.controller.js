@@ -14,15 +14,18 @@ sap.ui.define([
             const oModel = new JSONModel({
                 selectedQuestion: {
                     selected: false,
-                    answer: ""
+                    answer: "",
+                    id: ""
                 },
 
                 selectedTopic: {
+                    selected: false,
                     id: "",
                     name: ""
                 },
 
                 selectedGroup: {
+                    selected: false,
                     id: "",
                     name: ""
                 }
@@ -39,6 +42,10 @@ sap.ui.define([
             this._setQuestionsListCtx(oCtx);
             this._bindQuestionsList("questions");
             this._setGroupName("");
+            this._setTopicSelected(true);
+            this._setGroupSelected(false);
+            this._setQuestionSelected(false);
+            this._setQuestionId("");
         },
 
         onGroupSelect(oEvent) {
@@ -48,6 +55,9 @@ sap.ui.define([
             this._setQuestionsListCtx(oCtx);
             this._bindQuestionsList("questions");
             this._setGroupName(oGroup.name);
+            this._setGroupSelected(true);
+            this._setQuestionSelected(false);
+            this._setQuestionId("");
         },
 
         onQuestionSelect(oEvent) {
@@ -55,6 +65,7 @@ sap.ui.define([
             const oCtx = oQuestionItem.getBindingContext();
             const oQuestion = oCtx.getObject();
             this._setQuestionSelected(true);
+            this._setQuestionId(oQuestion.ID);
             this._setQuestionAnswer(oQuestion.text);
         },
 
@@ -66,8 +77,13 @@ sap.ui.define([
             this._clearTopicsListSelection();
             this._clearGroupsListSelection();
             this._setGroupsListCtx(oCtx);
+            this._setGroupSelected(false);
+            this._setTopicSelected(false);
+            this._setQuestionSelected(false);
+            this._setQuestionId("");
+            this._setQuestionAnswer("");
         },
-
+        
         onGroupsReset() {
             const oSelectedItem = this._getTopicsList().getSelectedItem();
             const oCtx = oSelectedItem.getBindingContext();
@@ -75,6 +91,17 @@ sap.ui.define([
             this._bindQuestionsList("questions");
             this._setGroupName("");
             this._clearGroupsListSelection();
+            this._setGroupSelected(false);
+            this._setQuestionSelected(false);
+            this._setQuestionId("");
+            this._setQuestionAnswer("");
+        },
+
+        onQuestionsReset() {
+            this._getQuestionsList().removeSelections();
+            this._setQuestionSelected(false);
+            this._setQuestionId("");
+            this._setQuestionAnswer("");
         },
         
         formatHighlight(test) {
@@ -105,12 +132,24 @@ sap.ui.define([
             this.getView().getModel("app").setProperty("/selectedQuestion/selected", isSelected);
         },
 
+        _setQuestionId(sId) {
+            this.getView().getModel("app").setProperty("/selectedQuestion/id", sId);
+        },
+
         _setQuestionAnswer(sAnswer) {
             this.getView().getModel("app").setProperty("/selectedQuestion/answer", sAnswer);
         },
 
+        _setGroupSelected(isSelected) {
+            this.getView().getModel("app").setProperty("/selectedGroup/selected", isSelected);
+        },
+
         _setGroupName(sName) {
             this.getView().getModel("app").setProperty("/selectedGroup/name", sName);
+        },
+
+        _setTopicSelected(isSelected) {
+            this.getView().getModel("app").setProperty("/selectedTopic/selected", isSelected);
         },
         
         _setTopicName(sName) {

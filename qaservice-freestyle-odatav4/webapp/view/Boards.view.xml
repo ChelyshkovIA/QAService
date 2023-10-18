@@ -1,4 +1,4 @@
-<mvc:View
+<mvc:View xmlns:actiontoolbar="sap.ui.mdc.actiontoolbar" xmlns:mdc="sap.ui.mdc"
     controllerName="qaservicefreestyleodatav4.controller.Boards"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
@@ -22,19 +22,24 @@
                                     <OverflowToolbar >
                                         <Title text="Topics" />
                                         <ToolbarSpacer />
-                                        <Button icon="sap-icon://reset" press=".onTopicsReset" />
+                                        <Button visible="{app>/selectedTopic/selected}" icon="sap-icon://reset" press=".onTopicsReset" />
                                     </OverflowToolbar>
                                 </headerToolbar>
 
                                 <infoToolbar>
-                                    <OverflowToolbar>
+                                    <Toolbar >
                                         <Text text="Selected: {app>/selectedTopic/name}" />
-                                    </OverflowToolbar>
+                                        <ToolbarSpacer />
+                                        <Button visible="{= ! ${app>/selectedTopic/selected} }" icon="sap-icon://add" />
+                                        <Button visible="{app>/selectedTopic/selected}" type="Reject" icon="sap-icon://delete" />
+                                    </Toolbar>
+                                    
                                 </infoToolbar>
 
                                 <StandardListItem type="Active" title="{name}" />    
                             </List>
                         </ScrollContainer>
+                        <mdc:ActionToolbar ></mdc:ActionToolbar>
                     </FlexBox>
 
                     <FlexBox class="sapUiResponsiveContentPadding" height="50%" width="100%" direction="Column">
@@ -45,19 +50,23 @@
                                 selectionChange=".onGroupSelect"
                                 width="100%"
                                 items="{groups}" 
-                                sticky="HeaderToolbar">
+                                sticky="HeaderToolbar,InfoToolbar">
 
                                 <headerToolbar>
                                     <OverflowToolbar >
                                         <Title text="{name} Groups" />
                                         <ToolbarSpacer />
-                                        <Button icon="sap-icon://reset" press=".onGroupsReset" />
+                                        <Button visible="{app>/selectedGroup/selected}" icon="sap-icon://reset" press=".onGroupsReset" />
                                     </OverflowToolbar>
                                 </headerToolbar>
 
                                 <infoToolbar>
                                     <OverflowToolbar >
                                         <Text text="Selected: {app>/selectedGroup/name}" />
+
+                                        <ToolbarSpacer />
+                                        <Button visible="{= !${app>/selectedGroup/selected} &amp;&amp; ${app>/selectedTopic/selected} }" icon="sap-icon://add" />
+                                        <Button visible="{app>/selectedGroup/selected}" type="Reject" icon="sap-icon://delete" />
                                     </OverflowToolbar>
                                 </infoToolbar>
 
@@ -86,17 +95,28 @@
                                 growingScrollToLoad="true"
                                 items="{}"
                                 width="100%"
-                                sticky="HeaderToolbar">
+                                sticky="HeaderToolbar,InfoToolbar">
 
                                 <headerToolbar>
                                     <OverflowToolbar >
                                         <Title text="Questions" />
-                                        <ToolbarSpacer />
                                         <Title text="{app>/selectedTopic/name}" />
+                                        <Title class="sapUiSmallMarginLeft" text="{app>/selectedGroup/name}" />
+
                                         <ToolbarSpacer />
-                                        <Title text="{app>/selectedGroup/name}" />
+                                        <Button visible="{app>/selectedQuestion/selected}" icon="sap-icon://reset" press=".onQuestionsReset" />
                                     </OverflowToolbar>
                                 </headerToolbar>
+
+                                <infoToolbar>
+                                    <OverflowToolbar >
+                                        <Title text="Selected: {app>/selectedQuestion/id}" />
+                                        <ToolbarSpacer />
+
+                                        <Button visible="{= !${app>/selectedQuestion/selected} &amp;&amp; ${app>/selectedGroup/selected}}" icon="sap-icon://add" />
+                                        <Button visible="{app>/selectedQuestion/selected}" type="Reject" icon="sap-icon://delete" />
+                                    </OverflowToolbar>
+                                </infoToolbar>
 
                                 <StandardListItem 
                                     title="{ID}" 
