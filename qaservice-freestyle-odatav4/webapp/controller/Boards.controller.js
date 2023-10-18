@@ -44,8 +44,7 @@ sap.ui.define([
             this._setGroupName("");
             this._setTopicSelected(true);
             this._setGroupSelected(false);
-            this._setQuestionSelected(false);
-            this._setQuestionId("");
+            this._resetQuestions();
         },
 
         onGroupSelect(oEvent) {
@@ -56,8 +55,7 @@ sap.ui.define([
             this._bindQuestionsList("questions");
             this._setGroupName(oGroup.name);
             this._setGroupSelected(true);
-            this._setQuestionSelected(false);
-            this._setQuestionId("");
+            this._resetQuestions();
         },
 
         onQuestionSelect(oEvent) {
@@ -79,9 +77,7 @@ sap.ui.define([
             this._setGroupsListCtx(oCtx);
             this._setGroupSelected(false);
             this._setTopicSelected(false);
-            this._setQuestionSelected(false);
-            this._setQuestionId("");
-            this._setQuestionAnswer("");
+            this._resetQuestions();
         },
         
         onGroupsReset() {
@@ -92,20 +88,22 @@ sap.ui.define([
             this._setGroupName("");
             this._clearGroupsListSelection();
             this._setGroupSelected(false);
-            this._setQuestionSelected(false);
-            this._setQuestionId("");
-            this._setQuestionAnswer("");
+            this._resetQuestions();
         },
 
         onQuestionsReset() {
             this._getQuestionsList().removeSelections();
-            this._setQuestionSelected(false);
-            this._setQuestionId("");
-            this._setQuestionAnswer("");
+            this._resetQuestions();
         },
         
         formatHighlight(test) {
             return `Indication0${++test}`;
+        },
+
+        _resetQuestions() {
+            this._setQuestionAnswer("");
+            this._setQuestionId("");
+            this._setQuestionSelected(false);
         },
 
         _clearTopicsListSelection() {
