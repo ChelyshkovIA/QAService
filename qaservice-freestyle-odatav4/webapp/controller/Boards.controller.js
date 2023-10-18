@@ -32,12 +32,11 @@ sap.ui.define([
         },
 
         onTopicSelect(oEvent) {
-            const oGroupsList = this._getGroupsList();
-            const oCxt = oEvent.getSource().getSelectedItem().getBindingContext();
-            const oTopic = oCxt.getObject();
-            oGroupsList.setBindingContext(oCxt);
+            const oCtx = oEvent.getSource().getSelectedItem().getBindingContext();
+            const oTopic = oCtx.getObject();
+            this._setGroupsListCtx(oCtx);
             this._setTopicName(oTopic.name);
-            this._getQuestionsList().setBindingContext(oCxt);
+            this._setQuestionsListCtx(oCtx);
             this._bindQuestionsList("questions");
             this._setGroupName("");
         },
@@ -46,8 +45,7 @@ sap.ui.define([
             const oGroupItem = oEvent.getSource().getSelectedItem();
             const oCtx = oGroupItem.getBindingContext();
             const oGroup = oCtx.getObject();
-            const oQuestionsList = this._getQuestionsList();
-            oQuestionsList.setBindingContext(oCtx);
+            this._setQuestionsListCtx(oCtx);
             this._bindQuestionsList("questions");
             this._setGroupName(oGroup.name);
         },
@@ -60,27 +58,47 @@ sap.ui.define([
             this._setQuestionAnswer(oQuestion.text);
         },
 
-        onTopicsReset(oEvent) {
-
+        onTopicsReset() {
+            const oCtx = this._getTopicsList().getBindingContext();
+            this._setTopicName("");
+            this._setGroupName("");
+            this._bindQuestionsList("/Questions");
+            this._clearTopicsListSelection();
+            this._clearGroupsListSelection();
+            this._setGroupsListCtx(oCtx);
         },
 
-        onGroupsReset(oEvent) {
-            const oGroupsList = this._getGroupsList();
-            const oQuestionsList = this._getQuestionsList();
-            const oTopicsList = this._getTopicsList();
-            const oSelectedItem = oTopicsList.getSelectedItem();
-
-            if (!oSelectedItem) return;
-
+        onGroupsReset() {
+            const oSelectedItem = this._getTopicsList().getSelectedItem();
             const oCtx = oSelectedItem.getBindingContext();
-            oQuestionsList.setBindingContext(oCtx);
+            this._setQuestionsListCtx(oCtx);
             this._bindQuestionsList("questions");
             this._setGroupName("");
-            oGroupsList.removeSelections();
+            this._clearGroupsListSelection();
         },
         
         formatHighlight(test) {
             return `Indication0${++test}`;
+        },
+
+        _clearTopicsListSelection() {
+            this._getTopicsList().removeSelections();
+        },
+        
+        _clearGroupsListSelection() {
+            this._getGroupsList().removeSelections();
+        },
+
+        _getModel() {
+            return this.getOwnerComponent().getModel();
+        },
+
+        _setQuestionsListCtx(oCtx) {
+            this._getQuestionsList().setBindingContext(oCtx);
+        },
+
+        _setGroupsListCtx(oCtx) {
+            this._getGroupsList().setBindingContext(oCtx);
         },
 
         _setQuestionSelected(isSelected) {
