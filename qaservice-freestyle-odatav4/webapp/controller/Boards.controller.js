@@ -39,6 +39,7 @@ sap.ui.define([
             this._setTopicName(oTopic.name);
             this._getQuestionsList().setBindingContext(oCxt);
             this._bindQuestionsList("questions");
+            this._setGroupName("");
         },
 
         onGroupSelect(oEvent) {
@@ -57,6 +58,25 @@ sap.ui.define([
             const oQuestion = oCtx.getObject();
             this._setQuestionSelected(true);
             this._setQuestionAnswer(oQuestion.text);
+        },
+
+        onTopicsReset(oEvent) {
+
+        },
+
+        onGroupsReset(oEvent) {
+            const oGroupsList = this._getGroupsList();
+            const oQuestionsList = this._getQuestionsList();
+            const oTopicsList = this._getTopicsList();
+            const oSelectedItem = oTopicsList.getSelectedItem();
+
+            if (!oSelectedItem) return;
+
+            const oCtx = oSelectedItem.getBindingContext();
+            oQuestionsList.setBindingContext(oCtx);
+            this._bindQuestionsList("questions");
+            this._setGroupName("");
+            oGroupsList.removeSelections();
         },
         
         formatHighlight(test) {
@@ -91,6 +111,10 @@ sap.ui.define([
 
         _getGroupsList() {
             return this.getView().byId("groupsList");
+        },
+
+        _getTopicsList() {
+            return this.getView().byId("topicsList");
         }
     });
 });

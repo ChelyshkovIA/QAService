@@ -11,6 +11,7 @@
                     <FlexBox class="sapUiResponsiveContentPadding" height="50%" width="100%" direction="Column">
                         <ScrollContainer height="100%" width="100%" vertical="true" horizontal="false" focusable="true">
                             <List
+                                id="topicsList"
                                 mode="SingleSelectMaster"
                                 width="100%" 
                                 items="{/Topics}"
@@ -21,7 +22,7 @@
                                     <OverflowToolbar >
                                         <Title text="Topics" />
                                         <ToolbarSpacer />
-                                        <Button icon="sap-icon://reset" />
+                                        <Button icon="sap-icon://reset" press=".onTopicsReset" />
                                     </OverflowToolbar>
                                 </headerToolbar>
 
@@ -44,7 +45,7 @@
                                     <OverflowToolbar >
                                         <Title text="{name} Groups" />
                                         <ToolbarSpacer />
-                                        <Button icon="sap-icon://reset" />
+                                        <Button icon="sap-icon://reset" press=".onGroupsReset" />
                                     </OverflowToolbar>
                                 </headerToolbar>
 
