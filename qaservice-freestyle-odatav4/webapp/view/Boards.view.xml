@@ -16,7 +16,7 @@
                                 width="100%" 
                                 items="{/Topics}"
                                 selectionChange=".onTopicSelect"
-                                sticky="HeaderToolbar">
+                                sticky="HeaderToolbar,InfoToolbar">
 
                                 <headerToolbar>
                                     <OverflowToolbar >
@@ -25,6 +25,12 @@
                                         <Button icon="sap-icon://reset" press=".onTopicsReset" />
                                     </OverflowToolbar>
                                 </headerToolbar>
+
+                                <infoToolbar>
+                                    <OverflowToolbar>
+                                        <Text text="Selected: {app>/selectedTopic/name}" />
+                                    </OverflowToolbar>
+                                </infoToolbar>
 
                                 <StandardListItem type="Active" title="{name}" />    
                             </List>
@@ -48,6 +54,12 @@
                                         <Button icon="sap-icon://reset" press=".onGroupsReset" />
                                     </OverflowToolbar>
                                 </headerToolbar>
+
+                                <infoToolbar>
+                                    <OverflowToolbar >
+                                        <Text text="Selected: {app>/selectedGroup/name}" />
+                                    </OverflowToolbar>
+                                </infoToolbar>
 
                                 <StandardListItem type="Active" title="{name}" />
                             </List>
