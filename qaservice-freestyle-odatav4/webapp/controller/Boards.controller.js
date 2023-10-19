@@ -14,6 +14,10 @@ sap.ui.define([
 
         _defineJSONModel() {
             const oModel = new JSONModel({
+                newTopic: {
+                    name: ""
+                },
+
                 selectedQuestion: {
                     selected: false,
                     answer: "",
@@ -34,6 +38,45 @@ sap.ui.define([
             });
 
             this.getView().setModel(oModel, "app");
+        },
+
+        async onTopicCreate() {
+            if (!this.createTopicDialog) {
+                this.createTopicDialog = await this.loadFragment({
+                    name: "qaservicefreestyleodatav4.fragment.CreateQuestion"
+                });
+            }
+
+            this.createTopicDialog.open();
+        },
+
+        async onSubmitTopicDialog() {
+            const oTopicPayload = this._getTopicPayload();
+            const oTopicsBinding = this._getTopicsList().getBinding("items");
+
+            
+            try {
+                await oTopicsBinding.create(oTopicPayload);
+                MessageToast.show("Topic created!");
+            } catch (sError) {
+                console.log(sError);
+                MessageToast.show("Can't create topic :(");
+            }
+            
+            this._resetTopicPayload();
+            this.createTopicDialog.close();
+        },
+
+        onCloseTopicDialog() {
+            this.createTopicDialog.close();
+        },
+
+        onGroupCreate() {
+
+        },
+
+        onQuestionCreate() {
+
         },
 
         onTopicSelect(oEvent) {
@@ -111,6 +154,14 @@ sap.ui.define([
         
         formatHighlight(test) {
             return `Indication0${++test}`;
+        },
+
+        _getTopicPayload() {
+            return this.getView().getModel("app").getProperty("/newTopic");
+        },
+
+        _resetTopicPayload() {
+            this.getView().getModel("app").setProperty("/newTopic/name", "");
         },
 
         _bindGroupsToRoot() {

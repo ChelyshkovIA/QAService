@@ -30,7 +30,7 @@
                                     <Toolbar >
                                         <Text text="Selected: {app>/selectedTopic/name}" />
                                         <ToolbarSpacer />
-                                        <Button visible="{= ! ${app>/selectedTopic/selected} }" icon="sap-icon://add" />
+                                        <Button visible="{= ! ${app>/selectedTopic/selected} }" icon="sap-icon://add" press=".onTopicCreate" />
                                         <Button visible="{app>/selectedTopic/selected}" type="Reject" icon="sap-icon://delete" press=".onTopicDelete" />
                                     </Toolbar>
                                     
@@ -65,7 +65,7 @@
                                         <Text text="Selected: {app>/selectedGroup/name}" />
 
                                         <ToolbarSpacer />
-                                        <Button visible="{= !${app>/selectedGroup/selected} &amp;&amp; ${app>/selectedTopic/selected} }" icon="sap-icon://add" />
+                                        <Button visible="{= !${app>/selectedGroup/selected} &amp;&amp; ${app>/selectedTopic/selected} }" icon="sap-icon://add" press=".onGroupCreate" />
                                         <Button visible="{app>/selectedGroup/selected}" type="Reject" icon="sap-icon://delete" press=".onGroupDelete" />
                                     </OverflowToolbar>
                                 </infoToolbar>
@@ -113,7 +113,7 @@
                                         <Title text="Selected: {app>/selectedQuestion/id}" />
                                         <ToolbarSpacer />
 
-                                        <Button visible="{= !${app>/selectedQuestion/selected} &amp;&amp; ${app>/selectedGroup/selected}}" icon="sap-icon://add" />
+                                        <Button visible="{= !${app>/selectedQuestion/selected} &amp;&amp; ${app>/selectedGroup/selected}}" icon="sap-icon://add" press=".onQuestionCreate" />
                                         <Button visible="{app>/selectedQuestion/selected}" type="Reject" icon="sap-icon://delete" press=".onQuestionDelete" />
                                     </OverflowToolbar>
                                 </infoToolbar>

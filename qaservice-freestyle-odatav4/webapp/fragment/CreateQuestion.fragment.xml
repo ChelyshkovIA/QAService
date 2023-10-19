@@ -1,0 +1,24 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Dialog
+        id="createQuestionDialog"
+        title="Create Topic">
+        
+        <content>
+            <FlexBox class="sapUiTinyMarginTop sapUiTinyMarginBottom" justifyContent="Center" alignItems="Center">
+                <Label text="Name:" />
+                <Input class="sapUiTinyMarginBegin" value="{app>/newTopic/name}" />
+            </FlexBox>
+        </content>
+
+        <beginButton>
+            <Button type="Emphasized" text="Create" press="onSubmitTopicDialog" />
+        </beginButton>
+
+        <endButton>
+            <Button text="Cancel" press="onCloseTopicDialog" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
