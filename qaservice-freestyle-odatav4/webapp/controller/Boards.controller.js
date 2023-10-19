@@ -39,10 +39,9 @@ sap.ui.define([
         onTopicSelect(oEvent) {
             const oCtx = oEvent.getSource().getSelectedItem().getBindingContext();
             const oTopic = oCtx.getObject();
+            this._bindQuestionsToSelectedTopic();
             this._setGroupsListCtx(oCtx);
             this._setTopicName(oTopic.name);
-            this._setQuestionsListCtx(oCtx);
-            this._bindQuestionsList("questions");
             this._setTopicSelected(true);
             this._resetGroup();
             this._resetQuestions();
@@ -92,6 +91,44 @@ sap.ui.define([
             });
         },
 
+        onTopicsReset() {
+            this._bindQuestionsToRoot();
+            this._bindGroupsToRoot();
+            this._resetGroup();
+            this._resetTopic();
+            this._resetQuestions();
+        },
+        
+        onGroupsReset() {
+            this._bindQuestionsToSelectedTopic();
+            this._resetGroup();
+            this._resetQuestions();
+        },
+
+        onQuestionsReset() {
+            this._resetQuestions();
+        },
+        
+        formatHighlight(test) {
+            return `Indication0${++test}`;
+        },
+
+        _bindGroupsToRoot() {
+            const oCtx = this._getTopicsList().getBindingContext();
+            this._setGroupsListCtx(oCtx);
+        },
+
+        _bindQuestionsToRoot() {
+            this._bindQuestionsList("/Questions");
+        },
+
+        _bindQuestionsToSelectedTopic() {
+            const oSelectedItem = this._getTopicsList().getSelectedItem();
+            const oCtx = oSelectedItem.getBindingContext();
+            this._setQuestionsListCtx(oCtx);
+            this._bindQuestionsList("questions");
+        },
+
         async _handleConfirmDialogClose(sAction, fnCallback) {
             if (sAction === MessageBox.Action.CANCEL) {
                 return;
@@ -100,43 +137,12 @@ sap.ui.define([
             await fnCallback();
         },
 
-        onTopicsReset() {
-            const oCtx = this._getTopicsList().getBindingContext();
-            this._setTopicName("");
-            this._setGroupName("");
-            this._bindQuestionsList("/Questions");
-            this._clearTopicsListSelection();
-            this._clearGroupsListSelection();
-            this._setGroupsListCtx(oCtx);
-            this._setGroupSelected(false);
-            this._setTopicSelected(false);
-            this._resetQuestions();
-        },
-        
-        onGroupsReset() {
-            const oSelectedItem = this._getTopicsList().getSelectedItem();
-            const oCtx = oSelectedItem.getBindingContext();
-            this._setQuestionsListCtx(oCtx);
-            this._bindQuestionsList("questions");
-            this._setGroupName("");
-            this._clearGroupsListSelection();
-            this._setGroupSelected(false);
-            this._resetQuestions();
-        },
-
-        onQuestionsReset() {
-            this._getQuestionsList().removeSelections();
-            this._resetQuestions();
-        },
-        
-        formatHighlight(test) {
-            return `Indication0${++test}`;
-        },
-
         _deleteSelectedTopic() {
             this._resetTopic();
             this._resetGroup();
             this._resetQuestions();
+            this._bindQuestionsToRoot();
+            this._bindGroupsToRoot();
             const oList = this._getTopicsList();
             return this._deleteSelectedItem(oList, "Topic deleted!");
         },
@@ -144,6 +150,7 @@ sap.ui.define([
         _deleteSelectedGroup() {
             this._resetGroup();
             this._resetQuestions();
+            this._bindQuestionsToSelectedTopic();
             const oList = this._getGroupsList();
             return this._deleteSelectedItem(oList, "Group deleted!");
         },
@@ -167,17 +174,20 @@ sap.ui.define([
         },
 
         _resetQuestions() {
+            this._clearQuestionsListSelection();
             this._setQuestionAnswer("");
             this._setQuestionId("");
             this._setQuestionSelected(false);
         },
 
         _resetGroup() {
+            this._clearGroupsListSelection();
             this._setGroupSelected(false);
             this._setGroupName("");
         },
 
         _resetTopic() {
+            this._clearTopicsListSelection();
             this._setTopicSelected(false);
             this._setTopicName("");
         },
@@ -188,6 +198,10 @@ sap.ui.define([
         
         _clearGroupsListSelection() {
             this._getGroupsList().removeSelections();
+        },
+
+        _clearQuestionsListSelection() {
+            this._getQuestionsList().removeSelections();
         },
 
         _getModel() {
