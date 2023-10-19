@@ -137,28 +137,28 @@ sap.ui.define([
             await fnCallback();
         },
 
-        _deleteSelectedTopic() {
+        async _deleteSelectedTopic() {
+            const oList = this._getTopicsList();
+            await this._deleteSelectedItem(oList, "Topic deleted!");
             this._resetTopic();
             this._resetGroup();
             this._resetQuestions();
             this._bindQuestionsToRoot();
             this._bindGroupsToRoot();
-            const oList = this._getTopicsList();
-            return this._deleteSelectedItem(oList, "Topic deleted!");
         },
 
-        _deleteSelectedGroup() {
+        async _deleteSelectedGroup() {
+            const oList = this._getGroupsList();
+            await this._deleteSelectedItem(oList, "Group deleted!");
             this._resetGroup();
             this._resetQuestions();
             this._bindQuestionsToSelectedTopic();
-            const oList = this._getGroupsList();
-            return this._deleteSelectedItem(oList, "Group deleted!");
         },
 
-        _deleteSelectedQuestion() {
-            this._resetQuestions();
+        async _deleteSelectedQuestion() {
             const oList = this._getQuestionsList();
-            return this._deleteSelectedItem(oList, "Question deleted!");
+            await this._deleteSelectedItem(oList, "Question deleted!");
+            this._resetQuestions();
         },
 
         async _deleteSelectedItem(oList, sMessage) {
