@@ -71,12 +71,24 @@ sap.ui.define([
 
         onQuestionDelete() {
             MessageBox.confirm("Are you sure, you want to delete this question?", {
-                onClose: async function(oAction) {
-                    if (oAction === MessageBox.Action.CANCEL) {
+                onClose: async function(sAction) {
+                    if (sAction === MessageBox.Action.CANCEL) {
                         return;
                     }
 
                     await this._deleteSelectedQuestion();
+                }.bind(this)
+            });
+        },
+
+        onGroupDelete() {
+            MessageBox.confirm("Are you sure, you want to delete this group?", {
+                onClose: async function(sAction) {
+                    if (sAction === MessageBox.Action.CANCEL) {
+                        return;
+                    }
+
+                    await this._deleteSelectedGroup();
                 }.bind(this)
             });
         },
@@ -114,14 +126,23 @@ sap.ui.define([
             return `Indication0${++test}`;
         },
 
+        async _deleteSelectedGroup() {
+            const oList = this._getGroupsList();
+            return this._deleteSelectedItem(oList, "Group deleted!");
+        },
+
         async _deleteSelectedQuestion() {
             const oList = this._getQuestionsList();
+            return this._deleteSelectedItem(oList, "Question deleted!");
+        },
+
+        async _deleteSelectedItem(oList, sMessage) {
             const oItem = oList.getSelectedItem();
             const oCtx = oItem.getBindingContext();
 
             try {
                 await oCtx.delete();
-                MessageToast.show("Question deleted!");
+                MessageToast.show(sMessage);
             } catch (sErr) {
                 console.log(sErr);
             }

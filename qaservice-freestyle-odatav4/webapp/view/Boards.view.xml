@@ -66,7 +66,7 @@
 
                                         <ToolbarSpacer />
                                         <Button visible="{= !${app>/selectedGroup/selected} &amp;&amp; ${app>/selectedTopic/selected} }" icon="sap-icon://add" />
-                                        <Button visible="{app>/selectedGroup/selected}" type="Reject" icon="sap-icon://delete" />
+                                        <Button visible="{app>/selectedGroup/selected}" type="Reject" icon="sap-icon://delete" press=".onGroupDelete" />
                                     </OverflowToolbar>
                                 </infoToolbar>
 
