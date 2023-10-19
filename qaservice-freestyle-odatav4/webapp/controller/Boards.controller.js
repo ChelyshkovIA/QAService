@@ -14,6 +14,8 @@ sap.ui.define([
 
         _defineJSONModel() {
             const oModel = new JSONModel({
+                editMode: false,
+
                 newTopic: {
                     name: ""
                 },
@@ -48,6 +50,31 @@ sap.ui.define([
             });
 
             this.getView().setModel(oModel, "app");
+        },
+
+        _setEditMode(isEditMode) {
+            this.getView().getModel("app").setProperty("/editMode", isEditMode);
+        },
+
+        onAnswerEdit() {
+            this._setEditMode(true);
+        },
+
+        onCancelEdit() {
+            this._setEditMode(false);
+        },
+        
+        async onSaveAnswer() {
+            try {
+                await this.getOwnerComponent().getModel().submitBatch("questionAnswer");
+                MessageToast.show("Answer updated!");
+            } catch (sErr) {
+                console.log(sErr);
+                MessageToast("Something went wrong");
+                return;
+            }
+            
+            this._setEditMode(false);
         },
 
         async onTopicCreate() {
@@ -152,7 +179,7 @@ sap.ui.define([
             const oQuestion = oCtx.getObject();
             this._setQuestionSelected(true);
             this._setQuestionId(oQuestion.ID);
-            this._setQuestionAnswer(oQuestion.text);
+            this._setAnswerContext();
         },
 
         onQuestionDelete() {
@@ -209,6 +236,12 @@ sap.ui.define([
                 console.log(sError);
                 MessageToast.show("Something went wrong");
             }
+        },
+
+        _setAnswerContext() {
+            const oCtx = this._getQuestionsList().getSelectedItem().getBindingContext();
+            const oArea = this._getAnswerArea();
+            oArea.setBindingContext(oCtx);
         },
 
         _getSelectedTopic() {
@@ -392,6 +425,10 @@ sap.ui.define([
 
         _getTopicsList() {
             return this.getView().byId("topicsList");
+        },
+
+        _getAnswerArea() {
+            return this.getView().byId("answerArea");
         }
     });
 });

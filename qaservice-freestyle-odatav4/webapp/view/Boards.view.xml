@@ -136,10 +136,17 @@
                     <FlexBox class="sapUiResponsiveContentPadding" direction="Column" height="150px" width="100%">
                         <FlexBox justifyContent="SpaceBetween" alignItems="Center">
                             <Title text="Answer" />
-                            <Button visible="{app>/selectedQuestion/selected}" enabled="false" icon="sap-icon://edit" />
+                            <FlexBox>
+                                <Button enabled="{app>/selectedQuestion/selected}" visible="{= !${app>/editMode}}" icon="sap-icon://edit" press=".onAnswerEdit" />
+                                <Button class="sapUiSmallMarginEnd" visible="{app>/editMode}" icon="sap-icon://cancel" press=".onCancelEdit" />
+                                <Button visible="{app>/editMode}" type="Accept" icon="sap-icon://save" press=".onSaveAnswer" />
+                            </FlexBox>
                         </FlexBox>
 
-                        <TextArea width="100%" rows="3" enabled="false" value="{app>/selectedQuestion/answer}" />
+                        <TextArea id="answerArea" enabled="{app>/editMode}" width="100%" rows="3" value="{
+                            path: 'answer',
+                            $$updateGroupId: 'questionAnswer'
+                        }" />
                     </FlexBox>
                 </FlexBox>
             </f:midColumnPages>
