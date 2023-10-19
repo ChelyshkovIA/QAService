@@ -31,7 +31,7 @@
                                         <Text text="Selected: {app>/selectedTopic/name}" />
                                         <ToolbarSpacer />
                                         <Button visible="{= ! ${app>/selectedTopic/selected} }" icon="sap-icon://add" />
-                                        <Button visible="{app>/selectedTopic/selected}" type="Reject" icon="sap-icon://delete" />
+                                        <Button visible="{app>/selectedTopic/selected}" type="Reject" icon="sap-icon://delete" press=".onTopicDelete" />
                                     </Toolbar>
                                     
                                 </infoToolbar>

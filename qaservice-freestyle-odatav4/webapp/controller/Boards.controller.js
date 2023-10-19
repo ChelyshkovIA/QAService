@@ -43,9 +43,8 @@ sap.ui.define([
             this._setTopicName(oTopic.name);
             this._setQuestionsListCtx(oCtx);
             this._bindQuestionsList("questions");
-            this._setGroupName("");
             this._setTopicSelected(true);
-            this._setGroupSelected(false);
+            this._resetGroup();
             this._resetQuestions();
         },
 
@@ -72,11 +71,7 @@ sap.ui.define([
         onQuestionDelete() {
             MessageBox.confirm("Are you sure, you want to delete this question?", {
                 onClose: async function(sAction) {
-                    if (sAction === MessageBox.Action.CANCEL) {
-                        return;
-                    }
-
-                    await this._deleteSelectedQuestion();
+                    await this._handleConfirmDialogClose(sAction, this._deleteSelectedQuestion.bind(this));
                 }.bind(this)
             });
         },
@@ -84,13 +79,25 @@ sap.ui.define([
         onGroupDelete() {
             MessageBox.confirm("Are you sure, you want to delete this group?", {
                 onClose: async function(sAction) {
-                    if (sAction === MessageBox.Action.CANCEL) {
-                        return;
-                    }
-
-                    await this._deleteSelectedGroup();
+                    await this._handleConfirmDialogClose(sAction, this._deleteSelectedGroup.bind(this));
                 }.bind(this)
             });
+        },
+
+        onTopicDelete() {
+            MessageBox.confirm("Are you sure, you want to delete this topic?", {
+                onClose: async function(sAction) {
+                    await this._handleConfirmDialogClose(sAction, this._deleteSelectedTopic.bind(this));
+                }.bind(this)
+            });
+        },
+
+        async _handleConfirmDialogClose(sAction, fnCallback) {
+            if (sAction === MessageBox.Action.CANCEL) {
+                return;
+            }
+
+            await fnCallback();
         },
 
         onTopicsReset() {
@@ -126,12 +133,23 @@ sap.ui.define([
             return `Indication0${++test}`;
         },
 
-        async _deleteSelectedGroup() {
+        _deleteSelectedTopic() {
+            this._resetTopic();
+            this._resetGroup();
+            this._resetQuestions();
+            const oList = this._getTopicsList();
+            return this._deleteSelectedItem(oList, "Topic deleted!");
+        },
+
+        _deleteSelectedGroup() {
+            this._resetGroup();
+            this._resetQuestions();
             const oList = this._getGroupsList();
             return this._deleteSelectedItem(oList, "Group deleted!");
         },
 
-        async _deleteSelectedQuestion() {
+        _deleteSelectedQuestion() {
+            this._resetQuestions();
             const oList = this._getQuestionsList();
             return this._deleteSelectedItem(oList, "Question deleted!");
         },
@@ -152,6 +170,16 @@ sap.ui.define([
             this._setQuestionAnswer("");
             this._setQuestionId("");
             this._setQuestionSelected(false);
+        },
+
+        _resetGroup() {
+            this._setGroupSelected(false);
+            this._setGroupName("");
+        },
+
+        _resetTopic() {
+            this._setTopicSelected(false);
+            this._setTopicName("");
         },
 
         _clearTopicsListSelection() {
