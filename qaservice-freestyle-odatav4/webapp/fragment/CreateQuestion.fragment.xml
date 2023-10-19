@@ -1,0 +1,51 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Dialog
+        id="createQuestionDialog"
+        title="Create Question"
+        class="sapUiContentPadding">
+        
+        <content>
+            <FlexBox width="100%" direction="Column" alignItems="Center">
+                <FlexBox width="100%" class="sapUiTinyMarginTop" justifyContent="SpaceBetween" alignItems="Center">
+                    <Label text="Topic:" />
+                    <Input value="{app>/selectedTopic/name}" enabled="false" />
+                </FlexBox>
+
+                <FlexBox width="100%" class="sapUiTinyMarginTop sapUiSmallMarginBottom" justifyContent="SpaceBetween" alignItems="Center">
+                    <Label text="Group:" />
+                    <Input value="{app>/selectedGroup/name}" enabled="false" />
+                </FlexBox>
+
+                <FlexBox width="100%" class="sapUiTinyMarginTop sapUiTinyMarginBottom" justifyContent="SpaceBetween" alignItems="Center">
+                    <Label text="Text:" />
+                    <Input value="{app>/newQuestion/text}" />
+                </FlexBox>
+
+                <FlexBox width="100%" class="sapUiTinyMarginTop sapUiTinyMarginBottom" justifyContent="SpaceBetween" alignItems="Center">
+                    <Label text="Difficulty:" />
+                    <Select
+                        selectedKey="{app>/newQuestion/difficulty_ID}"
+                        items="{/Difficulties}" >
+                        <core:Item key="{ID}" text="{name}" />
+                    </Select>
+                </FlexBox>
+
+                <FlexBox width="100%" class="sapUiTinyMarginTop sapUiTinyMarginBottom" justifyContent="SpaceBetween" alignItems="Center">
+                    <Label text="Answer:" />
+                    <Input value="{app>/newQuestion/answer}" />
+                </FlexBox>
+            </FlexBox>
+        </content>
+
+        <beginButton>
+            <Button type="Emphasized" text="Create" press=".onSubmitQuestionDialog" />
+        </beginButton>
+
+        <endButton>
+            <Button text="Cancel" press=".onCloseQuestionDialog" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

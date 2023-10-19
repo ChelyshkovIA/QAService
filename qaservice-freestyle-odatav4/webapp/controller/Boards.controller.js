@@ -22,6 +22,12 @@ sap.ui.define([
                     name: ""
                 },
 
+                newQuestion: {
+                    text: "",
+                    answer: "",
+                    difficulty_ID: null
+                },
+
                 selectedQuestion: {
                     selected: false,
                     answer: "",
@@ -92,8 +98,29 @@ sap.ui.define([
             this.createGroupDialog.close();
         },
 
-        onQuestionCreate() {
+        async onQuestionCreate() {
+            if (!this.createQuestionDialog) {
+                this.createQuestionDialog = await this.loadFragment({
+                    name: "qaservicefreestyleodatav4.fragment.CreateQuestion"
+                });
+            }
 
+            this.createQuestionDialog.open();
+        },
+        
+        async onSubmitQuestionDialog() {
+            const oQuestionPayload = this._getQuestionPayload();
+            oQuestionPayload.topic_ID = this._getSelectedTopic().id;
+            const oQuestionBinding = this._getQuestionsList().getBinding("items");
+
+            await this._createFromBinding(oQuestionBinding, oQuestionPayload);
+
+            this._resetQuestionPayload();
+            this.createQuestionDialog.close();
+        },
+
+        onCloseQuestionDialog() {
+            this.createQuestionDialog.close();
         },
 
         onTopicSelect(oEvent) {
@@ -101,6 +128,7 @@ sap.ui.define([
             const oTopic = oCtx.getObject();
             this._bindQuestionsToSelectedTopic();
             this._setGroupsListCtx(oCtx);
+            this._setTopicId(oTopic.ID);
             this._setTopicName(oTopic.name);
             this._setTopicSelected(true);
             this._resetGroup();
@@ -181,6 +209,20 @@ sap.ui.define([
                 console.log(sError);
                 MessageToast.show("Something went wrong");
             }
+        },
+
+        _getSelectedTopic() {
+            return this.getView().getModel("app").getProperty("/selectedTopic");
+        },
+
+        _getQuestionPayload() {
+            return this.getView().getModel("app").getProperty("/newQuestion");
+        },
+
+        _resetQuestionPayload() {
+            this.getView().getModel("app").setProperty("/newQuestion/text", "");
+            this.getView().getModel("app").setProperty("/newQuestion/answer", "");
+            this.getView().getModel("app").setProperty("/newQuestion/difficulty_ID", null);
         },
 
         _getGroupPayload() {
@@ -320,6 +362,10 @@ sap.ui.define([
 
         _setGroupName(sName) {
             this.getView().getModel("app").setProperty("/selectedGroup/name", sName);
+        },
+
+        _setTopicId(sId) {
+            this.getView().getModel("app").setProperty("/selectedTopic/id", sId);
         },
 
         _setTopicSelected(isSelected) {
