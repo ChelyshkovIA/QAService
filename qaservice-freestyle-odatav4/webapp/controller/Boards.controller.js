@@ -1,7 +1,9 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel"
-], function(Controller, JSONModel) {
+    "sap/ui/model/json/JSONModel",
+    "sap/m/MessageBox",
+    "sap/m/MessageToast"
+], function(Controller, JSONModel, MessageBox, MessageToast) {
     "use strict";
 
     return Controller.extend("qaservicefreestyleodatav4.controller.Boards", {
@@ -67,6 +69,18 @@ sap.ui.define([
             this._setQuestionAnswer(oQuestion.text);
         },
 
+        onQuestionDelete() {
+            MessageBox.confirm("Are you sure, you want to delete this question?", {
+                onClose: async function(oAction) {
+                    if (oAction === MessageBox.Action.CANCEL) {
+                        return;
+                    }
+
+                    await this._deleteSelectedQuestion();
+                }.bind(this)
+            });
+        },
+
         onTopicsReset() {
             const oCtx = this._getTopicsList().getBindingContext();
             this._setTopicName("");
@@ -98,6 +112,19 @@ sap.ui.define([
         
         formatHighlight(test) {
             return `Indication0${++test}`;
+        },
+
+        async _deleteSelectedQuestion() {
+            const oList = this._getQuestionsList();
+            const oItem = oList.getSelectedItem();
+            const oCtx = oItem.getBindingContext();
+
+            try {
+                await oCtx.delete();
+                MessageToast.show("Question deleted!");
+            } catch (sErr) {
+                console.log(sErr);
+            }
         },
 
         _resetQuestions() {
