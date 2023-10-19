@@ -18,6 +18,10 @@ sap.ui.define([
                     name: ""
                 },
 
+                newGroup: {
+                    name: ""
+                },
+
                 selectedQuestion: {
                     selected: false,
                     answer: "",
@@ -43,7 +47,7 @@ sap.ui.define([
         async onTopicCreate() {
             if (!this.createTopicDialog) {
                 this.createTopicDialog = await this.loadFragment({
-                    name: "qaservicefreestyleodatav4.fragment.CreateQuestion"
+                    name: "qaservicefreestyleodatav4.fragment.CreateTopic"
                 });
             }
 
@@ -52,16 +56,9 @@ sap.ui.define([
 
         async onSubmitTopicDialog() {
             const oTopicPayload = this._getTopicPayload();
-            const oTopicsBinding = this._getTopicsList().getBinding("items");
-
+            const oTopicBinding = this._getTopicsList().getBinding("items");
             
-            try {
-                await oTopicsBinding.create(oTopicPayload);
-                MessageToast.show("Topic created!");
-            } catch (sError) {
-                console.log(sError);
-                MessageToast.show("Can't create topic :(");
-            }
+            await this._createFromBinding(oTopicBinding, oTopicPayload);
             
             this._resetTopicPayload();
             this.createTopicDialog.close();
@@ -71,8 +68,28 @@ sap.ui.define([
             this.createTopicDialog.close();
         },
 
-        onGroupCreate() {
+        async onGroupCreate() {
+            if (!this.createGroupDialog) {
+                this.createGroupDialog = await this.loadFragment({
+                    name: "qaservicefreestyleodatav4.fragment.CreateGroup"
+                });
+            }
 
+            this.createGroupDialog.open();
+        },
+
+        async onSubmitGroupDialog() {
+            const oGroupPayload = this._getGroupPayload();
+            const oGroupBinding = this._getGroupsList().getBinding("items");
+
+            await this._createFromBinding(oGroupBinding, oGroupPayload);
+
+            this._resetGroupPayload();
+            this.createGroupDialog.close();
+        },
+
+        onCloseGroupDialog() {
+            this.createGroupDialog.close();
         },
 
         onQuestionCreate() {
@@ -154,6 +171,24 @@ sap.ui.define([
         
         formatHighlight(test) {
             return `Indication0${++test}`;
+        },
+
+        async _createFromBinding(oBinding, oPayload) {
+            try {
+                await oBinding.create(oPayload);
+                MessageToast.show("Successfully created!");
+            } catch (sError) {
+                console.log(sError);
+                MessageToast.show("Something went wrong");
+            }
+        },
+
+        _getGroupPayload() {
+            return this.getView().getModel("app").getProperty("/newGroup");
+        },
+
+        _resetGroupPayload() {
+            this.getView().getModel("app").setProperty("/newGroup/name", "");
         },
 
         _getTopicPayload() {

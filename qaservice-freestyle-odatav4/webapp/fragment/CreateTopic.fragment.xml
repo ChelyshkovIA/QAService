@@ -3,7 +3,7 @@
     xmlns="sap.m">
 
     <Dialog
-        id="createQuestionDialog"
+        id="createTopicDialog"
         title="Create Topic">
         
         <content>
